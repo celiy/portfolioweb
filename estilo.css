@@ -1,0 +1,110 @@
+@font-face {
+    font-family: PoppinsBold;
+    src: url(Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: PoppinsMedium;
+    src: url(Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: PoppinsRegular;
+    src: url(Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: PoppinsLight;
+    src: url(Poppins-Light.ttf);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}li {
+    float: right;
+}li a {
+    font-family: PoppinsMedium;
+    font-size: 16px;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px 40px;
+    text-decoration: none;
+}li a:hover {
+    background-color: #bdbdbd;
+}
+
+.active {
+    font-family: PoppinsBold;
+    color: #ff5757;
+    font-size: 16px;
+}
+
+body{
+    background-color: #201d1d;
+}
+
+p{
+    font-family: PoppinsLight;
+    padding-top: 20px;
+    line-height: 22px;
+    color: white;
+}
+
+ h1{
+    font-family: PoppinsBold;
+    color: white;
+    font-size: 50px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}h2{
+    font-family: PoppinsMedium;
+    color: white;
+    font-size: 35px;
+}h3{
+    font-family: PoppinsRegular;
+    color: white;
+    font-size: 25px;
+    white-space: nowrap;
+}
+
+.textoPrincipal{
+    position: relative;
+    top: 250px;
+    left: 100px;
+    width: 800px;
+} .sociaisPrincipal{
+    position: relative;
+    top: 20px;
+    left: -30px;
+    width: 800px;
+} .sociaisAjuste{
+    max-width: 30%;
+    height: auto;
+}
+
+.textoVermelho{
+    color: #ff5757;
+}
+
+.pagina2fade{
+    position: relative;
+    top: 450px;
+    width: auto;
+    height: 200px;
+    background-image: linear-gradient(to bottom, #201d1d, black);
+}.pagina2{
+    position: relative;
+    top: 200px;
+    width: auto;
+    height: 500px;
+    background-color: black;
+}
