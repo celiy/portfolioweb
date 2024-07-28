@@ -1,19 +1,22 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const boxes = document.querySelectorAll('.caixaRounded');
-    let currentIndex = 0;
+//Iniciar animação inicial da pagina
+function fadeInElements() {
+    const elements = document.querySelectorAll('.fade-in');
+    elements.forEach(element => {
+        element.style.opacity = 1;
+    });
+}
+window.onload = fadeInElements;
 
-    function showBox(index) {
-        boxes.forEach(box => box.style.display = 'none'); // Hide all boxes
-        boxes[index].style.display = 'block'; // Show the current box
-    }
+//Iniciar animação dos elementos na segunda pagina
+const startAnimation = (entries, observer) => {
+    entries.forEach(entry => {
+        entry.target.classList.toggle("slide-in-from-right", entry.isIntersecting);
+    });
+};
+const observer = new IntersectionObserver(startAnimation);
+const options = { root: null, rootMargin: '0px', threshold: 1 };
 
-    function switchBoxes() {
-        showBox(currentIndex);
-        currentIndex = (currentIndex + 1) % boxes.length; // Move to the next box, loop back to the first one
-    }
-
-    setInterval(switchBoxes, 3000); // Change every 3 seconds
-
-    // Initially show the first box
-    showBox(currentIndex);
+const elements = document.querySelectorAll('.caixaRounded');
+elements.forEach(el => {
+    observer.observe(el, options);
 });

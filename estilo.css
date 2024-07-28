@@ -1,19 +1,19 @@
 /* Fontes custom */
 @font-face {
     font-family: PoppinsBold;
-    src: url(Poppins-Bold.ttf);
+    src: url(fonts/Poppins-Bold.ttf);
 }
 @font-face {
     font-family: PoppinsMedium;
-    src: url(Poppins-Medium.ttf);
+    src: url(fonts/Poppins-Medium.ttf);
 }
 @font-face {
     font-family: PoppinsRegular;
-    src: url(Poppins-Regular.ttf);
+    src: url(fonts/Poppins-Regular.ttf);
 }
 @font-face {
     font-family: PoppinsLight;
-    src: url(Poppins-Light.ttf);
+    src: url(fonts/Poppins-Light.ttf);
 }
 
 /* Animação de aparecer */
@@ -47,7 +47,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #ffffff;
+    background-color: #131516;
     position: fixed;
     top: 0;
     width: 100%;
@@ -59,12 +59,15 @@ ul {
     font-family: PoppinsMedium;
     font-size: 16px;
     display: block;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 20px 40px;
     text-decoration: none;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out; 
 }li a:hover {
-    background-color: #bdbdbd;
+    background-color: #303030;
+    opacity: 1; 
 } .active {
     font-family: PoppinsBold;
     color: #ff5757;
@@ -73,7 +76,7 @@ ul {
 
 /* Cor de fundo da pagina */
 body{
-    background-color: #201d1d;
+    background-color: #181a1b;
 }
 
 /* Estilo do texto padrão */
@@ -112,7 +115,7 @@ p{
     width: 800px;
 } .sociaisPrincipal{
     position: relative;
-    top: 20px;
+    top: 0px;
     left: -30px;
     width: 800px;
 } .sociaisAjuste{
@@ -120,7 +123,7 @@ p{
     height: auto;
 } .imgLado {
     position: relative;
-    top: -430px;
+    top: -450px;
     left: 710px;
     width: 620px;
 } .imgAjuste{
@@ -138,7 +141,7 @@ p{
     top: -50px;
     width: auto;
     height: 200px;
-    background-image: linear-gradient(to bottom, #201d1d, black);
+    background-image: linear-gradient(to bottom, #181a1b, black);
 }.pagina2{
     position: relative;
     top: 200px;
@@ -172,4 +175,18 @@ p{
     color: white;
     font-size: 50px;
     padding-top: 10px;
-} 
+} .slide-in-from-right {
+    opacity: 0; 
+    visibility: hidden;
+    animation: 1.5s ease-out 0s 1 slideInFromRight forwards;
+} @keyframes slideInFromRight {
+    0% {
+        opacity: 0; 
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1; 
+        visibility: visible;
+        transform: translateY(10%);
+    }
+}
