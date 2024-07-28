@@ -1,23 +1,47 @@
+/* Fontes custom */
 @font-face {
     font-family: PoppinsBold;
     src: url(Poppins-Bold.ttf);
 }
-
 @font-face {
     font-family: PoppinsMedium;
     src: url(Poppins-Medium.ttf);
 }
-
 @font-face {
     font-family: PoppinsRegular;
     src: url(Poppins-Regular.ttf);
 }
-
 @font-face {
     font-family: PoppinsLight;
     src: url(Poppins-Light.ttf);
 }
 
+/* Animação de aparecer */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+        
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+    }
+}.fade-in {
+    opacity: 0; 
+    visibility: hidden;
+    animation: fadeInDown 2s forwards; 
+}.fade-in {
+    opacity: 0; 
+    animation: fadeInDown 2s forwards; 
+}.fade-in-delay1 {
+    animation-delay: 1s; 
+}.fade-in-delay2 {
+    animation-delay: 2s; 
+}
+
+/* Barra de navegação */
 ul {
     list-style-type: none;
     margin: 0;
@@ -28,6 +52,7 @@ ul {
     top: 0;
     width: 100%;
     z-index: 2;
+    box-shadow: 0px -5px 15px 0px black;
 }li {
     float: right;
 }li a {
@@ -40,18 +65,18 @@ ul {
     text-decoration: none;
 }li a:hover {
     background-color: #bdbdbd;
-}
-
-.active {
+} .active {
     font-family: PoppinsBold;
     color: #ff5757;
     font-size: 16px;
 }
 
+/* Cor de fundo da pagina */
 body{
     background-color: #201d1d;
 }
 
+/* Estilo do texto padrão */
 p{
     font-family: PoppinsLight;
     padding-top: 20px;
@@ -59,6 +84,7 @@ p{
     color: white;
 }
 
+/* Estilo dos Headers */
  h1{
     font-family: PoppinsBold;
     color: white;
@@ -76,6 +102,7 @@ p{
     white-space: nowrap;
 }
 
+/* Pagina 1||Estilo dos elementos */
 .textoPrincipal{
     position: relative;
     top: 250px;
@@ -89,15 +116,24 @@ p{
 } .sociaisAjuste{
     max-width: 30%;
     height: auto;
+} .imgLado {
+    position: relative;
+    top: -420px;
+    left: 780px;
+    width: 620px;
+} .imgAjuste{
+    max-width: 100%;
+    height: auto;
 }
-
+ 
 .textoVermelho{
     color: #ff5757;
 }
 
+/* Estilo da pagina 2 */
 .pagina2fade{
     position: relative;
-    top: 450px;
+    top: -50px;
     width: auto;
     height: 200px;
     background-image: linear-gradient(to bottom, #201d1d, black);

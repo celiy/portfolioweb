@@ -16,17 +16,22 @@
 <!-- Pagina 1 -->
     <div> 
         <div class="textoPrincipal">
-            <h2>Olá, me chamo</h2>
-            <h1>Diogo Carvalho Viegas</h1>
-            <div>
-                <h3>Eu sou um <span class="textoVermelho">Analista e Desenvolvedor de Sistemas.</span></h3>
+            <div class="fade-in">
+                <h2>Olá, me chamo</h2>
+                <h1>Diogo Carvalho Viegas</h1>
+                <div>
+                    <h3>Eu sou um <span class="textoVermelho">Analista e Desenvolvedor de Sistemas.</span></h3>
+                </div>
+                <p>Eu comecei minha carreira como programador com a linguagem de programação C. Desde então venho aprendendo e expandindo o meu conhecimento. Procurando novas oportunidades e aberto para criar coisas novas. Atualmente cursando um curso de ensino superior de Analise e Desenvolvimento de sistemas em IFSUL Campus Camaquã.</p>
             </div>
-            <p>Eu comecei minha carreira como programador com a linguagem de programação C. Desde então venho aprendendo e expandindo o meu conhecimento. Procurando novas oportunidades e aberto para criar coisas novas. Atualmente cursando um curso de ensino superior de Analise e Desenvolvimento de sistemas em IFSUL Campus Camaquã.</p>
-            <div class="sociaisPrincipal">
+            <div class="sociaisPrincipal fade-in fade-in-delay1">
                 <figure>
-                    <img class="sociaisAjuste" src="Sociais.png" alt="Sociais">
+                    <a href="contato.html"><img class="sociaisAjuste" src="Sociais.png" alt="Sociais"></a>
                 </figure>                    
-            </div>  
+            </div>
+            <div class="imgLado fade-in fade-in-delay2">
+                <img class="imgAjuste" src="ImagemLado.png" alt="Lado">
+            </div> 
         </div>
     </div>
 <!-- Pagina 2 -->
@@ -35,6 +40,16 @@
 
         </div>
     </div>
-    
+
+    <script>
+        function fadeInElements() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(element => {
+                element.style.opacity = 1;
+            });
+        }
+        window.onload = fadeInElements;
+    </script>
+
 </body>
 </html>
