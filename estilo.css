@@ -20,12 +20,12 @@
 @keyframes fadeInDown {
     0% {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(-3vh);
         
     }
     100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0vh);
         visibility: visible;
     }
 }.fade-in {
@@ -87,8 +87,9 @@ body{
 /* Estilo do texto padrão */
 p{
     font-family: PoppinsLight;
-    padding-top: 20px;
-    line-height: 22px;
+    font-size: 2vh;
+    padding-top: 2vh;
+    line-height: 2.7vh;
     text-align: justify;
     text-justify: inter-word;
     color: white;
@@ -98,39 +99,41 @@ p{
  h1{
     font-family: PoppinsBold;
     color: white;
-    font-size: 50px;
-    padding-top: 5px;
-    padding-bottom: 20px;
+    font-size: 7.3vh;
+    padding-top: 1vh;
+    padding-bottom: 2vh;
 }h2{
     font-family: PoppinsMedium;
     color: white;
-    font-size: 35px;
+    font-size: 3.8vh;
 }h3{
     font-family: PoppinsRegular;
     color: white;
-    font-size: 25px;
-    white-space: nowrap;
+    font-size: 3.8vh;
 }
 
 /* Pagina 1||Estilo dos elementos */
 .textoPrincipal{
     position: relative;
-    top: 250px;
-    left: 100px;
-    width: 800px;
+    top: 30vh;
+    left: 10vh;
+    width: 95vh;
+    height: 100vh;
 } .sociaisPrincipal{
     position: relative;
-    top: 0px;
-    left: -30px;
-    width: 800px;
+    padding-top: 1vh;
+    left: -3vh;
+    width: 100vh;
 } .sociaisAjuste{
-    max-width: 30%;
+    width: 30vh;
     height: auto;
 } .imgLado {
-    position: relative;
-    top: -450px;
-    left: 710px;
-    width: 620px;
+    position: absolute; 
+    right: 0;
+    top: 25vh;
+    width: auto;
+    padding-right: 8vh;
+    padding-left: 110vh;
 } .imgAjuste{
     max-width: 100%;
     height: auto;
@@ -203,8 +206,8 @@ p{
 }
 .imagemfundo1 {
     position: absolute;
-    top: 800px;
-    left: 180px;
+    top: 750px;
+    left: 40vh;
     width: 900px;
     height: auto;
     object-fit: cover;
@@ -216,8 +219,8 @@ p{
     transition: transform 0.1s ease-out;
 } .imagemfundo2 {
     position: absolute;
-    top: 50px;
-    left: 450px;
+    top: 40px;
+    left: 65vh;
     width: 900px;
     height: auto;
     object-fit: cover;
