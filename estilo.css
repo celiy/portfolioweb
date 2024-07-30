@@ -41,6 +41,12 @@
     animation-delay: 2s; 
 }
 
+.blur-div{
+    filter: blur(12px);
+    -webkit-filter: blur(12px);
+    transition: filter 1.5s, -webkit-filter 1.5s;
+}
+
 .zindex2{
     z-index: 2;
 }
@@ -102,6 +108,11 @@ p{
     font-size: 7.3vh;
     padding-top: 1vh;
     padding-bottom: 2vh;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+}h1:hover{
+    opacity: 0.5;
+    transition: 0.3s ease-in-out;
 }h2{
     font-family: PoppinsMedium;
     color: white;
@@ -121,23 +132,32 @@ p{
     height: 100vh;
 } .sociaisPrincipal{
     position: relative;
-    padding-top: 1vh;
-    left: -3vh;
+    padding-top: 0.2vh;
+    left: -6vh;
     width: 100vh;
 } .sociaisAjuste{
     width: 30vh;
     height: auto;
-} .imgLado {
+    transition: 0.3s ease-in-out;
+} .sociaisAjuste:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.2);
+}.imgLado {
     position: absolute; 
     right: 0;
-    top: 25vh;
+    top: 28vh;
     width: auto;
     padding-right: 8vh;
     padding-left: 110vh;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
 } .imgAjuste{
     max-width: 100%;
     height: auto;
-} 
+} .imgAjuste:hover {
+    opacity: 0.5;
+    transition: ease-in-out 0.3s;
+}
  
 .textoVermelho{
     color: #ff5757;
@@ -154,7 +174,7 @@ p{
     position: relative;
     top: 200px;
     width: auto;
-    height: 1700px;
+    height: 1600px;
     background-color: black;
 }
 
@@ -213,7 +233,7 @@ p{
     object-fit: cover;
     z-index: 0;
     pointer-events: none;
-    opacity: 20%;
+    opacity: 25%;
     filter: blur(12px);
     -webkit-filter: blur(12px);
     transition: transform 0.1s ease-out;
@@ -226,7 +246,7 @@ p{
     object-fit: cover;
     z-index: 0;
     pointer-events: none;
-    opacity: 20%;
+    opacity: 25%;
     filter: blur(12px);
     -webkit-filter: blur(12px);
     transition: transform 0.1s ease-out;
@@ -243,9 +263,10 @@ p{
 } .footertext{
     font-family: PoppinsLight;
     text-align: center;
-    font-size: 10px;
-    padding-top: 7px;
-    padding-bottom: 7px;
+    font-size: 15px;
+    line-height: 22px;
+    padding-top: 8px;
+    padding-bottom: 12px;
     color: white;
 }
 
@@ -259,6 +280,11 @@ p{
     height: 100%;
 }
 
+.containerwidgets {
+    z-index: 1;
+    position: relative;
+} 
+
 .widget{
     display:inline-table;
     text-align: center;
@@ -269,7 +295,7 @@ p{
     border-radius: 50px;
     margin: 2.5vw;
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.233);
-    transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out; 
+    transition: 0.2s ease-in-out; 
 } .widget:hover{
     background-color: #303030;
     opacity: 1; 
@@ -283,15 +309,38 @@ p{
     padding-top: 6vh;
     max-width: 50%;
     height: auto;
+    transition: 0.3s ease-in-out;
+} .imgAjustewidget:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
 } .imgAjustewidgetgithub{
     padding-top: 6vh;
     max-width: 60%;
     height: auto;
+    transition: 0.3s ease-in-out;
+} .imgAjustewidgetgithub:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+}
+
+.imagemfundoContato {
+    margin: auto;
+    height: auto;
+    width: 20%;
+    z-index: 0;
+    pointer-events: none;
+    filter: blur(12px);
+    -webkit-filter: blur(12px);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+.containerwidgets:hover ~ .imagemfundoContato {
+    opacity: 0.1;
 }
 
 .sh1Contato{
     font-family: PoppinsBold;
-    color: white;
+    color: #ffffff;
     font-size: 50px;
     padding-top: 4vh;
 } .spContato{
