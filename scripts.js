@@ -14,7 +14,7 @@ const startAnimation = (entries, observer) => {
     });
 };
 const observer = new IntersectionObserver(startAnimation);
-const options = { root: null, rootMargin: '0vh', threshold: 1 };
+const options = { root: null, rootMargin: '0px', threshold: 1 };
 
 const elements = document.querySelectorAll('.caixaRounded');
 elements.forEach(el => {

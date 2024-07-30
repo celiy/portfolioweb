@@ -248,3 +248,55 @@ p{
     padding-bottom: 7px;
     color: white;
 }
+
+
+/* Pagina Contato */
+
+.containercontato{
+    text-align: center;
+    padding-top: 17vh;
+    width: 100%;
+    height: 100%;
+}
+
+.widget{
+    display:inline-table;
+    text-align: center;
+    width: 20vw;
+    height: 21vw;
+    background-color: #202020;
+    border: 2px;
+    border-radius: 50px;
+    margin: 2.5vw;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.233);
+    transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out; 
+} .widget:hover{
+    background-color: #303030;
+    opacity: 1; 
+}
+
+.fade-in-delay1 {
+    animation-delay: 0.5s; 
+}.fade-in-delay2 {
+    animation-delay: 1s; 
+} .imgAjustewidget{
+    padding-top: 6vh;
+    max-width: 50%;
+    height: auto;
+} .imgAjustewidgetgithub{
+    padding-top: 6vh;
+    max-width: 60%;
+    height: auto;
+}
+
+.sh1Contato{
+    font-family: PoppinsBold;
+    color: white;
+    font-size: 50px;
+    padding-top: 4vh;
+} .spContato{
+    font-family: PoppinsLight;
+    padding-top: 3vh;
+    line-height: 22px;
+    color: white;
+}
