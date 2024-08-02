@@ -99,10 +99,7 @@ p{
     text-align: justify;
     text-justify: inter-word;
     color: white;
-}
-
-/* Estilo dos Headers */
- h1{
+}h1{
     font-family: PoppinsBold;
     color: white;
     font-size: 7.3vh;
@@ -124,13 +121,158 @@ p{
 }
 
 /* Pagina 1||Estilo dos elementos */
+
+.pagina1{
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+.containertexop{
+    position: relative;
+    padding-top: 21vh;
+}.textoPrincipal1{
+    display: inline-block;
+
+    width: 50vw;
+    height: auto;
+    padding-left: 5vw;
+} .imgLado1 {
+    display: inline-block;
+
+    width: 35vw;
+    height: auto;
+    padding-right: 4vw;
+    padding-left: 2vw;
+
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+
+    transform: translateY(6vh);
+} .imgAjuste1{
+    max-width: 100%;
+    height: auto;
+} .imgLado1:hover {
+    opacity: 0.5;
+    transition: ease-in-out 0.3s;
+} .sociaisPrincipal1{
+    position: relative;
+    padding-left: 1.7vw;
+} .sociaisAjuste1{
+    width: 16vw;
+    height: auto;
+    transition: 0.3s ease-in-out;
+} .sociaisAjuste1:hover{
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+.containerfade{
+    position: relative;
+    padding-top: 12vh;
+}.pagina2fade1{
+    position: relative;
+    width: auto;
+    height: 25vh;
+    background-image: linear-gradient(to bottom, #181a1b, black);
+}.pagina21{
+    position: relative;
+    width: auto;
+    height: auto;
+    background-color: #000000;
+}
+.containercaixa{
+    position: relative;
+    padding-bottom: 30vh;
+} .caixaRounded{
+    position: relative;
+    margin: auto;
+    width: 40vw;
+    height: 55svh;
+    background-color: #181818;
+    border: 2px;
+    border-radius: 50px;
+    z-index: 2;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+} .caixaRounded:hover{
+    opacity: 1;
+    background-color: #303030;
+}.alignDentro{
+    padding-top: 3vh;
+    padding-left: 2.3vw;
+    padding-right: 2.3vw;
+} .sp{
+    font-family: PoppinsLight;
+    font-size: 0.9vw;
+    padding-top: 15px;
+    line-height: 2.3vh;
+    text-align: justify;
+    text-justify: inter-word;
+    color: white;
+} .sh1{
+    font-family: PoppinsBold;
+    color: white;
+    font-size: 3.5vw;
+} .imgcaixa{
+    border: 2px; 
+    border-radius: 1vw; 
+    float: left;
+    padding-right: 20px;
+} .splist{
+    font-family: PoppinsLight;
+    font-size: 0.8vw;
+    line-height: 22px;
+    color: white;
+} 
+
+.imagemfundo1 {
+    position: absolute;
+    width: 50vw;
+    height: auto;
+    z-index: 0;
+
+    opacity: 32%;
+    filter: blur(2vh);
+    -webkit-filter: blur(2vh);
+    transition: transform 0.1s ease-out;
+} #posimagem1 {
+    right: 0;
+    padding-right: 15vw;
+} #posimagem2 {
+    left: 0;
+    padding-left: 15vw;
+}
+
+.slide-in-from-right {
+    opacity: 0; 
+    visibility: hidden;
+    animation: 1.5s ease-out 0s 1 slideInFromRight forwards;
+} @keyframes slideInFromRight {
+    0% {
+        opacity: 0; 
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1; 
+        visibility: visible;
+        transform: translateY(10%);
+    }
+}
+
+
 .textoPrincipal{
     position: relative;
     top: 30vh;
     left: 10vh;
     width: 95vh;
     height: 100vh;
-} .sociaisPrincipal{
+} 
+.sociaisPrincipal{  
     position: relative;
     padding-top: 0.2vh;
     left: -6vh;
@@ -139,10 +281,7 @@ p{
     width: 30vh;
     height: auto;
     transition: 0.3s ease-in-out;
-} .sociaisAjuste:hover{
-    transition: 0.3s ease-in-out;
-    transform: scale(1.2);
-}.imgLado {
+} .imgLado {
     position: absolute; 
     right: 0;
     top: 28vh;
@@ -178,66 +317,8 @@ p{
     background-color: black;
 }
 
-.caixaRounded{
-    position: relative;
-    margin: auto;
-    top: 80px;
-    width: 800px;
-    height: 500px;
-    background-color: #181818;
-    border: 2px;
-    border-radius: 50px;
-    z-index: 2;
-    opacity: 1;
-    transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
-} .caixaRounded:hover{
-    opacity: 1;
-    background-color: #303030;
-}.alignDentro{
-    padding-top: 30px;
-    padding-left: 40px;
-    padding-right: 60px;
-} .sp{
-    font-family: PoppinsLight;
-    padding-top: 15px;
-    line-height: 22px;
-    text-align: justify;
-    text-justify: inter-word;
-    color: white;
-} .sh1{
-    font-family: PoppinsBold;
-    color: white;
-    font-size: 50px;
-    padding-top: 10px;
-} .slide-in-from-right {
-    opacity: 0; 
-    visibility: hidden;
-    animation: 1.5s ease-out 0s 1 slideInFromRight forwards;
-} @keyframes slideInFromRight {
-    0% {
-        opacity: 0; 
-        transform: translateY(0);
-    }
-    100% {
-        opacity: 1; 
-        visibility: visible;
-        transform: translateY(10%);
-    }
-}
-.imagemfundo1 {
-    position: absolute;
-    top: 750px;
-    left: 40vh;
-    width: 900px;
-    height: auto;
-    object-fit: cover;
-    z-index: 0;
-    pointer-events: none;
-    opacity: 25%;
-    filter: blur(12px);
-    -webkit-filter: blur(12px);
-    transition: transform 0.1s ease-out;
-} .imagemfundo2 {
+
+ .imagemfundo2 {
     position: absolute;
     top: 40px;
     left: 65vh;
