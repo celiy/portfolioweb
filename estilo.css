@@ -1,21 +1,3 @@
-/* Fontes custom */
-@font-face {
-    font-family: PoppinsBold;
-    src: url(fonts/Poppins-Bold.ttf);
-}
-@font-face {
-    font-family: PoppinsMedium;
-    src: url(fonts/Poppins-Medium.ttf);
-}
-@font-face {
-    font-family: PoppinsRegular;
-    src: url(fonts/Poppins-Regular.ttf);
-}
-@font-face {
-    font-family: PoppinsLight;
-    src: url(fonts/Poppins-Light.ttf);
-}
-
 /* Animação de aparecer */
 @keyframes fadeInDown {
     0% {
@@ -36,10 +18,10 @@
     opacity: 0; 
     animation: fadeInDown 2s forwards; 
 }.fade-in-delay1 {
-    animation-delay: 1s; 
+    animation-delay: 0.5s; 
 }.fade-in-delay2 {
-    animation-delay: 2s; 
-}
+    animation-delay: 1s; 
+} 
 
 .blur-div{
     filter: blur(12px);
@@ -67,11 +49,11 @@ ul {
     float: right;
 }li a {
     font-family: PoppinsMedium;
-    font-size: 16px;
+    font-size: 2vh;
     display: block;
     color: rgb(255, 255, 255);
     text-align: center;
-    padding: 20px 40px;
+    padding: 2.2vh 2.2vw;
     text-decoration: none;
     opacity: 1;
     transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out; 
@@ -81,43 +63,19 @@ ul {
 } .active {
     font-family: PoppinsBold;
     color: #ff5757;
-    font-size: 16px;
+    font-size: 2vh;
+} #diogologo {
+    width: auto;
+    height: 4vh;
+} #diogologoverride {
+    float: left;
+    padding: 0.5vh 1.4vw;
 }
 
 /* Cor de fundo da pagina */
 body{
     background-color: #181a1b;
     overflow-y: scroll;
-}
-
-/* Estilo do texto padrão */
-p{
-    font-family: PoppinsLight;
-    font-size: 2vh;
-    padding-top: 2vh;
-    line-height: 2.7vh;
-    text-align: justify;
-    text-justify: inter-word;
-    color: white;
-}h1{
-    font-family: PoppinsBold;
-    color: white;
-    font-size: 7.3vh;
-    padding-top: 1vh;
-    padding-bottom: 2vh;
-    opacity: 1;
-    transition: 0.3s ease-in-out;
-}h1:hover{
-    opacity: 0.5;
-    transition: 0.3s ease-in-out;
-}h2{
-    font-family: PoppinsMedium;
-    color: white;
-    font-size: 3.8vh;
-}h3{
-    font-family: PoppinsRegular;
-    color: white;
-    font-size: 3.8vh;
 }
 
 /* Pagina 1||Estilo dos elementos */
@@ -134,13 +92,13 @@ p{
 }.textoPrincipal1{
     display: inline-block;
 
-    width: 50vw;
+    width: 48vw;
     height: auto;
     padding-left: 5vw;
 } .imgLado1 {
     display: inline-block;
 
-    width: 35vw;
+    width: 37vw;
     height: auto;
     padding-right: 4vw;
     padding-left: 2vw;
@@ -166,10 +124,7 @@ p{
     transform: scale(1.2);
 }
 
-
-
-
-
+/* Pagina 2 */
 
 .containerfade{
     position: relative;
@@ -206,18 +161,6 @@ p{
     padding-top: 3vh;
     padding-left: 2.3vw;
     padding-right: 2.3vw;
-} .sp{
-    font-family: PoppinsLight;
-    font-size: 0.9vw;
-    padding-top: 15px;
-    line-height: 2.3vh;
-    text-align: justify;
-    text-justify: inter-word;
-    color: white;
-} .sh1{
-    font-family: PoppinsBold;
-    color: white;
-    font-size: 3.5vw;
 } .imgcaixa{
     border: 2px; 
     border-radius: 1vw; 
@@ -236,11 +179,15 @@ p{
     height: auto;
     z-index: 0;
 
+    object-fit: cover;
+    pointer-events: none;
+
     opacity: 32%;
     filter: blur(2vh);
     -webkit-filter: blur(2vh);
     transition: transform 0.1s ease-out;
 } #posimagem1 {
+    top: 0;
     right: 0;
     padding-right: 15vw;
 } #posimagem2 {
@@ -348,85 +295,5 @@ p{
     line-height: 22px;
     padding-top: 8px;
     padding-bottom: 12px;
-    color: white;
-}
-
-
-/* Pagina Contato */
-
-.containercontato{
-    text-align: center;
-    padding-top: 17vh;
-    width: 100%;
-    height: 100%;
-}
-
-.containerwidgets {
-    z-index: 1;
-    position: relative;
-} 
-
-.widget{
-    display:inline-table;
-    text-align: center;
-    width: 20vw;
-    height: 21vw;
-    background-color: #202020;
-    border: 2px;
-    border-radius: 50px;
-    margin: 2.5vw;
-    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.233);
-    transition: 0.2s ease-in-out; 
-} .widget:hover{
-    background-color: #303030;
-    opacity: 1; 
-}
-
-.fade-in-delay1 {
-    animation-delay: 0.5s; 
-}.fade-in-delay2 {
-    animation-delay: 1s; 
-} .imgAjustewidget{
-    padding-top: 6vh;
-    max-width: 50%;
-    height: auto;
-    transition: 0.3s ease-in-out;
-} .imgAjustewidget:hover{
-    transform: scale(1.1);
-    transition: 0.3s ease-in-out;
-} .imgAjustewidgetgithub{
-    padding-top: 6vh;
-    max-width: 60%;
-    height: auto;
-    transition: 0.3s ease-in-out;
-} .imgAjustewidgetgithub:hover{
-    transform: scale(1.1);
-    transition: 0.3s ease-in-out;
-}
-
-.imagemfundoContato {
-    margin: auto;
-    height: auto;
-    width: 20%;
-    z-index: 0;
-    pointer-events: none;
-    filter: blur(12px);
-    -webkit-filter: blur(12px);
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
-}
-.containerwidgets:hover ~ .imagemfundoContato {
-    opacity: 0.1;
-}
-
-.sh1Contato{
-    font-family: PoppinsBold;
-    color: #ffffff;
-    font-size: 50px;
-    padding-top: 4vh;
-} .spContato{
-    font-family: PoppinsLight;
-    padding-top: 3vh;
-    line-height: 22px;
     color: white;
 }

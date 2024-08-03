@@ -1,0 +1,132 @@
+.paginasobre{
+    position: relative;
+    width: auto;
+    height: auto;
+}
+.containersobre{
+    position: relative;
+    padding-top: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+.containertexto{
+    text-align: center;
+} #textpadding {
+    padding: 2vh;
+}
+
+.containerinfo{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    padding-bottom: 2vh;
+} #textproprieties{
+    padding-top: 2vh;
+    line-height: 2.8vh; 
+    width: 60vw;
+} 
+.containerinfo2{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    padding-bottom: 10vh;
+} #textproprieties2{
+    padding-top: 0vh;
+    line-height: 2.5vh; 
+    width: 60vw;
+} .ajusteprint {
+    padding-top: 2vh;
+    padding-bottom: 6vh;
+    height: auto;
+} #ajusteprint{
+    width: 20vw;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.63);
+    transition: 0.3s ease-in-out;
+} #ajusteprint:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+}
+
+.textohabilidades{
+    font-family: PoppinsRegular;
+    color: white;
+    font-size: 3.5vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 12vh;
+} 
+.containerhabilidades{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2vw;
+    padding-bottom: 4vw;
+} #habilidades {
+    height: auto;
+    width: 5.5vw;
+    display: inline-block;
+    padding-inline: 1.5vw;
+} #paddingoveride {
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+} 
+
+.imghover{
+    transition: 0.3s ease-in-out;
+} .imghover:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+} .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 16vh;
+    background-color: black;
+    font-family: PoppinsLight;
+    font-size: 0.9vw;
+    color: #fff;
+    text-align: center;
+    border-radius: 1vh;
+    padding: 0.5vh 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -8vh;
+    opacity: 0;
+    transition: opacity 0.3s;
+}.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.containerides{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 4vw;
+}  #ides {
+    height: auto;
+    width: 5.5vw;
+    display: inline-block;
+    padding-inline: 1.5vw;
+} 

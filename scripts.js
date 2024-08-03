@@ -21,72 +21,13 @@ elements.forEach(el => {
     observer.observe(el, options);
 });
 
-//animação scroll texto principal
-window.addEventListener('DOMContentLoaded', () => {
-    const images = document.querySelectorAll('.textoPrincipal');
-
-    const parallaxEffect = (scrollY) => {
-        images.forEach(image => {
-            image.style.transform = `translateY(${scrollY * 0.1}px)`;
-        });
-    };
-
-    const handleScroll = () => {
-        const scrollY = window.scrollY;
-        parallaxEffect(scrollY);
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                window.addEventListener('scroll', handleScroll);
-            } else {
-                window.removeEventListener('scroll', handleScroll);
-            }
-        });
-    });
-
-    images.forEach(image => {
-        observer.observe(image);
-    });
-});
-
 //Iniciar animação das imagens de fundo1
 window.addEventListener('DOMContentLoaded', () => {
     const images = document.querySelectorAll('.imagemfundo1');
 
     const parallaxEffect = (scrollY) => {
         images.forEach(image => {
-            image.style.transform = `translateY(${scrollY * 0.08}px)`;
-        });
-    };
-
-    const handleScroll = () => {
-        const scrollY = window.scrollY;
-        parallaxEffect(scrollY);
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                window.addEventListener('scroll', handleScroll);
-            } else {
-                window.removeEventListener('scroll', handleScroll);
-            }
-        });
-    });
-
-    images.forEach(image => {
-        observer.observe(image);
-    });
-});
-//Iniciar animação das imagens de fundo2
-window.addEventListener('DOMContentLoaded', () => {
-    const images = document.querySelectorAll('.imagemfundo2');
-
-    const parallaxEffect = (scrollY) => {
-        images.forEach(image => {
-            image.style.transform = `translateY(${scrollY * 0.08}px)`;
+            image.style.transform = `translateY(${scrollY * 0.15}px)`;
         });
     };
 

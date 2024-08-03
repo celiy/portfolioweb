@@ -1,0 +1,71 @@
+/* Fontes custom */
+@font-face {
+    font-family: PoppinsBold;
+    src: url(fonts/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: PoppinsMedium;
+    src: url(fonts/Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: PoppinsRegular;
+    src: url(fonts/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: PoppinsLight;
+    src: url(fonts/Poppins-Light.ttf);
+}
+
+/* Estilo do texto padrão */
+p{
+    font-family: PoppinsLight;
+    font-size: 2vh;
+    padding-top: 2vh;
+    line-height: 2.7vh;
+    text-align: justify;
+    text-justify: inter-word;
+    color: white;
+}h1{
+    font-family: PoppinsBold;
+    color: white;
+    font-size: 7.3vh;
+    padding-top: 1vh;
+    padding-bottom: 2vh;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+}h1:hover{
+    opacity: 0.5;
+    transition: 0.3s ease-in-out;
+}h2{
+    font-family: PoppinsMedium;
+    color: white;
+    font-size: 3.8vh;
+}h3{
+    font-family: PoppinsRegular;
+    color: white;
+    font-size: 3.8vh;
+} 
+
+.sp{
+    font-family: PoppinsLight;
+    font-size: 0.9vw;
+    padding-top: 15px;
+    line-height: 2.3vh;
+    text-align: justify;
+    text-justify: inter-word;
+    color: white;
+} .sh1{
+    font-family: PoppinsBold;
+    color: white;
+    font-size: 3.5vw;
+} 
+
+.sp1{
+    font-family: PoppinsLight;
+    font-size: 1.1vw;
+    padding-top: 15px;
+    line-height: 2.3vh;
+    text-align: justify;
+    text-justify: inter-word;
+    color: white
+}
