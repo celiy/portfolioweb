@@ -2,8 +2,13 @@
     position: relative;
     width: auto;
     height: auto;
-}
-.containersobre{
+} .backgroundsobre{
+    position: relative;
+    width: auto;
+    height: auto;
+    background-color: #202020;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.233);
+} .containersobre{
     position: relative;
     padding-top: 20vh;
     display: flex;
@@ -12,6 +17,7 @@
     width: auto;
     height: auto;
 }
+
 .containertexto{
     text-align: center;
 } #textpadding {
@@ -25,13 +31,8 @@
     align-items: center;
     width: auto;
     height: auto;
-    padding-bottom: 2vh;
-} #textproprieties{
-    padding-top: 2vh;
-    line-height: 2.8vh; 
-    width: 60vw;
-} 
-.containerinfo2{
+    padding-bottom: 8vh;
+} .containerinfo2{
     position: relative;
     display: flex;
     justify-content: center;
@@ -39,11 +40,19 @@
     width: auto;
     height: auto;
     padding-bottom: 10vh;
+}
+
+#textproprieties{
+    padding-top: 2vh;
+    line-height: 2.8vh; 
+    width: 60vw;
 } #textproprieties2{
     padding-top: 0vh;
     line-height: 2.5vh; 
     width: 60vw;
-} .ajusteprint {
+} 
+
+.ajusteprint {
     padding-top: 2vh;
     padding-bottom: 6vh;
     height: auto;
@@ -64,9 +73,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 12vh;
-} 
-.containerhabilidades{
+    padding-top: 8vh;
+} .containerhabilidades{
     position: relative;
     width: auto;
     height: auto;
@@ -80,8 +88,16 @@
     width: 5.5vw;
     display: inline-block;
     padding-inline: 1.5vw;
-} #paddingoveride {
+} 
+
+#paddingoveride {
     padding-top: 4vh;
+    padding-bottom: 4vh;
+} #paddingoveride2 {
+    padding-top: 4vh;
+    padding-bottom: 2vh;
+} #paddingoveride3 {
+    padding-top: 8vh;
     padding-bottom: 4vh;
 } 
 
@@ -91,6 +107,7 @@
     transform: scale(1.1);
     transition: 0.3s ease-in-out;
 }
+
 .tooltip {
     position: relative;
     display: inline-block;

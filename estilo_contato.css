@@ -23,7 +23,7 @@
     transition: 0.2s ease-in-out; 
 } .widget:hover{
     background-color: #303030;
-    box-shadow: 0px 0px 15px 0px #ff575746;
+    box-shadow: 0px 0px 15px 0px #ffffff3b;
     opacity: 1; 
 }
 

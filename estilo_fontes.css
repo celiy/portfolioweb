@@ -54,7 +54,16 @@ p{
     text-align: justify;
     text-justify: inter-word;
     color: white;
-} .sh1{
+} .spbold{
+    font-family: PoppinsMedium;
+    font-size: 1.1vw;
+    padding-top: 15px;
+    line-height: 2.3vh;
+    text-align: justify;
+    text-justify: inter-word;
+    color: white;
+} 
+.sh1{
     font-family: PoppinsBold;
     color: white;
     font-size: 3.5vw;
@@ -69,3 +78,10 @@ p{
     text-justify: inter-word;
     color: white
 }
+
+.splist{
+    font-family: PoppinsMedium;
+    font-size: 0.8vw;
+    line-height: 2.4vh;
+    color: white;
+} 
