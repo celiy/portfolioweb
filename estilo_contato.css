@@ -17,18 +17,19 @@
     height: 21vw;
     background-color: #202020;
     border: 2px;
-    border-radius: 50px;
+    border-radius: 5vh;
     margin: 2.5vw;
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.233);
     transition: 0.2s ease-in-out; 
 } .widget:hover{
     background-color: #303030;
+    box-shadow: 0px 0px 15px 0px #ff575746;
     opacity: 1; 
 }
 
 .imgAjustewidget{
     padding-top: 6vh;
-    max-width: 50%;
+    max-width: 55%;
     height: auto;
     transition: 0.3s ease-in-out;
 } .imgAjustewidget:hover{
@@ -36,7 +37,7 @@
     transition: 0.3s ease-in-out;
 } .imgAjustewidgetgithub{
     padding-top: 6vh;
-    max-width: 60%;
+    max-width: 65%;
     height: auto;
     transition: 0.3s ease-in-out;
 } .imgAjustewidgetgithub:hover{
@@ -62,10 +63,11 @@
 .sh1Contato{
     font-family: PoppinsBold;
     color: #ffffff;
-    font-size: 50px;
+    font-size: 7vh;
     padding-top: 4vh;
 } .spContato{
     font-family: PoppinsLight;
+    font-size: 2.2vh;
     padding-top: 3vh;
     line-height: 22px;
     color: white;

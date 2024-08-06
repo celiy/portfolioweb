@@ -88,7 +88,7 @@ body{
 
 .containertexop{
     position: relative;
-    padding-top: 21vh;
+    padding-top: 18vh;
 }.textoPrincipal1{
     display: inline-block;
 
@@ -124,6 +124,31 @@ body{
     transform: scale(1.2);
 }
 
+.tooltip {
+    position: relative;
+    display: inline-block;
+} .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 16vh;
+    background-color: black;
+    font-family: PoppinsLight;
+    font-size: 0.9vw;
+    color: #fff;
+    text-align: center;
+    border-radius: 1vh;
+    padding: 0.5vh 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100;
+    left: 50%;
+    margin-left: -8vh;
+    opacity: 0;
+    transition: opacity 0.3s;
+}.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
 /* Pagina 2 */
 
 .containerfade{
@@ -148,15 +173,21 @@ body{
     margin: auto;
     width: 40vw;
     height: 55svh;
-    background-color: #181818;
+    background-color: #181818ad;
     border: 2px;
-    border-radius: 50px;
+    border-radius: 4vh;
     z-index: 2;
     opacity: 1;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.233);
     transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
 } .caixaRounded:hover{
     opacity: 1;
     background-color: #303030;
+    box-shadow: 0px 0px 15px 0px #ffffff3b;
+} #caixaRoundedsobre{
+    text-align: center;
+    width: 22vw;
+    height: 22vh;
 }.alignDentro{
     padding-top: 3vh;
     padding-left: 2.3vw;
@@ -296,4 +327,4 @@ body{
     padding-top: 8px;
     padding-bottom: 12px;
     color: white;
-}
+} 
