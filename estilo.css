@@ -173,7 +173,7 @@ body{
     margin: auto;
     width: 40vw;
     height: 55svh;
-    background-color: #181818ad;
+    background-color: #202020a9;
     border: 2px;
     border-radius: 4vh;
     z-index: 2;
@@ -268,10 +268,6 @@ body{
 } .imgAjuste:hover {
     opacity: 0.5;
     transition: ease-in-out 0.3s;
-}
- 
-.textoVermelho{
-    color: #ff5757;
 }
 
 /* Estilo da pagina 2 */

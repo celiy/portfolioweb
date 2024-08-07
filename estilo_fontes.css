@@ -22,8 +22,6 @@
     animation-duration: 1.5s;
     animation-name: fading;
 }
-
-/* Fade da barra de navegação */
 @-webkit-keyframes fading {
     from {
         color: rgb(255, 255, 255);
@@ -39,6 +37,34 @@
     to {
         color: #ff5757;
     }
+}
+
+#fading2 {
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-name: fading2;
+    animation-duration: 1.5s;
+    animation-name: fading2;
+    animation: fading2 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes fading2 {
+    from {
+        color: #fd6d6d;
+    }
+    to {
+        color: #ff5757;
+    }
+}
+@keyframes fading2 {
+    from {
+        color: #fd6d6d;
+    }
+    to {
+        color: #ff5757;
+    }
+}
+
+.textoVermelho{
+    color: #ff5757;
 }
 
 /* Estilo do texto padrão */
