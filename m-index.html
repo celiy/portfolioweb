@@ -5,19 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="resetcss.css">
-    <link rel="stylesheet" type="text/css" href="estilo.css">
-    <link rel="stylesheet" type="text/css" href="estilo_fontes.css">
+    <link rel="stylesheet" type="text/css" href="m_estilo.css">
+    <link rel="stylesheet" type="text/css" href="m_estilo_fontes.css">
     <title>Home</title>
-    <script>
-        function isMobileAspectRatio() {
-            const aspectRatio = window.innerWidth / window.innerHeight;
-            const mobileAspectRatios = [18 / 9, 19 / 9, 19.5 / 9, 21 / 9, 16 / 9];
-            const tolerance = 0.1;
-            return mobileAspectRatios.some(ratio => Math.abs(aspectRatio - ratio) < tolerance);
-        } if (isMobileAspectRatio()) {
-            window.location.href = "m-index.html"; 
-        }
-    </script>
 </head>
 
 <body>
@@ -31,6 +21,7 @@
     <!-- Pagina 1 -->
 
     <div class="pagina1">
+        
         <div class="containertexop blur-div">
             <div class="textoPrincipal1">
                 <div class="fade-in">
@@ -46,11 +37,11 @@
                         de Analise e Desenvolvimento de sistemas em IFSUL Campus Camaquã.</p>
                 </div>
             </div>
-            <div class="imgLado1 fade-in fade-in-delay2 tooltip">
-                <a href="https://github.com/celiy?tab=repositories" target="_blank" rel="noopener noreferrer">
-                    <img class="imgLado1" src="images/ImagemLado.png" alt="Lado"></a>
-                    <div class="tooltiptext">Ver meus repositórios</div>
-            </div>
+        </div>
+
+        <div class="imgLado1 fade-in fade-in-delay2">
+            <a href="https://github.com/celiy?tab=repositories" target="_blank" rel="noopener noreferrer">
+                <img class="imgLado1" src="images/ImagemLado.png" alt="Lado"></a>
         </div>
 
         <div class="sociaisPrincipal1 fade-in fade-in-delay1">
@@ -58,6 +49,7 @@
                 <a href="contato.html"><img class="sociaisAjuste1" src="images/Sociais.png" alt="Sociais"></a>
             </figure>
         </div>
+
     </div>
 
     <!-- Pagina 2 -->
@@ -78,9 +70,7 @@
                         <div style="padding-top: 1.5vh;">
                             <img class="imgcaixa" src="images/imagexemplo1.png" alt="Python" width="60%">
                             <h4 class="splist">
-                                • Login de usuário <br> • Regristrar usuário <br> • Consultar/Cadastrar Clientes <br> •
-                                Consultar/Cadastrar estoque <br> • Consultar/Cadastrar vendas <br> • Visualizar faturamento,
-                                <br> vendas feitas em total e <br> produtos em estoque.</h4>
+                                • Cadastrar produtos<br>• Cadastrar clientes<br>• Criar vendas<br>• Ver faturamento</h4>
                         </div>
                     </div>
                 </a>
@@ -89,7 +79,7 @@
         <img class="imagemfundo1" id="posimagem1" src="images/imagemfundo2.png" alt="WebFundo">
         <img class="imagemfundo1" id="posimagem2" src="images/imagemfundo1.png" alt="WebFundo">
         <div class="containercaixa">
-            <div class="caixaRounded slide-in-from-right">
+            <div class="caixaRounded slide-in-from-right" id="caixaRoundedheight">
                 <a style="text-decoration: none;" href="https://github.com/celiy/PortfolioWeb" target="_blank" rel="noopener noreferrer">
                     <div class="alignDentro">
                         <h4 class="sh1">Web</h4>    
@@ -101,22 +91,22 @@
                             <img class="imgcaixa" src="images/imagexemplo3.png" alt="Web" width="60%">
                             <h4 class="splist">
                                 Por anos trabalhei com Photoshop, Sony Vegas e Premiere Pro, sonhando em fazer algo
-                                deste tipo. Neste portfólio irei colocar toda ideia que eu conseguir dentro dele. </h4>
+                                deste tipo.</h4>
                         </div>
                     </div>
                 </a>
             </div>
         </div>
-            <div class="containercaixa">
-                <div class="caixaRounded slide-in-from-right" id="caixaRoundedsobre">
-                    <a style="text-decoration: none;" href="sobre.html" target="_blank" rel="noopener noreferrer">
-                        <div class="alignDentro">
-                            <h4 class="sh1">Mais</h4>    
-                            <h4 class="sp">Possuo mais projetos e criações, para ver mais sobre mim e outros projetos, clique aui para ver mais sobre mim.</h4>
-                        </div>
-                    </a>
-                </div>
+        <div class="containercaixa" id="containercaixapadding">
+            <div class="caixaRounded slide-in-from-right" id="caixaRoundedsobre">
+                <a style="text-decoration: none;" href="sobre.html" target="_blank" rel="noopener noreferrer">
+                    <div class="alignDentro">
+                        <h4 class="sh1">Mais</h4>    
+                        <h4 class="sp">Possuo mais projetos e criações, para ver mais sobre mim e outros projetos, clique aui para ver mais sobre mim.</h4>
+                    </div>
+                </a>
             </div>
+        </div>
         <div class="footer">
             <h4 class="footertext">Mais projetos no meu repositório: <br> <a href="https://github.com/celiy?tab=repositories">https://github.com/celiy?tab=repositories</a></h4>
         </div>
