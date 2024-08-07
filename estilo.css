@@ -237,7 +237,6 @@ body{
     }
 }
 
-
 .textoPrincipal{
     position: relative;
     top: 30vh;
@@ -323,3 +322,7 @@ body{
     padding-bottom: 12px;
     color: white;
 } 
+
+.textoVermelho span {
+    color: inherit;
+}

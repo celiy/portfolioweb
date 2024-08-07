@@ -16,6 +16,31 @@
     src: url(fonts/Poppins-Light.ttf);
 }
 
+#fading {
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-name: fading;
+    animation-duration: 1.5s;
+    animation-name: fading;
+}
+
+/* Fade da barra de navegação */
+@-webkit-keyframes fading {
+    from {
+        color: rgb(255, 255, 255);
+    }
+    to {
+        color: #ff5757;
+    }
+}
+@keyframes fading {
+    from {
+        color: rgb(255, 255, 255);
+    }
+    to {
+        color: #ff5757;
+    }
+}
+
 /* Estilo do texto padrão */
 p{
     font-family: PoppinsLight;
@@ -85,3 +110,4 @@ p{
     line-height: 2.4vh;
     color: white;
 } 
+
