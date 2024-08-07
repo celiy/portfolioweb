@@ -7,17 +7,19 @@
     <link rel="stylesheet" type="text/css" href="resetcss.css">
     <link rel="stylesheet" type="text/css" href="estilo.css">
     <link rel="stylesheet" type="text/css" href="estilo_fontes.css">
-    <title>Home</title>
     <script>
-        function isMobileAspectRatio() {
-            const aspectRatio = window.innerWidth / window.innerHeight;
-            const mobileAspectRatios = [18 / 9, 19 / 9, 19.5 / 9, 21 / 9, 16 / 9];
-            const tolerance = 0.1;
-            return mobileAspectRatios.some(ratio => Math.abs(aspectRatio - ratio) < tolerance);
-        } if (isMobileAspectRatio()) {
-            window.location.href = "m-index.html"; 
-        }
+        document.addEventListener("DOMContentLoaded", function() {
+            function isMobileAspectRatio() {
+                const aspectRatio = window.innerWidth / window.innerHeight;
+                const mobileAspectRatios = [18 / 9, 19 / 9, 19.5 / 9, 21 / 9, 16 / 9];
+                const tolerance = 0.1;
+                return mobileAspectRatios.some(ratio => Math.abs(aspectRatio - ratio) < tolerance);
+            } if (!(isMobileAspectRatio())) {
+                window.location.href = "mindex.html"; 
+            }
+        });
     </script>
+    <title>Home</title>
 </head>
 
 <body>
@@ -121,6 +123,17 @@
             <h4 class="footertext">Mais projetos no meu repositório: <br> <a href="https://github.com/celiy?tab=repositories">https://github.com/celiy?tab=repositories</a></h4>
         </div>
     </div>  
+
+    <script>
+        function isMobileAspectRatio() {
+            const aspectRatio = window.innerWidth / window.innerHeight;
+            const mobileAspectRatios = [18 / 9, 19 / 9, 19.5 / 9, 21 / 9, 16 / 9];
+            const tolerance = 0.1;
+            return mobileAspectRatios.some(ratio => Math.abs(aspectRatio - ratio) < tolerance);
+        }if (!(isMobileAspectRatio())) {
+            window.location.href = "mindex.html"; 
+        }
+    </script>
 
     <script src="scripts.js"></script>
 

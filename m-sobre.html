@@ -4,36 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="resetcss.css">
-    <link rel="stylesheet" type="text/css" href="estilo.css">
-    <link rel="stylesheet" type="text/css" href="estilo_fontes.css">
-    <link rel="stylesheet" type="text/css" href="estilo_sobre.css">
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            function isMobileAspectRatio() {
-                const aspectRatio = window.innerWidth / window.innerHeight;
-                const mobileAspectRatios = [18 / 9, 19 / 9, 19.5 / 9, 21 / 9, 16 / 9];
-                const tolerance = 0.1;
-                return mobileAspectRatios.some(ratio => Math.abs(aspectRatio - ratio) < tolerance);
-            } if (!(isMobileAspectRatio())) {
-                window.location.href = "m-sobre.html"; 
-            }
-        });
-    </script>
+    <link rel="stylesheet" type="text/css" href="m_estilo.css">
+    <link rel="stylesheet" type="text/css" href="m_estilo_fontes.css">
+    <link rel="stylesheet" type="text/css" href="m_estilo_sobre.css">
     <title>Sobre</title>
 </head>
 <body id="body">
     <ul>
-        <li><a class="active" id="fading" href="sobre.html">Sobre</a></li>
-        <li><a href="contato.html">Contato</a></li>
-        <li><a href="index.html">Home</a></li>
-        <li id="diogologoverride"><a id="diogologoverride" href="sobre.html"><img id="diogologo" src="logos/diogologo.png" alt="diogologo"></a></li>
+        <li><a class="active" id="fading" href="m-sobre.html">Sobre</a></li>
+        <li><a href="m-contato.html">Contato</a></li>
+        <li><a href="mindex.html">Home</a></li>
+        <li id="diogologoverride"><a id="diogologoverride" href="m-sobre.html"><img id="diogologo" src="logos/diogologo.png" alt="diogologo"></a></li>
     </ul>
     
     <div class="paginasobre blur-div">
         <div class="containersobre fade-in">
             <div class="containertexto">
-                <h4 class="sh1" id="textpadding">Diogo Carvalho Viegas</h4>
-                <h3><span class="textoVermelho" id="textpadding">Analista e Desenvolvedor de Sistemas.</span></h3>
+                <h4 class="sh1-2" id="textpadding">Diogo Carvalho Viegas</h4>
+                <h3><span class="textoVermelho h3-2" id="textpadding">Analista e Desenvolvedor de Sistemas.</span></h3>
             </div>
         </div>
         <div class="containerinfo fade-in">
@@ -44,7 +32,7 @@
         
         <div class="backgroundsobre">
         
-            <h4 class="textohabilidades fade-in fade-in-delay1">Habilidade e conhecimentos:</h4>
+            <h4 class="fade-in fade-in-delay1" id="textohabilidadesid">Conhecimentos:</h4>
 
             <div class="containerhabilidades fade-in fade-in-delay1">
                 <div class="tooltip">
@@ -135,17 +123,6 @@
         </div>
 
     </div>
-
-    <script>
-        function isMobileAspectRatio() {
-            const aspectRatio = window.innerWidth / window.innerHeight;
-            const mobileAspectRatios = [18 / 9, 19 / 9, 19.5 / 9, 21 / 9, 16 / 9];
-            const tolerance = 0.1;
-            return mobileAspectRatios.some(ratio => Math.abs(aspectRatio - ratio) < tolerance);
-        }if (!(isMobileAspectRatio())   ) {
-            window.location.href = "m-sobre.html"; 
-        }
-    </script>
 
     <script src="scripts.js"></script>
 
