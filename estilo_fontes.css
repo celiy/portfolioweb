@@ -16,7 +16,7 @@
     src: url(fonts/Poppins-Light.ttf);
 }
 
-#fading {
+#fading { 
     -webkit-animation-duration: 1.5s;
     -webkit-animation-name: fading;
     animation-duration: 1.5s;
@@ -63,12 +63,11 @@
     }
 }
 
-.textoVermelho{
+.textoVermelho{ 
     color: #ff5757;
 }
 
-/* Estilo do texto padrão */
-p{
+p{ 
     font-family: PoppinsLight;
     font-size: 2vh;
     padding-top: 2vh;
@@ -114,6 +113,7 @@ p{
     text-justify: inter-word;
     color: white;
 } 
+
 .sh1{
     font-family: PoppinsBold;
     color: white;

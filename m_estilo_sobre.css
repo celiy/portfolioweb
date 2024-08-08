@@ -57,11 +57,11 @@
     padding-top: 2vh;
     line-height: 2.8vh; 
     font-size: 4vw;
-    width: 80vw;
+    width: 85vw;
 } #textproprieties2{
     padding-top: 0vh;
     line-height: 2.5vh; 
-    width: 60vw;
+    width: 80vw;
 } 
 
 #textpadding {
@@ -73,35 +73,42 @@
     padding-bottom: 6vh;
     height: auto;
 } #ajusteprint{
-    width: 20vw;
+    width: 40vw;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.63);
-    transition: 0.3s ease-in-out;
+    transition: 0.5s ease-in-out;
 } #ajusteprint:hover {
-    transform: scale(1.1);
-    transition: 0.3s ease-in-out;
+    transform: scale(1.5);
+    transition: 0.5s ease-in-out;
+} #ajusteprint2{
+    width: 80vw;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.63);
+    transition: 0.5s ease-in-out;
+} #ajusteprint2:hover {
+    transform: scale(1.5);
+    transition: 0.5s ease-in-out;
 }
 
 .backgroundsobre{
     position: relative;
     width: auto;
     height: auto;
-    align-items: center;
-    justify-items: center;
-    display:block;
     background-color: #202020;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.233);
 }
 
 #textohabilidadesid{
     position: relative;
+    text-align: center;
     font-family: PoppinsRegular;
     color: white;
     font-size: 3.5vh;
     padding-top: 8vh;
     padding-bottom: 2vh;
 }
+
 .textohabilidades{
     font-family: PoppinsRegular;
+    text-align: center;
     color: white;
     font-size: 3.5vh;
     position: relative;
@@ -110,23 +117,26 @@
     position: relative;
     width: 80vw;
     height: auto;
+    margin: auto;
     padding-top: 2vw;
     padding-bottom: 4vw;
 } #habilidades {
     height: auto;
     width: 16vw;
-    display: inline-block;
     padding-inline: 1.5vw;
+    padding-bottom: 1.5vh;
 } 
 
 #paddingoveride {
     padding-top: 4vh;
-    padding-bottom: 4vh;
+    padding-bottom: 2vh;
 } #paddingoveride2 {
     padding-top: 4vh;
-    padding-bottom: 2vh;
+    padding-bottom: 0vh;
 } #paddingoveride3 {
-    padding-top: 8vh;
+    padding-bottom: 4vh;
+}  #paddingoveride4 {
+    padding-top: 4vh;
     padding-bottom: 4vh;
 } 
 
@@ -137,39 +147,16 @@
     transition: 0.3s ease-in-out;
 }
 
-.tooltip {
-    position: relative;
-    display: inline-block;
-} .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 16vh;
-    background-color: black;
-    font-family: PoppinsLight;
-    font-size: 0.9vw;
-    color: #fff;
-    text-align: center;
-    border-radius: 1vh;
-    padding: 0.5vh 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -8vh;
-    opacity: 0;
-    transition: opacity 0.3s;
-}.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-}
-
 .containerides{
     position: relative;
-    width: auto;
+    margin: auto;
+    width: 80vw;
     height: auto;
-    padding-bottom: 4vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
 }  #ides {
     height: auto;
     width: 16vw;
-    display: inline-block;
+    padding-bottom: 1.5vh;
     padding-inline: 1.5vw;
 } 

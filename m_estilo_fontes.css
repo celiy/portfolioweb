@@ -108,9 +108,33 @@ p{
     text-align: justify;
     text-justify: inter-word;
     color: white;
+} .sp1{
+    font-family: PoppinsLight;
+    font-size: 1.1vw;
+    padding-top: 15px;
+    line-height: 2.3vh;
+    text-align: justify;
+    text-justify: inter-word;
+    color: white
+} .sp1-2{
+    font-family: PoppinsLight;
+    font-size: 4vw;
+    padding-top: 15px;
+    line-height: 2.3vh;
+    text-align: justify;
+    text-justify: inter-word;
+    color: white
 } .spbold{
     font-family: PoppinsMedium;
     font-size: 3vw;
+    padding-top: 15px;
+    line-height: 2.3vh;
+    text-align: justify;
+    text-justify: inter-word;
+    color: white;
+} .spbold-2{
+    font-family: PoppinsMedium;
+    font-size: 4vw;
     padding-top: 15px;
     line-height: 2.3vh;
     text-align: justify;
@@ -127,15 +151,7 @@ p{
     font-size: 7vw;
 }
 
-.sp1{
-    font-family: PoppinsLight;
-    font-size: 1.1vw;
-    padding-top: 15px;
-    line-height: 2.3vh;
-    text-align: justify;
-    text-justify: inter-word;
-    color: white
-}
+
 
 .splist{
     font-family: PoppinsMedium;
