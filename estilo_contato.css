@@ -1,10 +1,4 @@
-#body {
-	background: linear-gradient(-45deg, #181a1b, #151718);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
-    overflow-y: scroll;
-}
+
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -38,11 +32,11 @@
     border: 2px;
     border-radius: 5vh;
     margin: 2.5vw;
-    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.233);
+    box-shadow: 0vh 0vh 2vh 0vh rgba(0, 0, 0, 0.233);
     transition: 0.2s ease-in-out; 
 } .widget:hover{
     background-color: #303030;
-    box-shadow: 0px 0px 15px 0px #ffffff3b;
+    box-shadow: 0vh 0vh 2vh 0vh #ffffff3b;
     opacity: 1; 
 }
 

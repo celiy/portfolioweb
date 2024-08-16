@@ -7,6 +7,18 @@
     <link rel="stylesheet" type="text/css" href="m_estilo.css">
     <link rel="stylesheet" type="text/css" href="m_estilo_contato.css">
     <link rel="stylesheet" type="text/css" href="m_estilo_fontes.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            function isMobileAspectRatio() {
+                const aspectRatio = window.innerWidth / window.innerHeight;
+                const mobileAspectRatios = [18 / 9, 19 / 9, 19.5 / 9, 21 / 9, 16 / 9];
+                const tolerance = 0.1;
+                return mobileAspectRatios.some(ratio => Math.abs(aspectRatio - ratio) < tolerance);
+            } if ((isMobileAspectRatio())) {
+                window.location.href = "contato.html"; 
+            }
+        });
+    </script>
     <title>Contato</title>
 </head>
 <body id="body">

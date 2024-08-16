@@ -1,10 +1,4 @@
-#body {
-	background: linear-gradient(-45deg, #181a1b, #151718);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
-    overflow-y: scroll;
-}
+
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -95,18 +89,17 @@
     padding-top: 8vh;
 } .containerhabilidades{
     position: relative;
-    width: auto;
+    width: 60%;
     height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: auto;
+    text-align: center;
     padding-top: 2vw;
     padding-bottom: 4vw;
 } #habilidades {
     height: auto;
     width: 5.5vw;
-    display: inline-block;
     padding-inline: 1.5vw;
+    padding-bottom: 1.5vh;
 } 
 
 #paddingoveride {
@@ -118,10 +111,18 @@
 } #paddingoveride3 {
     padding-top: 8vh;
     padding-bottom: 4vh;
-} 
+} #paddingoveride4{
+    font-family: PoppinsMedium;
+    font-size: 2.2vh;
+    line-height: 4.4vh;
+} #paddingoveride5 {
+    padding-top: 4vh;
+    padding-bottom: 0vh;
+}
 
 .imghover{
     transition: 0.3s ease-in-out;
+    padding-inline: 0.5vw;
 } .imghover:hover{
     transform: scale(1.1);
     transition: 0.3s ease-in-out;
@@ -139,7 +140,7 @@
     color: #fff;
     text-align: center;
     border-radius: 1vh;
-    padding: 0.5vh 0;
+    padding: 0.5vh 0.2vw;
     position: absolute;
     z-index: 1;
     bottom: 125%;
@@ -150,6 +151,8 @@
 }.tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+} #ajustetooltip{
+    bottom: 80%;
 }
 
 .containerides{
@@ -160,9 +163,14 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 4vw;
-}  #ides {
+} #ides {
     height: auto;
     width: 5.5vw;
+    display: inline-block;
+    padding-inline: 1.5vw;
+} #cdw {
+    height: auto;
+    width: 18vw;
     display: inline-block;
     padding-inline: 1.5vw;
 } 

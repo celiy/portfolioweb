@@ -178,12 +178,12 @@ body{
     border-radius: 4vh;
     z-index: 2;
     opacity: 1;
-    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.233);
-    transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    box-shadow: 0vh 0vh 5vh 0vh rgba(0, 0, 0, 0.233);
+    transition: 0.2s;
 } .caixaRounded:hover{
     opacity: 1;
     background-color: #303030;
-    box-shadow: 0px 0px 15px 0px #ffffff3b;
+    box-shadow: 0vh 0vh 5vh 0vh #ffffff3b;
 } #caixaRoundedsobre{
     text-align: center;
     width: 22vw;
