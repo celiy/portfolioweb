@@ -1,4 +1,1 @@
-1. criar parte para experiencia codewars
-2. colocar mais ferramentas na parte de "ides que uso" e renomear para ferramentas
-3. colocar projetos na parte de sobre
-4. resumir mais os textos grandes
+Nada para fazer
