@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="estilo.css">
     <link rel="stylesheet" type="text/css" href="estilo_contato.css">
     <link rel="stylesheet" type="text/css" href="estilo_fontes.css">
+    <!-- Checar se a propoção de tela é mobile -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             function isMobileAspectRatio() {
@@ -53,22 +54,13 @@
                 </div>
             </a>
         </div>
-        <img class="imagemfundoContato" src="images/logogithub.png" alt="github">
-        <img class="imagemfundoContato opacity-in-delay1" src="images/logogmail.png" alt="github">
-        <img class="imagemfundoContato" src="images/logolinkedin.png" alt="github">
+        
+        <img id="delay1" class="imagemfundoContato"  src="images/logogithub.png" alt="github">
+        <img id="delay2" class="imagemfundoContato opacity-in-delay1" src="images/logogmail.png" alt="github">
+        <img id="delay3" class="imagemfundoContato" src="images/logolinkedin.png" alt="github">
         <h4 class="spContato">github.com/celiy | sasbrazilian@gmail.com</h4>
-    </div>
 
-    <script>
-        function isMobileAspectRatio() {
-            const aspectRatio = window.innerWidth / window.innerHeight;
-            const mobileAspectRatios = [18 / 9, 19 / 9, 19.5 / 9, 21 / 9, 16 / 9];
-            const tolerance = 0.1;
-            return mobileAspectRatios.some(ratio => Math.abs(aspectRatio - ratio) < tolerance);
-        }if (!(isMobileAspectRatio())   ) {
-            window.location.href = "m-contato.html"; 
-        }
-    </script>
+    </div>
 
     <script src="scripts.js"></script>
 

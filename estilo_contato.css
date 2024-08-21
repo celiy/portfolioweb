@@ -1,16 +1,16 @@
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+/* IDs */
+#delay1{
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+} #delay2{
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+} #delay3{
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
 }
 
+/* Classes */
 .containercontato{
     text-align: center;
     padding-top: 17vh;
@@ -66,12 +66,17 @@
     pointer-events: none;
     filter: blur(12px);
     -webkit-filter: blur(12px);
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
 }
-.containerwidgets:hover ~ .imagemfundoContato {
+
+.containerwidgets:hover ~ #delay1 {
     opacity: 0.1;
-}
+} .containerwidgets:hover ~ #delay2 {
+    transition-delay: 0.1s;
+    opacity: 0.1;
+} .containerwidgets:hover ~ #delay3 {
+    transition-delay: 0.2s;
+    opacity: 0.1;
+} 
 
 .sh1Contato{
     font-family: PoppinsBold;

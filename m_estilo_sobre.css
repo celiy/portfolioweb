@@ -1,23 +1,84 @@
+/* IDs */
+#habilidades {
+    height: auto;
+    width: 16vw;
+    padding-inline: 1.5vw;
+    padding-bottom: 1.5vh;
+} 
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+#textpadding {
+    padding-bottom: 2vh;
+} #paddingoveride {
+    padding-top: 4vh;
+    padding-bottom: 2vh;
+} #paddingoveride2 {
+    padding-top: 4vh;
+    padding-bottom: 0vh;
+} #paddingoveride3 {
+    padding-bottom: 6vh;
+} #paddingoveride4 {
+    font-family: PoppinsMedium;
+    padding-top: 6vh;
+    padding-bottom: 4vh;
+} #paddingoveride5 {
+    padding-top: 4vh;
+    padding-bottom: 0vh;
+} 
+
+#textproprieties{
+    padding-top: 2vh;
+    line-height: 2.8vh; 
+    font-size: 4vw;
+    width: 85vw;
+} #textproprieties2{
+    padding-top: 0vh;
+    line-height: 2.5vh; 
+    width: 80vw;
+} 
+
+#ajusteprint{
+    width: 40vw;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.63);
+    transition: 0.5s ease-in-out;
+} #ajusteprint:hover {
+    transform: scale(1.5);
+    transition: 0.5s ease-in-out;
+} #ajusteprint2{
+    width: 80vw;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.63);
+    transition: 0.5s ease-in-out;
+} #ajusteprint2:hover {
+    transform: scale(1.5);
+    transition: 0.5s ease-in-out;
 }
 
+#ides {
+    height: auto;
+    width: 16vw;
+    padding-bottom: 1.5vh;
+    padding-inline: 1.5vw;
+} 
+
+#textohabilidadesid{
+    position: relative;
+    text-align: center;
+    font-family: PoppinsRegular;
+    color: white;
+    font-size: 3vh;
+    padding-top: 6vh;
+    padding-bottom: 2vh;
+}
+
+/* Classes */
 .paginasobre{
     position: relative;
     width: auto;
     height: auto;
-} .containersobre{
+} 
+
+.containersobre{
     position: relative;
-    padding-top: 10vh;
+    padding-top: 14vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,7 +97,7 @@
     align-items: center;
     width: auto;
     height: auto;
-    padding-bottom: 8vh;
+    padding-bottom: 6vh;
 } .containerinfo2{
     position: relative;
     display: flex;
@@ -47,40 +108,11 @@
     padding-bottom: 10vh;
 }
 
-#textproprieties{
-    padding-top: 2vh;
-    line-height: 2.8vh; 
-    font-size: 4vw;
-    width: 85vw;
-} #textproprieties2{
-    padding-top: 0vh;
-    line-height: 2.5vh; 
-    width: 80vw;
-} 
-
-#textpadding {
-    padding-bottom: 2vh;
-}
-
 .ajusteprint {
     padding-top: 2vh;
     padding-bottom: 6vh;
     height: auto;
-} #ajusteprint{
-    width: 40vw;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.63);
-    transition: 0.5s ease-in-out;
-} #ajusteprint:hover {
-    transform: scale(1.5);
-    transition: 0.5s ease-in-out;
-} #ajusteprint2{
-    width: 80vw;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.63);
-    transition: 0.5s ease-in-out;
-} #ajusteprint2:hover {
-    transform: scale(1.5);
-    transition: 0.5s ease-in-out;
-}
+} 
 
 .backgroundsobre{
     position: relative;
@@ -90,49 +122,25 @@
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.233);
 }
 
-#textohabilidadesid{
-    position: relative;
-    text-align: center;
-    font-family: PoppinsRegular;
-    color: white;
-    font-size: 3.5vh;
-    padding-top: 8vh;
-    padding-bottom: 2vh;
-}
-
 .textohabilidades{
     font-family: PoppinsRegular;
     text-align: center;
     color: white;
-    font-size: 3.5vh;
+    font-size: 3vh;
     position: relative;
     padding-top: 8vh;
-} .containerhabilidades{
-    position: relative;
-    width: 80vw;
-    height: auto;
-    margin: auto;
-    padding-top: 2vw;
-    padding-bottom: 4vw;
-} #habilidades {
-    height: auto;
-    width: 16vw;
-    padding-inline: 1.5vw;
-    padding-bottom: 1.5vh;
 } 
 
-#paddingoveride {
-    padding-top: 4vh;
-    padding-bottom: 2vh;
-} #paddingoveride2 {
-    padding-top: 4vh;
-    padding-bottom: 0vh;
-} #paddingoveride3 {
-    padding-bottom: 4vh;
-}  #paddingoveride4 {
-    padding-top: 4vh;
-    padding-bottom: 4vh;
-} 
+.containerhabilidades{
+    position: relative;
+    width: 80%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    padding-top: 2vw;
+    padding-bottom: 4vw;
+}
 
 .imghover{
     transition: 0.3s ease-in-out;
@@ -141,16 +149,16 @@
     transition: 0.3s ease-in-out;
 }
 
+.imghovergit{
+    width: 36vh;
+}
+
 .containerides{
     position: relative;
     margin: auto;
     width: 80vw;
     height: auto;
+    text-align: center;
     padding-top: 2vw;
     padding-bottom: 2vw;
-}  #ides {
-    height: auto;
-    width: 16vw;
-    padding-bottom: 1.5vh;
-    padding-inline: 1.5vw;
-} 
+}  

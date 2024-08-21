@@ -1,4 +1,4 @@
-/* Animação de aparecer */
+/* Animações */
 @keyframes fadeInDown {
     0% {
         opacity: 0;
@@ -29,188 +29,6 @@
     transition: filter 1.5s, -webkit-filter 1.5s;
 }
 
-.zindex2{
-    z-index: 2;
-}
-
-/* Barra de navegação */
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #131516;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 4;
-    box-shadow: 0px -5px 15px 0px black;
-}li {
-    float: right;
-}li a {
-    font-family: PoppinsMedium;
-    font-size: 1.5vh;
-    display: block;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 2.2vh 3.5vw;
-    text-decoration: none;
-    opacity: 1;
-    transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out; 
-}li a:hover {
-    background-color: #303030;
-    opacity: 1; 
-} .active {
-    font-family: PoppinsBold;
-    color: #ff5757;
-    font-size: 1.5vh;
-} #diogologo {
-    width: auto;
-    height: 3.5vh;
-} #diogologoverride {
-    float: left;
-    padding: 0.5vh 3vw;
-}
-
-/* Cor de fundo da pagina */
-body{
-    background-color: #181a1b;
-    overflow-y: scroll;
-}
-
-/* Pagina 1||Estilo dos elementos */
-
-.pagina1{
-    position: relative;
-    width: auto;
-    height: auto;
-}
-
-.containertexop{
-    position: relative;
-    padding-top: 12vh;
-    
-}.textoPrincipal1{
-    position: relative;
-
-    width: 85vw;
-    height: auto;
-    padding-left: 5.8vw;
-} 
-
-.imgLado1 {
-    position: relative;
-    margin: auto;
-
-    width: 90vw;
-    height: auto;
-
-    opacity: 1;
-    transition: opacity 0.2s ease-in-out;
-
-    transform: translateY(6vh);
-} .imgAjuste1{
-    max-width: 100%;
-    height: auto;
-} .imgLado1:hover {
-    opacity: 0.5;
-    transition: ease-in-out 0.3s;
-} 
-
-.sociaisPrincipal1{
-    position: relative;
-    margin: auto;
-    padding-top: 6vh;
-    padding-left: 0vw;
-    width: 70vw;
-    height: auto;
-} .sociaisAjuste1{
-    width: 70vw;
-    height: auto;
-    transition: 0.3s ease-in-out;
-} .sociaisAjuste1:hover{
-    transform: scale(1.2);
-}
-
-/* Pagina 2 */
-
-.containerfade{
-    position: relative;
-    padding-top: 6vh;
-}.pagina2fade1{
-    position: relative;
-    width: auto;
-    height: 15vh;
-    background-image: linear-gradient(to bottom, #181a1b, black);
-}.pagina21{
-    position: relative;
-    width: auto;
-    height: auto;
-    background-color: #000000;
-}
-
-.containercaixa{
-    position: relative;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-} #containercaixapadding{
-    padding-top: 4vh;
-    padding-bottom: 20vh;
-}.caixaRounded{
-    position: relative;
-    margin: auto;
-    width: 80vw;
-    height: 36vh;
-    background-color: #202020a9;
-    border: 2px;
-    border-radius: 3vh;
-    z-index: 2;
-    opacity: 1;
-    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.233);
-    transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
-} #caixaRoundedheight{
-    height: 37.4vh;
-}.caixaRounded:hover{
-    opacity: 1;
-    background-color: #303030;
-    box-shadow: 0px 0px 15px 0px #ffffff3b;
-} #caixaRoundedsobre{
-    text-align: center;
-    width: 50vw;
-    height: 18vh;
-}.alignDentro{
-    padding-top: 2vh;
-    padding-left: 4vw;
-    padding-right: 4vw;
-} .imgcaixa{
-    border: 2px; 
-    float: left;
-    margin-right: 2vw;
-    border-radius: 3vw; 
-} 
-
-.imagemfundo1 {
-    position: absolute;
-    width: 50vw;
-    height: auto;
-    z-index: 0;
-
-    object-fit: cover;
-    pointer-events: none;
-
-    opacity: 32%;
-    filter: blur(2vh);
-    -webkit-filter: blur(2vh);
-    transition: transform 0.1s ease-out;
-} #posimagem1 {
-    top: 0;
-    right: 0;
-    padding-right: 15vw;
-} #posimagem2 {
-    left: 0;
-    padding-left: 15vw;
-}
-
 .slide-in-from-right {
     opacity: 0; 
     visibility: hidden;
@@ -227,55 +45,197 @@ body{
     }
 }
 
-.textoPrincipal{
-    position: relative;
-    top: 30vh;
-    left: 10vh;
-    width: 95vh;
-    height: 100vh;
-} 
-.sociaisPrincipal{  
-    position: relative;
-    padding-top: 0.2vh;
-    left: -6vh;
-    width: 100vh;
-} .sociaisAjuste{
-    width: 30vh;
-    height: auto;
-    transition: 0.3s ease-in-out;
-} .imgLado {
-    position: absolute; 
-    right: 0;
-    top: 28vh;
+/* IDs */
+#diogologo {
     width: auto;
-    padding-right: 8vh;
-    padding-left: 110vh;
+    height: 3.5vh;
+} #diogologoverride {
+    float: left;
+    padding: 0.5vh 3vw;
+}
+
+#posimagem1 {
+    top: 0;
+    right: 0;
+    padding-right: 15vw;
+} #posimagem2 {
+    left: 0;
+    padding-left: 15vw;
+}
+
+#containercaixapadding{
+    padding-top: 4vh;
+    padding-bottom: 20vh;
+}
+
+#caixaRoundedheight{
+    height: 37.4vh;
+} #caixaRoundedsobre{
+    text-align: center;
+    width: 50vw;
+    height: 18vh;
+}
+
+/* Zindexes */
+.zindex2{
+    z-index: 2;
+}
+
+/* Tags */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #131516;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+    box-shadow: 0px -5px 15px 0px black;
+}li {
+    float: right;
+}li a {
+    font-family: PoppinsMedium;
+    font-size: 1.8vh;
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 2.2vh 3.5vw;
+    text-decoration: none;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out; 
+}li a:hover {
+    background-color: #303030;
+    opacity: 1; 
+} .active {
+    font-family: PoppinsBold;
+    color: #ff5757;
+    font-size: 1.8vh;
+} 
+
+body{
+    background-color: #181a1b;
+    overflow-y: scroll;
+}
+
+/* Classes */
+
+.pagina1{
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+.containertexop{
+    position: relative;
+    padding-top: 14vh;
+    
+}
+
+.textoPrincipal1{
+    position: relative;
+    margin: auto;
+    width: 85vw;
+    height: auto;
+} 
+
+.imgLado1 {
+    position: relative;
+    margin: auto;
+    width: 90vw;
+    height: auto;
     opacity: 1;
     transition: opacity 0.2s ease-in-out;
-} .imgAjuste{
+    transform: translateY(6vh);
+} .imgAjuste1{
     max-width: 100%;
     height: auto;
-} .imgAjuste:hover {
+} .imgLado1:hover {
     opacity: 0.5;
     transition: ease-in-out 0.3s;
+} 
+
+.sociaisPrincipal1{
+    position: relative;
+    margin: auto;
+    text-align: center;
+    padding-top: 6vh;
+    padding-left: 0vw;
+    width: 70vw;
+    height: auto;
+} .sociaisAjuste1{
+    width: 60vw;
+    height: auto;
+    transition: 0.3s ease-in-out;
+} .sociaisAjuste1:hover{
+    transform: scale(1.2);
 }
 
-/* Estilo da pagina 2 */
-.pagina2fade{
+.containerfade{
     position: relative;
-    top: -50px;
+    padding-top: 6vh;
+} .pagina2fade1{
+    position: relative;
     width: auto;
-    height: 200px;
+    height: 15vh;
     background-image: linear-gradient(to bottom, #181a1b, black);
-}.pagina2{
+} 
+
+.pagina21{
     position: relative;
-    top: 200px;
     width: auto;
-    height: 1600px;
-    background-color: black;
+    height: auto;
+    background-color: #000000;
 }
 
- .imagemfundo2 {
+.containercaixa{
+    position: relative;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+} .caixaRounded{
+    position: relative;
+    margin: auto;
+    width: 80vw;
+    height: 36vh;
+    background-color: #202020a9;
+    border: 2px;
+    border-radius: 3vh;
+    z-index: 2;
+    opacity: 1;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.233);
+    transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+} .caixaRounded:hover{
+    opacity: 1;
+    background-color: #303030;
+    box-shadow: 0px 0px 15px 0px #ffffff3b;
+} 
+
+.alignDentro{
+    padding-top: 2vh;
+    padding-left: 4vw;
+    padding-right: 4vw;
+} .imgcaixa{
+    border: 2px; 
+    float: left;
+    margin-right: 2vw;
+    border-radius: 3vw; 
+} 
+
+.imagemfundo1 {
+    position: absolute;
+    width: 50vw;
+    height: auto;
+    z-index: 0;
+    object-fit: cover;
+    pointer-events: none;
+    opacity: 32%;
+    filter: blur(2vh);
+    -webkit-filter: blur(2vh);
+    transition: transform 0.1s ease-out;
+} 
+
+.imagemfundo2 {
     position: absolute;
     top: 40px;
     left: 65vh;

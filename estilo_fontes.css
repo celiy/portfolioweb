@@ -16,6 +16,7 @@
     src: url(fonts/Poppins-Light.ttf);
 }
 
+/* Animações das fontes */
 #fading { 
     -webkit-animation-duration: 1.5s;
     -webkit-animation-name: fading;
@@ -38,7 +39,6 @@
         color: #ff5757;
     }
 }
-
 #fading2 {
     -webkit-animation-duration: 1.5s;
     -webkit-animation-name: fading2;
@@ -46,6 +46,7 @@
     animation-name: fading2;
     animation: fading2 1s ease-in-out infinite alternate;
 }
+
 @-webkit-keyframes fading2 {
     from {
         color: #fd6d6d;
@@ -63,10 +64,7 @@
     }
 }
 
-.textoVermelho{ 
-    color: #ff5757;
-}
-
+/* Tags */
 p{ 
     font-family: PoppinsLight;
     font-size: 2vh;
@@ -75,7 +73,7 @@ p{
     text-align: justify;
     text-justify: inter-word;
     color: white;
-}h1{
+} h1{
     font-family: PoppinsBold;
     color: white;
     font-size: 7.3vh;
@@ -83,24 +81,33 @@ p{
     padding-bottom: 2vh;
     opacity: 1;
     transition: 0.3s ease-in-out;
-}h1:hover{
+} h1:hover{
     opacity: 0.5;
     transition: 0.3s ease-in-out;
-}h2{
+} h2{
     font-family: PoppinsMedium;
     color: white;
     font-size: 3.8vh;
-}h3{
+} h3{
     font-family: PoppinsRegular;
     color: white;
     font-size: 3.8vh;
 } 
 
+/* Classes */
+.textoVermelho{ 
+    color: #ff5757;
+} 
+
+.textoVermelho span {
+    color: inherit;
+}
+
 .sp{
     font-family: PoppinsLight;
-    font-size: 0.9vw;
+    font-size: 0.92vw;
     padding-top: 15px;
-    line-height: 2.3vh;
+    line-height: 2.2vh;
     text-align: justify;
     text-justify: inter-word;
     color: white;
@@ -122,7 +129,7 @@ p{
 
 .sp1{
     font-family: PoppinsLight;
-    font-size: 1.1vw;
+    font-size: 1.2vw;
     padding-top: 15px;
     line-height: 2.3vh;
     text-align: justify;
@@ -136,4 +143,3 @@ p{
     line-height: 2.4vh;
     color: white;
 } 
-

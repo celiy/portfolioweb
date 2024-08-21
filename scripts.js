@@ -7,7 +7,7 @@ function fadeInElements() {
 }
 window.onload = fadeInElements;
 
-//Iniciar animação dos elementos na segunda pagina
+//Iniciar animação dos widgets no index.html
 const startAnimation = (entries, observer) => {
     entries.forEach(entry => {
         entry.target.classList.toggle("slide-in-from-right", entry.isIntersecting);

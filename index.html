@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="resetcss.css">
     <link rel="stylesheet" type="text/css" href="estilo.css">
     <link rel="stylesheet" type="text/css" href="estilo_fontes.css">
+    <!-- Checar se a propoção de tela é mobile -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             function isMobileAspectRatio() {
@@ -33,8 +34,9 @@
 
     <!-- Pagina 1 -->
 
-    <div class="pagina1">
-        <div class="containertexop blur-div">
+    <div class="pagina1 blur-div">
+
+        <div class="containertexop">
             <div class="textoPrincipal1">
                 <div class="fade-in">
                     <h2>Olá, me chamo</h2>
@@ -49,6 +51,7 @@
                         de Análise e Desenvolvimento de sistemas em IFSUL Campus Camaquã.</p>
                 </div>
             </div>
+
             <div class="imgLado1 fade-in fade-in-delay2 tooltip">
                 <a href="https://github.com/celiy?tab=repositories" target="_blank" rel="noopener noreferrer">
                     <img class="imgLado1" src="images/ImagemLado.png" alt="Lado"></a>
@@ -61,20 +64,27 @@
                 <a href="contato.html"><img class="sociaisAjuste1" src="images/Sociais.png" alt="Sociais"></a>
             </figure>
         </div>
+        
+        <!-- Implementar animação de fade de acordo com o scroll da pagina -->
+        <!--
+        <div class="containerMais fade-in fade-in-delay3">
+            <h4 id="textoMais">Abaixe para ver mais</h4>
+        </div>
+        -->
+
     </div>
 
     <!-- Pagina 2 -->
 
     <div class="containerfade">
-        <div class="pagina2fade1">
-        </div>
+        <div class="pagina2fade1"></div>
     </div>
     <div class="pagina21">
         <div class="containercaixa">
             <div class="caixaRounded slide-in-from-right">
                 <a style="text-decoration: none;" href="https://github.com/celiy/Projeto_ControleDeEstoque" target="_blank" rel="noopener noreferrer">
                     <div class="alignDentro">
-                        <h4 class="sh1">Python</h4>
+                        <h4 class="sh1">Python <span><img src="logos/py.png" alt="python" style="height: 4vh;"></span></h4>
                         <h4 class="sp">Sou um programador intermediário em Python que já possuo um pequeno projeto que fiz
                             em apenas uma semana de um programa de controle de estoque simples que possui funcionalidades
                             básicas para um programa de controle de estoque.</h4>
@@ -95,7 +105,11 @@
             <div class="caixaRounded slide-in-from-right">
                 <a style="text-decoration: none;" href="https://github.com/celiy/PortfolioWeb" target="_blank" rel="noopener noreferrer">
                     <div class="alignDentro">
-                        <h4 class="sh1">Web</h4>    
+                        <h4 class="sh1">Web <span>
+                            <img src="logos/html.png" alt="html" style="height: 4vh;">
+                            <img src="logos/css.png" alt="css" style="height: 4vh;">
+                            <img src="logos/js.png" alt="js" style="height: 4vh;">
+                        </span> </h4>    
                         <h4 class="sp">Comecei a programação e desenvolvimento web recentemente e já aprendi maior parte
                             das funcionalides que as linguagens de programação HTML e CSS tem a oferecer. Juntando meu
                             conhecimento de designer gráfico, decidi criar este portfólio que é meu primeiro projeto
@@ -114,7 +128,7 @@
             <div class="caixaRounded slide-in-from-right">
                 <a style="text-decoration: none;" href="https://github.com/celiy/PortfolioWeb" target="_blank" rel="noopener noreferrer">
                     <div class="alignDentro">
-                        <h4 class="sh1">Planilhas</h4>    
+                        <h4 class="sh1">Planilhas <span><img src="logos/py.png" alt="python" style="height: 4vh;"></span></h4>    
                         <h4 class="sp">Este projeto é um aplicativo em Python que tem o intuido de automatizar o gerenciamento de planilhas do Excel. Além de poder ler os dados de uma planilha, ele também pode inserir dados de forma automatizada. O intuido deste projeto é aprender como manipular e escanear dados de uma planilha.</h4>
                         <div style="padding-top: 1.5vh;">
                             <img class="imgcaixa" src="images/imagexemplo4.png" alt="planilha" width="60%">
@@ -125,31 +139,22 @@
                 </a>
             </div>
         </div>
-            <div class="containercaixa">
-                <div class="caixaRounded slide-in-from-right" id="caixaRoundedsobre">
-                    <a style="text-decoration: none;" href="sobre.html" target="_blank" rel="noopener noreferrer">
-                        <div class="alignDentro">
-                            <h4 class="sh1">Mais</h4>    
-                            <h4 class="sp">Possuo mais projetos e criações, para ver mais sobre mim e outros projetos, clique aui para ver mais sobre mim.</h4>
-                        </div>
-                    </a>
-                </div>
+        <div class="containercaixa">
+            <div class="caixaRounded slide-in-from-right" id="caixaRoundedsobre">
+                <a style="text-decoration: none;" href="sobre.html">
+                    <div class="alignDentro">
+                        <h4 class="sh1">Mais</h4>    
+                        <h4 class="sp">Possuo mais projetos e criações, para ver mais sobre mim e outros projetos, clique aqui para ver mais sobre mim.</h4>
+                    </div>
+                </a>
             </div>
-        <div class="footer">
-            <h4 class="footertext">Mais projetos no meu repositório: <br> <a href="https://github.com/celiy?tab=repositories">https://github.com/celiy?tab=repositories</a></h4>
         </div>
-    </div>  
 
-    <script>
-        function isMobileAspectRatio() {
-            const aspectRatio = window.innerWidth / window.innerHeight;
-            const mobileAspectRatios = [18 / 9, 19 / 9, 19.5 / 9, 21 / 9, 16 / 9];
-            const tolerance = 0.1;
-            return mobileAspectRatios.some(ratio => Math.abs(aspectRatio - ratio) < tolerance);
-        }if (!(isMobileAspectRatio())) {
-            window.location.href = "mindex.html"; 
-        }
-    </script>
+        <div class="footer">
+            <h4 class="footertext">Mais projetos no meu repositório: <br> <a href="https://github.com/celiy?tab=repositories" target="_blank" rel="noopener noreferrer">https://github.com/celiy?tab=repositories</a></h4>
+        </div>
+
+    </div>
 
     <script src="scripts.js"></script>
 

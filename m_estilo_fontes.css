@@ -16,6 +16,7 @@
     src: url(fonts/Poppins-Light.ttf);
 }
 
+/* Animações de textos */
 #fading {
     -webkit-animation-duration: 1.5s;
     -webkit-animation-name: fading;
@@ -63,16 +64,12 @@
     }
 }
 
-.textoVermelho{
-    color: #ff5757;
-}
-
-/* Estilo do texto padrão */
+/* Tags */
 p{
     font-family: PoppinsLight;
     font-size: 1.8vh;
     padding-top: 1.6vh;
-    line-height: 2.2vh;
+    line-height: 2.6vh;
     text-align: justify;
     text-justify: inter-word;
     color: white;
@@ -95,9 +92,17 @@ p{
     font-family: PoppinsMedium;
     color: white;
     font-size: 2.8vh;
-}.h3-2{
+}
+
+/* Classes */
+
+.h3-2{
     font-family: PoppinsMedium;
-    font-size: 2.5vh;
+    font-size: 5.5vw;
+}
+
+.textoVermelho{
+    color: #ff5757;
 }
 
 .sp{
@@ -124,7 +129,9 @@ p{
     text-align: justify;
     text-justify: inter-word;
     color: white
-} .spbold{
+} 
+
+.spbold{
     font-family: PoppinsMedium;
     font-size: 3vw;
     padding-top: 15px;
@@ -141,6 +148,7 @@ p{
     text-justify: inter-word;
     color: white;
 } 
+
 .sh1{
     font-family: PoppinsBold;
     color: white;
@@ -150,8 +158,6 @@ p{
     color: white;
     font-size: 7vw;
 }
-
-
 
 .splist{
     font-family: PoppinsMedium;

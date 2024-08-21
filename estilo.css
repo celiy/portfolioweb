@@ -1,4 +1,4 @@
-/* Animação de aparecer */
+/* Animações */
 @keyframes fadeInDown {
     0% {
         opacity: 0;
@@ -10,7 +10,25 @@
         transform: translateY(0vh);
         visibility: visible;
     }
-}.fade-in {
+}
+
+.slide-in-from-right {
+    opacity: 0; 
+    visibility: hidden;
+    animation: 1.5s ease-out 0s 1 slideInFromRight forwards;
+} @keyframes slideInFromRight {
+    0% {
+        opacity: 0; 
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1; 
+        visibility: visible;
+        transform: translateY(10%);
+    }
+}
+
+.fade-in {
     opacity: 0; 
     visibility: hidden;
     animation: fadeInDown 2s forwards; 
@@ -21,6 +39,8 @@
     animation-delay: 0.5s; 
 }.fade-in-delay2 {
     animation-delay: 1s; 
+} .fade-in-delay3 {
+    animation-delay: 2s; 
 } 
 
 .blur-div{
@@ -29,11 +49,17 @@
     transition: filter 1.5s, -webkit-filter 1.5s;
 }
 
+/* Zindexes */
 .zindex2{
     z-index: 2;
 }
 
-/* Barra de navegação */
+/* Estilo das tags */
+body{
+    background-color: #181a1b;
+    overflow-y: scroll;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -64,21 +90,39 @@ ul {
     font-family: PoppinsBold;
     color: #ff5757;
     font-size: 2vh;
-} #diogologo {
+}
+
+/* IDs */
+#diogologo {
     width: auto;
     height: 4vh;
 } #diogologoverride {
     float: left;
     padding: 0.5vh 1.4vw;
+} 
+
+#textoMais {
+    font-family: PoppinsLight;
+    color: rgba(255, 255, 255, 0.35);
+    padding-top: 2vh;
 }
 
-/* Cor de fundo da pagina */
-body{
-    background-color: #181a1b;
-    overflow-y: scroll;
+#caixaRoundedsobre{
+    text-align: center;
+    width: 22vw;
+    height: 22vh;
 }
 
-/* Pagina 1||Estilo dos elementos */
+#posimagem1 {
+    top: 0;
+    right: 0;
+    padding-right: 15vw;
+} #posimagem2 {
+    left: 0;
+    padding-left: 15vw;
+}
+
+/* Classes */
 
 .pagina1{
     position: relative;
@@ -95,17 +139,16 @@ body{
     width: 48vw;
     height: auto;
     padding-left: 5vw;
-} .imgLado1 {
-    display: inline-block;
+} 
 
+.imgLado1 {
+    display: inline-block;
     width: 37vw;
     height: auto;
     padding-right: 4vw;
     padding-left: 2vw;
-
     opacity: 1;
     transition: opacity 0.2s ease-in-out;
-
     transform: translateY(6vh);
 } .imgAjuste1{
     max-width: 100%;
@@ -113,7 +156,9 @@ body{
 } .imgLado1:hover {
     opacity: 0.5;
     transition: ease-in-out 0.3s;
-} .sociaisPrincipal1{
+} 
+
+.sociaisPrincipal1{
     position: relative;
     padding-left: 1.7vw;
 } .sociaisAjuste1{
@@ -123,6 +168,14 @@ body{
 } .sociaisAjuste1:hover{
     transform: scale(1.2);
 }
+
+.containerMais{
+    position: relative;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    transition: opacity 0.3s ease;
+} 
 
 .tooltip {
     position: relative;
@@ -149,11 +202,9 @@ body{
     opacity: 1;
 }
 
-/* Pagina 2 */
-
 .containerfade{
     position: relative;
-    padding-top: 12vh;
+    padding-top: 10vh;
 }.pagina2fade1{
     position: relative;
     width: auto;
@@ -165,6 +216,7 @@ body{
     height: auto;
     background-color: #000000;
 }
+
 .containercaixa{
     position: relative;
     padding-bottom: 30vh;
@@ -184,11 +236,7 @@ body{
     opacity: 1;
     background-color: #303030;
     box-shadow: 0vh 0vh 5vh 0vh #ffffff3b;
-} #caixaRoundedsobre{
-    text-align: center;
-    width: 22vw;
-    height: 22vh;
-}.alignDentro{
+} .alignDentro{
     padding-top: 3vh;
     padding-left: 2.3vw;
     padding-right: 2.3vw;
@@ -204,73 +252,14 @@ body{
     width: 50vw;
     height: auto;
     z-index: 0;
-
     object-fit: cover;
     pointer-events: none;
-
     opacity: 32%;
     filter: blur(2vh);
     -webkit-filter: blur(2vh);
     transition: transform 0.1s ease-out;
-} #posimagem1 {
-    top: 0;
-    right: 0;
-    padding-right: 15vw;
-} #posimagem2 {
-    left: 0;
-    padding-left: 15vw;
-}
-
-.slide-in-from-right {
-    opacity: 0; 
-    visibility: hidden;
-    animation: 1.5s ease-out 0s 1 slideInFromRight forwards;
-} @keyframes slideInFromRight {
-    0% {
-        opacity: 0; 
-        transform: translateY(0);
-    }
-    100% {
-        opacity: 1; 
-        visibility: visible;
-        transform: translateY(10%);
-    }
-}
-
-.textoPrincipal{
-    position: relative;
-    top: 30vh;
-    left: 10vh;
-    width: 95vh;
-    height: 100vh;
 } 
-.sociaisPrincipal{  
-    position: relative;
-    padding-top: 0.2vh;
-    left: -6vh;
-    width: 100vh;
-} .sociaisAjuste{
-    width: 30vh;
-    height: auto;
-    transition: 0.3s ease-in-out;
-} .imgLado {
-    position: absolute; 
-    right: 0;
-    top: 28vh;
-    width: auto;
-    padding-right: 8vh;
-    padding-left: 110vh;
-    opacity: 1;
-    transition: opacity 0.2s ease-in-out;
-} .imgAjuste{
-    max-width: 100%;
-    height: auto;
-} .imgAjuste:hover {
-    opacity: 0.5;
-    transition: ease-in-out 0.3s;
-}
 
-/* Estilo da pagina 2 */
 .pagina2fade{
     position: relative;
     top: -50px;
@@ -285,8 +274,7 @@ body{
     background-color: black;
 }
 
-
- .imagemfundo2 {
+.imagemfundo2 {
     position: absolute;
     top: 40px;
     left: 65vh;
@@ -312,13 +300,9 @@ body{
 } .footertext{
     font-family: PoppinsLight;
     text-align: center;
-    font-size: 15px;
+    font-size: 15px;    
     line-height: 22px;
     padding-top: 8px;
     padding-bottom: 12px;
     color: white;
 } 
-
-.textoVermelho span {
-    color: inherit;
-}
