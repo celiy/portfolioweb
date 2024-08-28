@@ -57,3 +57,17 @@ window.addEventListener('load', function() {
     blurDiv.style.filter = 'blur(0px)';
     blurDiv.style.webkitFilter = 'blur(0px)';
 });
+
+
+const nobserver = new IntersectionObserver((nentries) =>{
+    nentries.forEach((nentry) => {
+        if (nentry.isIntersecting){
+            nentry.target.classList.add('.show');
+        } else {
+            nentry.target.classList.remove('.show');
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((elem) => observer.observe(elem));
