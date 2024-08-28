@@ -128,8 +128,8 @@
     height: auto;
     margin: auto;
     text-align: center;
-    padding-top: 2vw;
-    padding-bottom: 4vw;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
 } 
 
 .imghover{
@@ -167,7 +167,8 @@
 
 .containerides{
     position: relative;
-    width: auto;
+    margin: auto;
+    width: 60%;
     height: auto;
     display: flex;
     justify-content: center;
