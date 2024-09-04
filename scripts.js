@@ -1,73 +1,24 @@
-//Iniciar animação inicial da pagina
-function fadeInElements() {
-    const elements = document.querySelectorAll('.fade-in');
-    elements.forEach(element => {
-        element.style.opacity = 1;
-    });
-}
-window.onload = fadeInElements;
-
-//Iniciar animação dos widgets no index.html
-const startAnimation = (entries, observer) => {
-    entries.forEach(entry => {
-        entry.target.classList.toggle("slide-in-from-right", entry.isIntersecting);
-    });
-};
-const observer = new IntersectionObserver(startAnimation);
-const options = { root: null, rootMargin: '0px', threshold: 1 };
-
-const elements = document.querySelectorAll('.caixaRounded');
-elements.forEach(el => {
-    observer.observe(el, options);
-});
-
-//Iniciar animação das imagens de fundo1
-window.addEventListener('DOMContentLoaded', () => {
-    const images = document.querySelectorAll('.imagemfundo1');
-
-    const parallaxEffect = (scrollY) => {
-        images.forEach(image => {
-            image.style.transform = `translateY(${scrollY * 0.15}px)`;
-        });
-    };
-
-    const handleScroll = () => {
-        const scrollY = window.scrollY;
-        parallaxEffect(scrollY);
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                window.addEventListener('scroll', handleScroll);
-            } else {
-                window.removeEventListener('scroll', handleScroll);
-            }
-        });
-    });
-
-    images.forEach(image => {
-        observer.observe(image);
-    });
-});
-
-//Iniciar animação de desfoque
-window.addEventListener('load', function() {
-    const blurDiv = document.querySelector('.blur-div');
-    blurDiv.style.filter = 'blur(0px)';
-    blurDiv.style.webkitFilter = 'blur(0px)';
-});
-
-
-const nobserver = new IntersectionObserver((nentries) =>{
-    nentries.forEach((nentry) => {
-        if (nentry.isIntersecting){
-            nentry.target.classList.add('.show');
+const observer1 = new IntersectionObserver((entries) => {
+    entries.forEach((entry) =>{
+        if (entry.isIntersecting){
+            entry.target.classList.add('show');
         } else {
-            nentry.target.classList.remove('.show');
+            entry.target.classList.remove('show');
         }
     });
 });
+const hiddenElements1 = document.querySelectorAll('.hidden');
+hiddenElements1.forEach((el) => observer1.observe(el));
 
-const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((elem) => observer.observe(elem));
+
+const observer2 = new IntersectionObserver((entries2) => {
+    entries2.forEach((entry2) =>{
+        if (entry2.isIntersecting){
+            entry2.target.classList.add('show2');
+        } else {
+            entry2.target.classList.remove('show2');
+        }
+    });
+});
+const hiddenElements2 = document.querySelectorAll('.hidden2');
+hiddenElements2.forEach((el2) => observer2.observe(el2));

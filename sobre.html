@@ -4,203 +4,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="logos/diogologo.ico"/>
-    <link rel="stylesheet" type="text/css" href="resetcss.css">
-    <link rel="stylesheet" type="text/css" href="estilo.css">
-    <link rel="stylesheet" type="text/css" href="estilo_fontes.css">
-    <link rel="stylesheet" type="text/css" href="estilo_sobre.css">
-    <!-- Checar se a propoção de tela é mobile -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            function isMobileAspectRatio() {
-                const aspectRatio = window.innerWidth / window.innerHeight;
-                const mobileAspectRatios = [18 / 9, 19 / 9, 19.5 / 9, 21 / 9, 16 / 9];
-                const tolerance = 0.1;
-                return mobileAspectRatios.some(ratio => Math.abs(aspectRatio - ratio) < tolerance);
-            } if (!(isMobileAspectRatio())) {
-                window.location.href = "m-sobre.html"; 
-            }
-        });
-    </script>
+
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="css/sobre.css">
+    <link rel="stylesheet" type="text/css" href="css/resetcss.css">
+
+    <script defer src="scripts.js"></script>
+
     <title>Sobre</title>
 </head>
-<body id="body">
+<body>
     <ul>
-        <li><a class="active" id="fading" href="sobre.html">Sobre</a></li>
+        <li><a class="active" href="sobre.html">Sobre</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
         <li><a href="contato.html">Contato</a></li>
         <li><a href="index.html">Home</a></li>
-        <li id="diogologoverride"><a id="diogologoverride" href="sobre.html"><img id="diogologo" src="logos/diogologo.png" alt="diogologo"></a></li>
     </ul>
-    
-    <div class="paginasobre">
-        <div class="containersobre fade-in">
-            <div class="containertexto">
-                <h4 class="sh1" id="textpadding">Diogo Carvalho Viegas</h4>
-                <h3><span class="textoVermelho" id="textpadding">Analista e Desenvolvedor de Sistemas.</span></h3>
+    <div class="pagina_sobre">
+        <section class="containerSobre">
+            <article class="infoSobre slide-in-down">
+                <h1>Diogo Carvalho Viegas</h1>
+                <h3><span id="textoVermelho">Analista, Desenvolvedor e Programador de sistemas.</span></h3>
+                <p>
+                • Análise e Desenvolvimento de Sistemas <br>
+                • Conhecimento em TI <br>
+                • Design Gráfico<br>
+                • Programador<br>
+                </p>
+                <div></div>
+                <button class="botaoContato" onclick="window.location.href='contato.html'">Contato</button>
+            </article>
+            <div class="containerImgSobre slide-in-down anim-delay1"> 
+                <img src="images/ladosobre.png">
             </div>
-        </div>
-        <div class="containerinfo fade-in">
-            <div class="containertexto">
-                <h4 class="sp1" id="textproprieties"><br>Além de Analista, Desenvolvedor e Programador, também possuo habilidade avançadas de edição de imagens, vídeo e design gráfico em geral. <br> <span id="paddingoveride4"> <br>
-                    • Trabalhei independentemente como designer gráfico pelo total de 2 anos. </span> <br>
-                    Antes de começar minha carreira como designer gráfico, programador, analista e desenvolvedor, eu estudei os conceitos de TI e hoje em dia eu possuo um conhecimento avançado sobre computação, tanto sobre software quanto hardware. <br>
-                    <span id="paddingoveride4"> <br>
-                    • Trabalhei independentemente com serviços de TI, como suporte de hardware e software por 3 anos. </span> <br>
-                    Então recentemente venho procurando a área de programação, análise e desenvolvimento de sistemas, pois é uma que eu tinha interesse a anos e só recentemente me sinto confortável tomando esta posição.</h4>
-            </div>
-        </div>
-        
-        <div class="backgroundsobre">
-            <h4 class="textohabilidades fade-in fade-in-delay1">Habilidade e conhecimentos:</h4>
-
-            <div class="containerhabilidades fade-in fade-in-delay1">
-                <div class="tooltip">
-                    <img class="imghover" id="habilidades" src="logos/c.png" alt="c">
-                    <div class="tooltiptext">C - Intermediário</div>
-                </div>
-                <div class="tooltip">
-                    <img class="imghover" id="habilidades" src="logos/py.png" alt="py">
-                    <div class="tooltiptext">Python - Avançado</div>
-                </div>
-                <div class="tooltip">
-                    <img class="imghover" id="habilidades" src="logos/js.png" alt="js">
-                    <div class="tooltiptext">JavaScript - Básico</div>
-                </div>
-                <div class="tooltip">
-                    <img class="imghover" id="habilidades" src="logos/html.png" alt="html">
-                    <div class="tooltiptext">HTML - Intermediário</div>
-                </div>
-                <div class="tooltip">
-                    <img class="imghover" id="habilidades" src="logos/css.png" alt="css">
-                    <div class="tooltiptext">CSS - Intermediário</div>
-                </div>
-                <div class="tooltip">
-                    <img class="imghover" id="habilidades" src="logos/git.png" alt="git">
-                    <div class="tooltiptext">Git - Intermediário</div>
-                </div>
-                <div class="tooltip">
-                    <img class="imghover" id="habilidades" src="logos/psql.png" alt="postgresql">
-                    <div class="tooltiptext">PostgreSQL - Básico</div>
-                </div>
-                <div class="tooltip">
-                    <img class="imghover" id="habilidades" src="logos/django.png" alt="django">
-                    <div class="tooltiptext">django - Básico</div>
-                </div>
-                <div class="tooltip">
-                    <img class="imghover" id="habilidades" src="logos/react.png" alt="reactjs">
-                    <div class="tooltiptext">React - Básico</div>
-                </div>
-                <div class="tooltip">
-                    <img class="imghover" id="habilidades" src="logos/chatgpt.png" alt="gpt">
-                    <div class="tooltiptext">Uso de ferramentas IA - Avançado</div>
-                </div>
-                <div class="tooltip">
-                    <img class="imghover" id="habilidades" src="logos/ps.png" alt="ps">
-                    <div class="tooltiptext">Photoshop - Avançado</div>
-                </div>
-                <div class="tooltip">
-                    <img class="imghover" id="habilidades" src="logos/pr.png" alt="pr">
-                    <div class="tooltiptext">Premiere Pro - Avançado</div>
-                </div>
-            </div>
-
-            <h4 class="textohabilidades fade-in fade-in-delay2" id="paddingoveride">IDEs/Editores de código que uso:</h4>
-
-            <div class="containerides fade-in fade-in-delay2">
-                <div class="tooltip">
-                    <img class="imghover" id="ides" src="logos/pycharm.png" alt="pycharm">
-                    <div class="tooltiptext">PyCharm - Intermediário</div>
-                </div>
-                <div class="tooltip">
-                    <img class="imghover" id="ides" src="logos/vs.png" alt="vs">
-                    <div class="tooltiptext">Visual Studio Code - Avançado</div>
-                </div>
-                <div class="tooltip">
-                    <img class="imghover" id="ides" src="logos/codeblocks.png" alt="codeblocks">
-                    <div class="tooltiptext">Code::BLocks - Intermediário</div>
-                </div>
-                <div class="tooltip">
-                    <img class="imghover" id="ides" src="logos/replit.png" alt="replit"> 
-                    <div class="tooltiptext">Replit - Intermediário</div>
-                </div>
-                <div class="tooltip">
-                    <img class="imghover" id="ides" src="logos/notepad.png" alt="notedpad++"> 
-                    <div class="tooltiptext">Notepad++ - Intermediário</div>
-                </div>
-                <div class="tooltip">
-                    <img class="imghover" id="ides" src="logos/sublime.png" alt="sublimetext"> 
-                    <div class="tooltiptext">Sublime Text - Intermediário</div>
-                </div>
-            </div>
-
-            <h4 class="textohabilidades fade-in fade-in-delay2" id="paddingoveride5">Projetos do meu Github:</h4>
-
-            <div class="containerhabilidades fade-in fade-in-delay2">
-                <div class="tooltip">
-                    <a href="https://github.com/celiy" target="_blank" rel="noopener noreferrer">
-                        <p><img class="imghover" src="https://github-readme-stats.vercel.app/api/pin?username=celiy&repo=ProjetoPlanilhas" alt="Top Repositórios" alt="celiy" /></p>
-                    </a>
-                    <div class="tooltiptext">Projeto Planilhas</div>
-                </div>
-                <div class="tooltip">
-                    <a href="https://github.com/celiy" target="_blank" rel="noopener noreferrer">
-                        <p><img class="imghover" src="https://github-readme-stats.vercel.app/api/pin?username=celiy&repo=Projeto_ControleDeEstoque" alt="Top Repositórios" alt="celiy" /></p>
-                    </a>
-                    <div class="tooltiptext">Projeto Controle de estoque</div>
-                </div>
-                <div class="tooltip">
-                    <a href="https://github.com/celiy" target="_blank" rel="noopener noreferrer">
-                        <p><img class="imghover" src="https://github-readme-stats.vercel.app/api/pin?username=celiy&repo=portfolioWeb" alt="Top Repositórios" alt="celiy" /></p>
-                    </a>
-                    <div class="tooltiptext">PortfolioWeb</div>
-                </div>
-                <div class="tooltip">
-                    <a href="https://github.com/celiy" target="_blank" rel="noopener noreferrer">
-                        <p><img class="imghover" src="https://github-readme-stats.vercel.app/api/pin?username=celiy&repo=Mecar-vit" alt="Top Repositórios" alt="celiy" /></p>
-                    </a>
-                    <div class="tooltiptext">Mecar-vit</div>
-                </div>
-            </div>
-
-            <h4 class="textohabilidades fade-in fade-in-delay2" id="paddingoveride5">NÍvel de habilidade com lógica de programação:</h4>
-
-            <div class="containerides fade-in fade-in-delay2">
-                <div class="tooltip">
-                    <a href="https://www.codewars.com/users/celiy" target="_blank" rel="noopener noreferrer">
-                        <p><img class="imghover" src="https://www.codewars.com/users/celiy/badges/large" alt="celiy" id="cdw"/></p>
-                    </a>
-                    <div class="tooltiptext">Rank Codewars</div>
-                </div>
-                <div class="tooltip">
-                    <a href="https://www.codewars.com/users/celiy" target="_blank" rel="noopener noreferrer">
-                        <p><img class="imghover" src="logos/codewars-progress.png" alt="celiy" id="cdw"/></p>
-                    </a>
-                    <div class="tooltiptext" id="ajustetooltip">Progresso Codewars</div>
-                </div>
-            </div>
-        </div>
-        
-        <h4 class="textohabilidades fade-in fade-in-delay2" id="paddingoveride3">Outros conhecimentos:</h4>
-        <div class="containerinfo2 fade-in fade-in-delay2">
-            <div class="containertexto">
-                <h4 class="sp1" id="textproprieties2"><span class="spbold">1.</span> Possuo conhecimento em uso de <span class="spbold">terminal, bash, shell e Linux</span> pois tive um semestre inteiro do meu curso de Análise e Desenvolvimento de Sistemas sobre estes tópicos.</h4>
-                <div class="ajusteprint">
-                    <img id="ajusteprint" src="images/print2.png" alt="print1">
-                    <img id="ajusteprint" src="images/print22.png" alt="print1">
-                </div>
-                <h4 class="sp1" id="textproprieties2"><span class="spbold">2.</span> Possuo conhecimento aprofundado em informática e inteligência artificial. Abaixo está uns trabalhos que fiz no meu curso de Análise e Desenvolvimento de Sistemas sobre tais campos.</h4>
-                <div class="ajusteprint">
-                    <a href="https://drive.google.com/drive/folders/1Ad9HoE28jiCqZDCAn8ZPSIn8fB_KVb0Q?usp=sharing" target="_blank" rel="noopener noreferrer"><img id="ajusteprint" src="images/print3.png" alt="print1"></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer">
-            <h4 class="footertext">Interessado em contratar meus serviços? <br> <a href="contato.html">Clique aqui para ver meus contatos.</a></h4>
-        </div>
-
+        </section>
+        <section class="secaoSobre slide-in-down anim-delay2">
+            <article class="textoSobre">
+                <h2 class="highlighted">Sobre</h2>
+                <p>Além de Analista, Desenvolvedor e Programador, também possuo habilidades avançadas em edição de imagens, vídeos e design gráfico em geral, com 4 anos de experiência na área. Também tenho um conhecimento aprofundado em TI, com 6 anos de experiência na área. <br><br>
+                • Trabalhei autonomamente com serviços de TI, como suporte de hardware e software por 3 anos. Então recentemente venho procurando a área de programação, análise e desenvolvimento de sistemas, pois é uma que eu tinha interesse a anos e só recentemente me sinto confortável tomando esta posição. <br><br>
+                • Trabalhei autonomamente como designer gráfico por um total de 2 anos. Antes de iniciar minha carreira como designer gráfico, programador, analista e desenvolvedor, estudei os conceitos de TI, e hoje possuo um conhecimento avançado em computação, tanto em software quanto em hardware.
+                </p>
+            </article>
+        </section>
     </div>
-
-    <script src="scripts.js"></script>
-
+    <div class="pagina_sobre_conhecimentos">
+        <h2>Conhecimentos</h2>
+        <div class="containerConhecimentos">
+            <div class="widgetConhecimentos">
+                <img src="logos/html.png">
+                <h4>HTML</h4>
+            </div>
+            <div class="widgetConhecimentos">
+                <img src="logos/css.png">
+                <h4>CSS</h4>
+            </div>
+            <div class="widgetConhecimentos">
+                <img src="logos/js.png">
+                <h4>JavaScript</h4>
+            </div>
+            <div class="widgetConhecimentos">
+                <img src="logos/react.png">
+                <h4>React</h4>
+            </div>
+            <div class="widgetConhecimentos">
+                <img src="logos/django.png">
+                <h4>django</h4>
+            </div>
+            <div class="widgetConhecimentos">
+                <img src="logos/py.png">
+                <h4>Python</h4>
+            </div>
+            <div class="widgetConhecimentos">
+                <img src="logos/c.png">
+                <h4>C</h4>
+            </div>
+            <div class="widgetConhecimentos">
+                <img src="logos/psql.png">
+                <h4>PostgreSQL</h4>
+            </div>
+            <div class="widgetConhecimentos">
+                <img src="logos/git.png">
+                <h4>Git</h4>
+            </div>
+            <div class="widgetConhecimentos">
+                <img src="logos/linux.png">
+                <h4>Linux<h4>
+            </div>
+            <div class="widgetConhecimentos">
+                <img src="logos/ps.png">
+                <h4>Photoshop</h4>
+            </div>
+            <div class="widgetConhecimentos">
+                <img src="logos/pr.png">
+                <h4>Premiere</h4>
+            </div>
+        </div>
+    </div>
+    <section class="pagina_sobre_trabalhos">
+        <h2>Portfolio</h2>
+        <article class="containerSlides">
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <img id="slide1" src="images/projeto_1.png">
+                    <img id="slide2" src="images/projeto_2.jpg">
+                    <img id="slide3" src="images/projeto_3.jpg">
+                    <img id="slide4" src="images/projeto_4.png">
+                    <img id="slide5" src="images/projeto_5.png">
+                </div>
+                <div class="slider-nav">
+                    <a href="#slide1"></a>
+                    <a href="#slide2"></a>
+                    <a href="#slide3"></a>
+                    <a href="#slide4"></a>
+                    <a href="#slide5"></a>
+                </div>
+            </div>
+        </article>
+    </section>
+    <section class="pagina_sobre_projetos">
+        <h2>Projetos</h2>
+        <div class="containerProjetos">
+            <div class="widgetProjetos">
+                <img src="images/projetos_ph.png">
+                <h3>Mecarvit</h3>
+            </div>
+            <div class="widgetProjetos">
+                <img src="images/projetos_ph.png">
+                <h3>Mecarvit</h3>
+            </div>
+            <div class="widgetProjetos">
+                <img src="images/projetos_ph.png">
+                <h3>Mecarvit</h3>
+            </div>
+            <div class="widgetProjetos">
+                <img src="images/projetos_ph.png">
+                <h3>Mecarvit</h3>
+            </div>
+        </div>
+        <p>Quer ver mais projetos?</p>
+        <button class="botaoContato" style="color: #ffffff; background-color: #202020; border-color: #ff5757; border-style: solid;" onclick="window.location.href='projetos.html'">Projetos</button>
+    </section>
 </body>
 </html>

@@ -1,159 +1,84 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="logos/diogologo.ico"/>
-    <link rel="stylesheet" type="text/css" href="resetcss.css">
-    <link rel="stylesheet" type="text/css" href="estilo.css">
-    <link rel="stylesheet" type="text/css" href="estilo_fontes.css">
-    <!-- Checar se a propoção de tela é mobile -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            function isMobileAspectRatio() {
-                const aspectRatio = window.innerWidth / window.innerHeight;
-                const mobileAspectRatios = [18 / 9, 19 / 9, 19.5 / 9, 21 / 9, 16 / 9];
-                const tolerance = 0.1;
-                return mobileAspectRatios.some(ratio => Math.abs(aspectRatio - ratio) < tolerance);
-            } if (!(isMobileAspectRatio())) {
-                window.location.href = "mindex.html"; 
-            }
-        });
-    </script>
+
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="css/resetcss.css">
+
+    <script defer src="scripts.js"></script>
     <title>Home</title>
 </head>
-
 <body>
     <ul>
         <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
         <li><a href="contato.html">Contato</a></li>
-        <li><a class="active" id="fading" href="index.html">Home</a></li>
-        <li id="diogologoverride"><a id="diogologoverride" href="sobre.html"><img id="diogologo" src="logos/diogologo.png" alt="diogologo"></a></li>
+        <li><a class="active" href="index.html">Home</a></li>
     </ul>
-
-    <!-- Pagina 1 -->
-
-    <div class="pagina1 blur-div">
-
-        <div class="containertexop">
-            <div class="textoPrincipal1">
-                <div class="fade-in">
-                    <h2>Olá, me chamo</h2>
-                    <a style="text-decoration: none;" href="sobre.html"><h1>Diogo Carvalho Viegas</h1></a>
-                    <div>
-                        <h3>Eu sou um <span class="textoVermelho" id="fading2">Analista e Desenvolvedor de Sistemas.</span></h3>
-                    </div>
-                    <p>Eu comecei minha carreira como programador com a linguagem de programação C. Desde então venho
-                        aprendendo e expandindo o meu conhecimento. Este é meu portfólio que criei não só para mostrar
-                        meu conhecimento HTML/CSS, tanto como minha habilidade como designer gráfico. Estou procurando novas
-                        oportunidades de trabalho e aberto para criar projetos novos. Atualmente cursando um curso de ensino superior
-                        de Análise e Desenvolvimento de sistemas em IFSUL Campus Camaquã.</p>
-                </div>
-            </div>
-
-            <div class="imgLado1 fade-in fade-in-delay2 tooltip">
-                <a href="https://github.com/celiy?tab=repositories" target="_blank" rel="noopener noreferrer">
-                    <img class="imgLado1" src="images/ImagemLado.png" alt="Lado"></a>
-                    <div class="tooltiptext">Ver meus repositórios</div>
-            </div>
-        </div>
-
-        <div class="sociaisPrincipal1 fade-in fade-in-delay1">
-            <figure>
-                <a href="contato.html"><img class="sociaisAjuste1" src="images/Sociais.png" alt="Sociais"></a>
+    <section class="pagina_1">
+        <div class="containerTextoEImagem">
+            <article class="containerTexto slide-in-down">
+                <h3>Olá, me chamo</h3>
+                <h1>Diogo Carvalho Viegas</h1>
+                <h3>Eu sou um <span id="textoVermelho">Analista e Desenvolvedor de sistemas.</span></h3>
+                <p>Eu comecei minha carreira como programador com a linguagem de programação C. Desde então venho aprendendo e expandindo o meu conhecimento. Este é meu portfólio que criei não só para mostrar meu conhecimento HTML/CSS, tanto como minha habilidade como designer gráfico. Estou procurando novas oportunidades de trabalho e aberto para criar novos projetos. Atualmente cursando um curso de ensino superior de Análise e Desenvolvimento de sistemas em IFSUL Campus Camaquã.</p> 
+                <div></div>
+                <button class="botaoContato" onclick="window.location.href='contato.html'">Contato</button>
+            </article>
+            <figure class="containerImagem slide-in-down anim-delay2">
+                <img src="images/ImagemLado.png">
             </figure>
         </div>
-        
-        <!-- Implementar animação de fade de acordo com o scroll da pagina -->
-        <!--
-        <div class="containerMais fade-in fade-in-delay3">
-            <h4 id="textoMais">Abaixe para ver mais</h4>
+    </section>
+    <div class="fade_to_pagina_2"></div>
+    <section class="pagina_2">
+        <div class="containerWidget">
+            <h1 class="hidden2" style="margin-bottom: 12vh; margin-top: 2vh;"> Introdução </h1>
+            <article class="widget hidden">
+                <h2>Mecarvit</h2>
+                <img src="logos/py.png" id="widgetSingleIcon">
+                <p style="grid-column: 1 / -1;">Programa em Python que tem integração com banco de dados PostgreSQL. Este programa permite que o usuário possa registrar clientes e serviços de um modo simples e rápido, dando a opção para ver os clientes e serviços registrados com apenas um clique.</p>
+                <img src="">
+                <h4>• Registrar cliente <br> • Regristrar serviço <br> • Ver clientes <br> • Ver serviços <br> • Procurar serviço por nome do cliente <br> • Mudar serviços para pago ou não pago</h4>
+            </article>
+            <article class="widget hidden">
+                <h2>Planilhas</h2>
+                <img src="logos/py.png" id="widgetSingleIcon">
+                <p style="grid-column: 1 / -1;">Este projeto é um aplicativo em Python que tem o intuido de automatizar o gerenciamento de planilhas do Excel. Além de poder ler os dados de uma planilha, ele também pode inserir dados de forma automatizada. O intuido deste projeto é aprender como manipular e escanear dados de uma planilha.</p>
+                <img src="images/widget_pyex.jpg">
+                <h4>• Ler planilha <br> • Inserir dados <br> • Escanear dados <br> • Maior/Menor valor <br> • Média <br> • Valores repetidos <br> • Criar planilha</h4>
+            </article>
+            <article class="widget hidden">
+                <h2>Web</h2>
+                <div style="justify-self:end">
+                    <img src="logos/html.png" id="widgetMultipleIcon">
+                    <img src="logos/css.png" id="widgetMultipleIcon">
+                    <img src="logos/js.png" id="widgetMultipleIcon">
+                    <img src="logos/react.png" id="widgetMultipleIcon">
+                    <img src="logos/django.png" id="widgetMultipleIcon">
+                </div>
+                <p style="grid-column: 1 / -1;">Comecei a programação e desenvolvimento Web recentemente, buscando mais conhecimento e decidindo que meu primeiro projeto web seria este portfólio. No momento possuo conhecimento back-end de django e front-end de React.</p>
+                <img src="images/widget_redj.jpg">
+                <h4>Por anos trabalhei com Photoshop, Sony Vegas e Premiere Pro, sonhando em fazer algo deste tipo. Neste portfólio irei colocar toda ideia que eu conseguir dentro dele.</h4>
+            </article>
+            <article class="widget hidden" style="grid-template-columns:1.8fr 1fr;">
+                <h2>Design Gráfico</h2>
+                <div style="justify-self:end">
+                    <img src="logos/ps.png" id="widgetMultipleIcon">
+                    <img src="logos/pr.png" id="widgetMultipleIcon">
+                </div>
+                <p style="grid-column: 1 / -1;">Trabalhei autonomamente como designer gráfico por 2 anos. Oferecendo serviços pequenos e projetos de escala média. Possuo um conhecimento aprofundado em ferramentas de design gráfico em geral e tenho paixão pelo meu trabalho artístico visual. </p>
+                <img src="images/widget_pspr.jpg">
+                <h4>Usei ferramentas como Premiere Pro, Sony Vegas, GIMP, Photoshop, Illustrator e Canva. Trabalhei com identidade visual e flyers promocionais.</h4>
+            </article>
+            <article class="widgetMais">
+                <h2>Mais</h2>
+                <p>Para ver mais sobre mim, minhas experiências, conhecimentos e projetos, clique aqui neste card.</p>
+            </article>
         </div>
-        -->
-
-    </div>
-
-    <!-- Pagina 2 -->
-
-    <div class="containerfade">
-        <div class="pagina2fade1"></div>
-    </div>
-    <div class="pagina21">
-        <div class="containercaixa">
-            <div class="caixaRounded slide-in-from-right">
-                <a style="text-decoration: none;" href="https://github.com/celiy/Projeto_ControleDeEstoque" target="_blank" rel="noopener noreferrer">
-                    <div class="alignDentro">
-                        <h4 class="sh1">Python <span><img src="logos/py.png" alt="python" style="height: 4vh;"></span></h4>
-                        <h4 class="sp">Sou um programador intermediário em Python que já possuo um pequeno projeto que fiz
-                            em apenas uma semana de um programa de controle de estoque simples que possui funcionalidades
-                            básicas para um programa de controle de estoque. Este programa usa um sistema de banco de dados que eu mesmo criei.</h4>
-                        <div style="padding-top: 1.5vh;">
-                            <img class="imgcaixa" src="images/imagexemplo1.png" alt="Python" width="60%">
-                            <h4 class="splist">
-                                • Login de usuário <br> • Regristrar usuário <br> • Consultar/Cadastrar Clientes <br> •
-                                Consultar/Cadastrar estoque <br> • Consultar/Cadastrar vendas <br> • Visualizar faturamento,
-                                <br> vendas feitas em total e <br> produtos em estoque.</h4>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <img class="imagemfundo1" id="posimagem1" src="images/imagemfundo2.png" alt="WebFundo">
-        <img class="imagemfundo1" id="posimagem2" src="images/imagemfundo1.png" alt="WebFundo">
-        <div class="containercaixa">
-            <div class="caixaRounded slide-in-from-right">
-                <a style="text-decoration: none;" href="https://github.com/celiy/PortfolioWeb" target="_blank" rel="noopener noreferrer">
-                    <div class="alignDentro">
-                        <h4 class="sh1">Web <span>
-                            <img src="logos/html.png" alt="html" style="height: 4vh;">
-                            <img src="logos/css.png" alt="css" style="height: 4vh;">
-                            <img src="logos/js.png" alt="js" style="height: 4vh;">
-                        </span> </h4>    
-                        <h4 class="sp">Comecei a programação e desenvolvimento Web recentemente, buscando mais conhecimento e decidindo que meu primeiro projeto web seria este portfólio. No momento possuo conhecimento back-end de django e front-end de React.</h4>
-                        <div style="padding-top: 1.5vh;">
-                            <img class="imgcaixa" src="images/imagexemplo3.png" alt="Web" width="60%">
-                            <h4 class="splist">
-                                Por anos trabalhei com Photoshop, Sony Vegas e Premiere Pro, sonhando em fazer algo
-                                deste tipo. Neste portfólio irei colocar toda ideia que eu conseguir dentro dele. </h4>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="containercaixa">
-            <div class="caixaRounded slide-in-from-right">
-                <a style="text-decoration: none;" href="https://github.com/celiy/PortfolioWeb" target="_blank" rel="noopener noreferrer">
-                    <div class="alignDentro">
-                        <h4 class="sh1">Planilhas <span><img src="logos/py.png" alt="python" style="height: 4vh;"></span></h4>    
-                        <h4 class="sp">Este projeto é um aplicativo em Python que tem o intuido de automatizar o gerenciamento de planilhas do Excel. Além de poder ler os dados de uma planilha, ele também pode inserir dados de forma automatizada. O intuido deste projeto é aprender como manipular e escanear dados de uma planilha.</h4>
-                        <div style="padding-top: 1.5vh;">
-                            <img class="imgcaixa" src="images/imagexemplo4.png" alt="planilha" width="60%">
-                            <h4 class="splist">
-                                • Ler planilha <br> • Inserir dados <br> • Escanear dados <br> • Maior/Menor valor <br> • Média <br> • Valores repetidos <br> • Criar planilha</h4>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="containercaixa">
-            <div class="caixaRounded slide-in-from-right" id="caixaRoundedsobre">
-                <a style="text-decoration: none;" href="sobre.html">
-                    <div class="alignDentro">
-                        <h4 class="sh1">Mais</h4>    
-                        <h4 class="sp">Possuo mais projetos e criações, para ver mais sobre mim e outros projetos, clique aqui para ver mais sobre mim.</h4>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <div class="footer">
-            <h4 class="footertext">Mais projetos no meu repositório: <br> <a href="https://github.com/celiy?tab=repositories" target="_blank" rel="noopener noreferrer">https://github.com/celiy?tab=repositories</a></h4>
-        </div>
-
-    </div>
-
-    <script src="scripts.js"></script>
-
-    </body>
+    </section>
+</body>
 </html>
