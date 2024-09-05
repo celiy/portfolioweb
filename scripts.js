@@ -40,7 +40,6 @@ function slideShow(){
         mousehover = false;
     });
     
-    //Se o mouse não estiver em cima, o slideshow continua novamente.
     if (!mousehover){
         var image = document.getElementById('imgslides');
         image.src = `images/sobre_portfolio/projeto_${imgcounter}.jpg`;
@@ -68,7 +67,7 @@ function slideSwitcher(){
 
 function switchSlide(bool){
     clearInterval(intervalo_switch)
-    intervalo_switch = setInterval(slideSwitcher, 5000);
+    intervalo_switch = setInterval(slideSwitcher, 4000);
 
     if (bool){
         imgcounter++;
@@ -80,4 +79,4 @@ function switchSlide(bool){
     slideShow();
 }
 
-intervalo_switch = setInterval(slideSwitcher, 5000);
+intervalo_switch = setInterval(slideSwitcher, 4000);
