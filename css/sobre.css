@@ -113,7 +113,7 @@ h2.highlighted {
 }
 
 .containerSlides{
-    padding: 2rem;
+    padding: 1.6rem;
 }
 
 .slider-wrapper{
@@ -125,17 +125,10 @@ h2.highlighted {
 .slider{
     display: flex;
     aspect-ratio: 16 / 9;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -ms-overflow-style: none;
-	scrollbar-width: none; 
     transition: all 0.3s ease-in-out;
 } .slider:hover{
     transform: scale(1.1);
-}
-
-.slider img {
+} .slider img {
     flex: 1 0 100%;
     scroll-snap-align: start;
     object-fit: contain;
@@ -149,7 +142,7 @@ h2.highlighted {
     justify-content: center;
 }
 
-#rbtn, #lbtn{
+#lrbtn{
     position: relative;
     font-family: PoppinsLight;
     font-size: 1.2rem;
@@ -162,7 +155,7 @@ h2.highlighted {
     background-color: #181a1b;
     transition: all 0.4s;
          
-} #rbtn::after, #lbtn::after{
+} #lrbtn::after{
     position: absolute;
     content: '';
     height: 124%;
@@ -174,7 +167,7 @@ h2.highlighted {
     background-image: linear-gradient(to bottom left, #ff5757, #ca3737);
     transition: all 0.6s;
     z-index: -1;
-} #rbtn:hover, #lbtn:hover{
+} #lrbtn:hover{
     color: #ffffff;
     box-shadow: 0 0 20px #ff5757;
     z-index: 0;

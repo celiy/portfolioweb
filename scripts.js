@@ -44,8 +44,7 @@ function slideShow(){
         var image = document.getElementById('imgslides');
         image.src = `images/sobre_portfolio/projeto_${imgcounter}.jpg`;
     }
-}
-slideShow();
+} slideShow();
 
 function checkImgcounter(counter){
     if (counter > noi){
