@@ -22,3 +22,6 @@ const observer2 = new IntersectionObserver((entries2) => {
 });
 const hiddenElements2 = document.querySelectorAll('.hidden2');
 hiddenElements2.forEach((el2) => observer2.observe(el2));
+
+var image = document.getElementById('imgslides');
+image.src = 'images/sobre_portfolio/projeto_1.png'
