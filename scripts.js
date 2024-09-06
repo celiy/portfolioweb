@@ -38,7 +38,7 @@ function esperarSegundos(segundos) {
 async function slideShow(force_bool){
     const image = document.getElementById('imgslides');
     if (image){
-        //Detecta se o mouse está sem cima do slideshow
+        //Detecta se o mouse está em cima do slideshow
         elemouse.addEventListener('mouseover', () => {
             mousehover = true;
         });
@@ -66,7 +66,9 @@ function checkImgcounter(counter){
 
 //O código abaixo faz o seguinte: o intervalo de trocar de slide é atribuido a uma variavel (intervalo_switch),
 //e então a função de troca de slides acontece, mas se a função que recebe um click para trocar de slides for chamada,
-//o intervalo de chamar a função é resetado.
+//o intervalo de chamar a função para trocar de slide automaticamente é resetado.
+
+//Troca de slide auto
 function slideSwitcher(){
     imgcounter++;
     imgcounter = checkImgcounter(imgcounter);
