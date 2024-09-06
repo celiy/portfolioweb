@@ -31,18 +31,27 @@ let intervalo_switch;
 let imgcounter = 1;
 const noi = 5; //numero maximo de imagens em images/sobre_portfolio
 
-function slideShow(){
-    //Detecta se o mouse está sem cima do slideshow
-    elemouse.addEventListener('mouseover', () => {
-        mousehover = true;
-    });
-    elemouse.addEventListener('mouseout', () => {
-        mousehover = false;
-    });
-    
-    if (!mousehover){
-        var image = document.getElementById('imgslides');
-        image.src = `images/sobre_portfolio/projeto_${imgcounter}.jpg`;
+function esperarSegundos(segundos) {
+    return new Promise(resolve => setTimeout(resolve, segundos * 1000));
+}
+
+async function slideShow(){
+    const image = document.getElementById('imgslides');
+    if (image){
+        //Detecta se o mouse está sem cima do slideshow
+        elemouse.addEventListener('mouseover', () => {
+            mousehover = true;
+        });
+        elemouse.addEventListener('mouseout', () => {
+            mousehover = false;
+        });
+        
+        if (!mousehover){
+            image.classList.add('disappear')
+            await esperarSegundos(0.3);
+            image.classList.remove('disappear')
+            image.src = `images/sobre_portfolio/projeto_${imgcounter}.jpg`;
+        }
     }
 } slideShow();
 

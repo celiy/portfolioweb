@@ -284,6 +284,61 @@ p {
     color: #ffffff;
     box-shadow: 0 0 40px #ff5757;
     z-index: 0;
+} #botaoContatoSmall{
+    height: 124%;
+    width: 20%;
+}
+
+#lrbtn{
+    position: relative;
+    font-family: PoppinsLight;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: #ff5757;
+    width: 3rem;
+    height: 2rem;
+    border-color: #ff575700;
+    border-radius: 1000px;
+    background-color: #181a1b;
+    transition: all 0.4s;
+         
+} #lrbtn::after{
+    position: absolute;
+    content: '';
+    height: 124%;
+    width: 116%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border-radius: 1000px;
+    background-image: linear-gradient(to bottom left, #ff5757, #ca3737);
+    transition: all 0.6s;
+    z-index: -1;
+} #lrbtn:hover{
+    color: #ffffff;
+    box-shadow: 0 0 20px #ff5757;
+    z-index: 0;
+} 
+
+
+.btnVermais{
+    position: relative;
+    font-family: PoppinsLight;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: #ffffff;
+    width: 10rem;
+    height: 3rem;
+    border: solid;
+    border-color: #ff5757;
+    border-radius: 1000px;
+    background-color: #202020;
+    transition: all 0.4s;
+}  .btnVermais:hover{
+    color: #ffffff;
+    background-color: #ff5757;
+    box-shadow: 0 0 40px #ff5757;
+    z-index: 0;
 } 
 
 .hidden{
@@ -308,6 +363,15 @@ p {
     filter: blur(0px);
     transform: translateY(0%);
     opacity: 1;
+}
+
+.appear{
+    opacity: 1;
+    filter: blur(0px);
+    transition: all 1s;
+} .disappear {
+    opacity: 0;
+    filter: blur(6px);
 }
 
 /* Ajuste para mobile */

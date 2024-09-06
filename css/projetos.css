@@ -1,0 +1,38 @@
+h4 {
+    font-size: 1.4rem;
+}
+
+.paginaProj{
+    width: 86%;
+    display: grid;
+    gap: 8rem;
+    justify-content: center;
+    margin: auto;
+    margin-top: 22vh;
+    margin-bottom: 18vh;
+}
+
+.containerProj{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 3fr 0.8fr;
+    align-items: center;
+    padding: 3rem;
+    border-radius: 2vh;
+    background: #202020;   
+} .containerProj img{
+    width: 30rem;
+    border-radius: 2vh;
+    object-fit: contain;
+}
+
+#containerProjImg{
+    display: grid;
+    gap: 1rem;
+    justify-items: center;
+    align-content: center;
+    height: 1rem;
+} #containerProjImg img{
+    width: 5rem;
+    object-fit: contain;
+}
