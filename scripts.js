@@ -35,7 +35,7 @@ function esperarSegundos(segundos) {
     return new Promise(resolve => setTimeout(resolve, segundos * 1000));
 }
 
-async function slideShow(){
+async function slideShow(force_bool){
     const image = document.getElementById('imgslides');
     if (image){
         //Detecta se o mouse está sem cima do slideshow
@@ -46,11 +46,11 @@ async function slideShow(){
             mousehover = false;
         });
         
-        if (!mousehover){
+        if (!mousehover || force_bool){
             image.classList.add('disappear')
             await esperarSegundos(0.3);
-            image.classList.remove('disappear')
             image.src = `images/sobre_portfolio/projeto_${imgcounter}.jpg`;
+            image.classList.remove('disappear')
         }
     }
 } slideShow();
@@ -73,7 +73,8 @@ function slideSwitcher(){
     slideShow();
 }
 
-function switchSlide(bool){
+//force_bool existe para forçar a troca de slide
+function switchSlide(bool, force_bool){
     clearInterval(intervalo_switch)
     intervalo_switch = setInterval(slideSwitcher, 4000);
 
@@ -84,7 +85,7 @@ function switchSlide(bool){
     }
     
     imgcounter = checkImgcounter(imgcounter);
-    slideShow();
+    slideShow(force_bool);
 }
 
 intervalo_switch = setInterval(slideSwitcher, 4000);
