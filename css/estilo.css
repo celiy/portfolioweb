@@ -115,7 +115,7 @@ p {
     justify-content: center;
     margin: auto;
     margin-top: 22vh;
-    margin-bottom: 18vh;
+    margin-bottom: 14vh;
 }
 
 .containerTextoEImagem{
@@ -160,6 +160,20 @@ p {
 .containerImagem img:hover, .containerSociais img:hover{ 
     z-index: 3;
     transform: scale(1.2);
+}
+
+.textoCentro{
+    display: grid;
+    justify-items: center;
+    padding-top: 4vh;
+    opacity: 0;
+    animation: disappear-scroll linear;
+    animation-timeline: view();
+    animation-range-end: 500px;
+}
+@keyframes disappear-scroll{
+    from { opacity: 0.4 ;}
+    to { opacity: 0; }
 }
 
 .fade_to_pagina_2{
