@@ -37,3 +37,46 @@ h4 {
     width: 5rem;
     object-fit: contain;
 }
+
+.containerItens{
+    display: grid; 
+    gap: 1rem; 
+    align-content: center;
+}
+
+@media (max-width: 1280px){
+    .containerProj img{
+        width: 28rem;
+    }
+}
+
+@media (max-width: 1024px){
+    .containerProj img{
+        width: 20rem;
+    }
+}
+
+@media (max-width: 768px){
+    .containerProj{
+        row-gap: 0rem;
+        column-gap: 2rem;
+        grid-template-columns: 1fr 3fr 0fr;
+        align-items: center;
+        padding: 3rem;
+    } .containerProj img{
+        grid-column: 3;
+        height: 0rem;
+        width: 0rem;
+        object-fit: contain;
+    } #containerProjImg{
+        gap: 1rem;
+        justify-items: center;
+        align-content: center;
+        height: 0rem;
+    } #containerProjImg img{
+        width: 0rem;
+        object-fit: contain;
+    } .containerItens{
+        grid-column: 1 / 4;
+    }
+}

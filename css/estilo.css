@@ -15,7 +15,7 @@
     src: url(fonts/Poppins-Light.ttf);
 }
 
-.slide-in-down {
+.slide-in-down   {
     opacity: 0;
     filter: blur(5px);
     visibility: hidden;
@@ -233,11 +233,16 @@ p {
     width: 3rem; 
     border-radius: 0%;
     justify-self:end
+} .widgetContainerInfo{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1 / -1;
+    margin-top: 1vh;
 }
 
 .widgetMais{
     position: relative;
-    z-index: 2;
 
     display: grid;
     justify-content: center;
@@ -256,18 +261,6 @@ p {
     border-radius: 4vh;
 
     background: #3030309a;
-} .widgetMais::after{
-    position: absolute;
-    content: '';
-    height: 100%;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    z-index: -1;
-    padding: 10px;
-    border-radius: 4vh;
-    background: #ca37378c;
 }
 
 .botaoContato{
@@ -386,16 +379,6 @@ p {
 } .disappear {
     opacity: 0;
     filter: blur(6px);
-}
-
-/* Ajuste para mobile */
-@media (max-width: 600px){
-    .containerTextoEImagem{
-        grid-template-columns: 1fr;
-    }
-    .pagina_1{
-        width: 80%;
-    }
 }
 
 /* Ajuste para 16:10 */
@@ -517,8 +500,48 @@ p {
     }
 }
 
-/* Ajuste para 16:9 1080p */
-@media (min-width: 1920px){
+/* Ajuste para mobile */
+@media (max-width: 600px){
+    .pagina_1{
+        margin-top: 14vh;
+        width: 90%;
+    }
+    .containerTextoEImagem{
+        grid-template-columns: 1fr;
+    }
+    .containerImagem{
+        height: 0px;
+    }
+    .widget{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
     
+        padding-top: 1.6rem;
+        padding-left: 2.2rem;
+        padding-right: 2.2rem;
+        padding-bottom: 2rem;
+    
+        margin-bottom: 40vh;
+    
+        width: 18rem;
+        
+        border-radius:4vh;
+     } #widgetSingleIcon{
+        width: 2rem;
+        border-radius: 0%;
+        justify-self:end
+    } #widgetMultipleIcon{
+        width: 2rem; 
+        border-radius: 0%;
+        justify-self:end
+    } .widgetContainerInfo{
+        gap: 0rem;
+        grid-template-columns: 1fr 0fr;
+    } .widgetContainerInfo h4{
+        font-size: 0rem;
+    }
+    .widgetMais{
+        width: 16rem;
+    }
 }
-

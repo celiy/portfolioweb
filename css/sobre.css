@@ -118,6 +118,9 @@ h2.highlighted {
 
 .slider-wrapper{
     position: relative;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
     max-width: 60rem;
     margin: 0 auto;
 }
@@ -183,11 +186,6 @@ h2.highlighted {
     background: #ff5757;
 }
 
-/* Ajuste para mobile */
-@media (max-width: 600px){
-    
-}
-
 @media (max-width: 1600px){
     .containerConhecimentos{
         width: 60%;
@@ -198,6 +196,9 @@ h2.highlighted {
     }
     .slider-wrapper{
         max-width: 48rem;
+    }
+    .widgetProjetos{
+        height: 11rem;
     }
 }
 
@@ -211,6 +212,15 @@ h2.highlighted {
     }
     .slider-wrapper{
         max-width: 46rem;
+    } 
+    .widgetProjetos{
+        height: 10rem;
+    }
+}
+
+@media (max-width: 1366px){
+    .slider{
+        height: 30rem;
     }
 }
 
@@ -222,7 +232,68 @@ h2.highlighted {
     .widgetConhecimentos{
         height: 5.2rem;
     }
+    .widgetProjetos{
+        height: 8rem;
+    }
     .slider-wrapper{
         max-width: 40rem;
+    }
+    .slider{
+        height: 28rem;
+    }
+}
+
+/* Ajuste para mobile */
+@media (max-width: 600px){
+    .pagina_sobre{
+        width: 90%;
+        margin-top: 2vh;
+        margin-bottom: 12vh;
+    }
+    .containerSobre{
+        grid-template-columns: 1fr;
+    }
+    .containerImgSobre{
+        width: 0%;
+        height: 0%;
+        display: grid;
+        justify-items: end;
+    }
+    .textoSobre{
+        grid-column: 1 / 4;
+    }
+    .containerConhecimentos{
+        display: grid;
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+        width: 80%;
+        gap: 1rem;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .slider-wrapper{
+        max-width: 10rem;
+    }
+    .slider{
+        height: 16rem;
+    } .slider:hover{
+        transform: scale(1);
+    }
+    .containerProjetos{
+        width: 80%;
+        grid-template-columns: 1fr;
+    }
+    .widgetProjetos{
+        gap: 1rem;
+        height: 12rem;
+        min-width: 0rem;
+        padding-top: 1.6rem;
+        padding-bottom: 1.6rem;
+        justify-items: center;
+        justify-content: center;
+        border-radius: 1.6vh;
+        background: #333131;
+        transition: all 0.2s ease-in-out;
+    } .widgetProjetos img{
+        width: 80%;
     }
 }
