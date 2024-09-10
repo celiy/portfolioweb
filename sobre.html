@@ -103,12 +103,8 @@
     </div>
     <section class="pagina_sobre_trabalhos">
         <h2>Portfolio</h2>
-        <article class="containerSlides">
-            <div class="slider-wrapper">
-                <div class="slider">
-                    <img onclick="switchSlide(true, true)" class="appear" id="imgslides" src="images/projeto_1.png">
-                </div>
-            </div>
+        <article class="containerSlides">  
+                <img onclick="switchSlide(true, true)" class="appear" id="imgslides" src="images/projeto_1.png">
         </article>
         <div class="sliderbtn">
             <button id="lrbtn" onclick="switchSlide(false)"> < </button><button id="lrbtn" onclick="switchSlide(true)"> > </button>
@@ -117,22 +113,30 @@
     <section class="pagina_sobre_projetos">
         <h2>Projetos</h2>
         <div class="containerProjetos">
-            <div class="widgetProjetos">
-                <img src="images/projetos_ph.png">
-                <h3>Mecarvit</h3>
-            </div>
-            <div class="widgetProjetos">
-                <img src="images/projetos_ph.png">
-                <h3>Mecarvit</h3>
-            </div>
-            <div class="widgetProjetos">
-                <img src="images/projetos_ph.png">
-                <h3>Mecarvit</h3>
-            </div>
-            <div class="widgetProjetos">
-                <img src="images/projetos_ph.png">
-                <h3>Mecarvit</h3>
-            </div>
+            <a href="projetos.html#mecarvit" style="text-decoration: none;">
+                <div class="widgetProjetos">
+                    <img src="images/projetos_ph.png">
+                    <h3>Mecarvit</h3>
+                </div>
+            </a>
+            <a href="projetos.html#python_e_excel" style="text-decoration: none;">
+                <div class="widgetProjetos">
+                    <img src="images/frame_pyex.jpg">
+                    <h3>Python e Excel</h3>
+                </div>
+            </a>
+            <a href="projetos.html#portfolio" style="text-decoration: none;">
+                <div class="widgetProjetos">
+                    <img src="images/frame_port.jpg">
+                    <h3>Portfolio</h3>
+                </div>
+            </a>
+            <a href="" style="text-decoration: none;">
+                <div class="widgetProjetos">
+                    <img src="images/projetos_ph.png">
+                    <h3>Mecarvit</h3>
+                </div>
+            </a>
         </div>
         <p>Quer ver mais projetos?</p>
         <button class="btnVermais" onclick="window.location.href='projetos.html'">Projetos</button>
