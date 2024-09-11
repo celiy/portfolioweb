@@ -261,6 +261,10 @@ p {
     border-radius: 4vh;
 
     background: #3030309a;
+    transition: 0.2s;
+}.widgetMais:hover{
+    background-color: #303030;
+    box-shadow: 0vh 0vh 5vh 0vh #ffffff3b;
 }
 
 .botaoContato{
