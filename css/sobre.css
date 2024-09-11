@@ -114,7 +114,6 @@ h2.highlighted {
 
 .containerSlides{
     margin: 0;
-    padding: 0;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -122,13 +121,18 @@ h2.highlighted {
 }
 
 .slider{
-    width: 80vw;
+    padding: 2rem;
+    width: 30vw;
+    z-index: 2;
     position: relative;
 } .slider img{
     width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
+    transition: all 0.3s ease-in-out;
+} .slider img:hover{
+    transform: scale(1.3);
 }
 
 .sliderbtn{
@@ -189,8 +193,8 @@ h2.highlighted {
     .widgetConhecimentos{
         height: 6rem;
     }
-    .slider-wrapper{
-        max-width: 48rem;
+    .slider{
+        width: 40vw;
     }
 }
 
@@ -202,14 +206,14 @@ h2.highlighted {
     .widgetConhecimentos{
         height: 6rem;
     }
-    .slider-wrapper{
-        max-width: 46rem;
-    } 
+    .slider{
+        width: 40vw;
+    }
 }
 
 @media (max-width: 1366px){
     .slider{
-        height: 30rem;
+        width: 38vw;
     }
 }
 
@@ -221,11 +225,8 @@ h2.highlighted {
     .widgetConhecimentos{
         height: 5.2rem;
     }
-    .slider-wrapper{
-        max-width: 40rem;
-    }
     .slider{
-        height: 28rem;
+        width: 40vw;
     }
 }
 
@@ -256,6 +257,9 @@ h2.highlighted {
         width: 80%;
         gap: 1rem;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .slider{
+        width: 62vw;
     }
     .containerProjetos{
         width: 80%;
@@ -302,13 +306,8 @@ h2.highlighted {
         gap: 1rem;
         grid-template-columns: 1fr 1fr 1fr;
     }
-    .slider-wrapper{
-        max-width: 10rem;
-    }
     .slider{
-        height: 16rem;
-    } .slider:hover{
-        transform: scale(1);
+        width: 82vw;
     }
     .containerProjetos{
         width: 80%;
