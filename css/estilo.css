@@ -15,6 +15,14 @@
     src: url(fonts/Poppins-Light.ttf);
 }
 
+:root{
+    --eerie: #181a1b;
+    --chibla: #131516;
+    --charcoal: #202020;
+    --coarent: #333131;
+    --sunset: #ff5757;
+}
+
 .slide-in-down   {
     opacity: 0;
     filter: blur(5px);
@@ -44,7 +52,7 @@
 }
 
 body{
-    background-color: #181a1b;
+    background-color: var(--eerie);
 }
 
 ul {
@@ -52,7 +60,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #131516;
+    background-color: var(--chibla);
     position: fixed;
     top: 0;
     width: 100%;
@@ -70,11 +78,11 @@ ul {
     opacity: 1;
     transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out; 
 } li a:hover {
-    background-color: #303030;
+    background-color: var(--charcoal);
     opacity: 1; 
 } .active {
     font-family: PoppinsBold;
-    color: #ff5757;
+    color: var(--sunset);
     font-size: 1.2rem;
 }
 
@@ -107,7 +115,7 @@ p {
 }
 
 #textoVermelho{
-    color: #ff5757;
+    color: var(--sunset);
 }
 
 .pagina_1{
@@ -180,7 +188,7 @@ p {
     position: relative;
     width: auto;
     height: 20vh;
-    background-image: linear-gradient(to bottom, #181a1b, black);
+    background-image: linear-gradient(to bottom, var(--eerie), black);
 }
 
 .pagina_2{
@@ -213,11 +221,11 @@ p {
     
     border-radius: 4vh;
 
-    background: #3030309a;
+    background: var(--charcoal);
     box-shadow: 0vh 0vh 5vh 0vh rgba(0, 0, 0, 0.233);
     transition: 0.2s;
 } .widget:hover{
-    background-color: #303030;
+    background-color: var(--charcoal);
     box-shadow: 0vh 0vh 5vh 0vh #ffffff3b;
 } .widget img{
     width: 100%;
@@ -260,10 +268,10 @@ p {
     
     border-radius: 4vh;
 
-    background: #3030309a;
+    background: var(--charcoal);
     transition: 0.2s;
 }.widgetMais:hover{
-    background-color: #303030;
+    background-color: var(--charcoal);
     box-shadow: 0vh 0vh 5vh 0vh #ffffff3b;
 }
 
@@ -272,12 +280,12 @@ p {
     font-family: PoppinsLight;
     font-size: 1.2rem;
     line-height: 1.6rem;
-    color: #ff5757;
+    color: var(--sunset);
     width: 10rem;
     height: 3rem;
-    border-color: #ff575700;
+    border-color: #ffffff00;
     border-radius: 1000px;
-    background-color: #181a1b;
+    background-color: var(--eerie);
     transition: all 0.4s;
 } .botaoContato::after{
     position: absolute;
@@ -288,12 +296,12 @@ p {
     left: 50%;
     translate: -50% -50%;
     border-radius: 1000px;
-    background-image: linear-gradient(to bottom left, #ff5757, #ca3737);
+    background-image: linear-gradient(to bottom left, var(--sunset), #ca3737);
     transition: all 0.6s;
     z-index: -1;
 } .botaoContato:hover{
     color: #ffffff;
-    box-shadow: 0 0 40px #ff5757;
+    box-shadow: 0 0 40px var(--sunset);
     z-index: 0;
 } #botaoContatoSmall{
     height: 124%;
@@ -305,12 +313,12 @@ p {
     font-family: PoppinsLight;
     font-size: 1.2rem;
     line-height: 1.6rem;
-    color: #ff5757;
+    color: var(--sunset);
     width: 3rem;
     height: 2rem;
-    border-color: #ff575700;
+    border-color: #ffffff00;
     border-radius: 1000px;
-    background-color: #181a1b;
+    background-color: var(--eerie);
     transition: all 0.4s;
          
 } #lrbtn::after{
@@ -322,12 +330,12 @@ p {
     left: 50%;
     translate: -50% -50%;
     border-radius: 1000px;
-    background-image: linear-gradient(to bottom left, #ff5757, #ca3737);
+    background-image: linear-gradient(to bottom left, var(--sunset), #ca3737);
     transition: all 0.6s;
     z-index: -1;
 } #lrbtn:hover{
     color: #ffffff;
-    box-shadow: 0 0 20px #ff5757;
+    box-shadow: 0 0 20px var(--sunset);
     z-index: 0;
 } 
 
@@ -341,14 +349,14 @@ p {
     width: 10rem;
     height: 3rem;
     border: solid;
-    border-color: #ff5757;
+    border-color: var(--sunset);
     border-radius: 1000px;
-    background-color: #202020;
+    background-color: var(--charcoal);
     transition: all 0.4s;
 }  .btnVermais:hover{
-    color: #ffffff;
-    background-color: #ff5757;
-    box-shadow: 0 0 40px #ff5757;
+    color: #ffffff; 
+    background-color: var(--sunset);
+    box-shadow: 0 0 40px var(--sunset);
     z-index: 0;
 } 
 

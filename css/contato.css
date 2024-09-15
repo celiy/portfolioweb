@@ -30,7 +30,7 @@
     
     border-radius: 4vh;
 
-    background-color: #202020;
+    background-color: var(--charcoal);
     box-shadow: 0vh 0vh 5vh 0vh rgba(0, 0, 0, 0.233);
     transition: 0.2s ease-out;
 } .contato:hover{

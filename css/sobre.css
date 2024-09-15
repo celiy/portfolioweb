@@ -8,7 +8,7 @@ h2.highlighted {
     width: 25%;
     left: 0;
     bottom: -4px;
-    background: #ff5757;
+    background: var(--sunset);
     transition: ease-in-out 0.3s;
 } h2.highlighted:hover::after {
     width: 100%;
@@ -67,7 +67,7 @@ h2.highlighted {
     justify-items: center;
     margin: auto;
     width: 100%;
-    background-color: #202020;
+    background-color: var(--charcoal);
     padding-top: 6vh;
     padding-bottom: 6vh;
     margin-top: 12vh;
@@ -99,7 +99,7 @@ h2.highlighted {
 } .widgetConhecimentos img{
     width: 46%;
 } .widgetConhecimentos:hover {
-    background: #ff5757;
+    background: var(--sunset);
 }
 
 .pagina_sobre_trabalhos{
@@ -132,7 +132,7 @@ h2.highlighted {
     object-fit: cover;
     transition: all 0.3s ease-in-out;
 } .slider img:hover{
-    transform: scale(1.3);
+    transform: scale(1.12);
 }
 
 .sliderbtn{
@@ -182,7 +182,7 @@ h2.highlighted {
 } .widgetProjetos img{
     width: 50%;
 } .widgetProjetos:hover {
-    background: #ff5757;
+    background: var(--sunset);
 }
 
 @media (max-width: 1600px){
