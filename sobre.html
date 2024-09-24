@@ -9,7 +9,8 @@
     <link rel="stylesheet" type="text/css" href="css/sobre.css">
     <link rel="stylesheet" type="text/css" href="css/resetcss.css">
 
-    <script defer src="scripts.js"></script>
+    <script defer type="module" src="js/scripts.js"></script>
+    <script defer type="module" src="js/sobre_js.js"></script>
 
     <title>Sobre</title>
 </head>
@@ -105,11 +106,11 @@
         <h2>Portfolio</h2>
         <article class="containerSlides">
             <div class="slider">    
-                <img onclick="switchSlide(true, true)" class="appear" id="imgslides" src="images/projeto_1.png">
+                <img class="appear" id="imgslides" src="images/projeto_1.png">
             </div>
         </article>
         <div class="sliderbtn">
-            <button id="lrbtn" onclick="switchSlide(false)"> < </button><button id="lrbtn" onclick="switchSlide(true)"> > </button>
+            <button id="lrbtn" class="lbtn"> < </button><button id="lrbtn" class="rbtn"> > </button>
         </div>
     </section>
     <section class="pagina_sobre_projetos">
