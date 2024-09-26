@@ -27,7 +27,7 @@
     margin-bottom: 16vh;
 
     width: 15.4rem;
-    height: 13rem;
+    height: 15rem;
     
     border-radius: 4vh;
 
@@ -49,6 +49,7 @@
 @media (max-width: 1600px){
     .contato{   
         width: 12rem;
+        height: 14rem;
         padding-top: 1.8rem;
         padding-bottom: 2rem;
     } .contato img{
@@ -59,6 +60,7 @@
 @media (max-width: 1444px){
     .contato{   
         width: 12rem;
+        height: 13rem;
         padding-top: 1.8rem;
         padding-bottom: 2rem;
     } .contato img{
