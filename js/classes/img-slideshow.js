@@ -1,3 +1,8 @@
+//Esta classe é um slideshow de imagens que roda automaticamente e pode ser interagido com botões ou clicks/toques
+//na imagem. A classe recebe o número máximo de imagens do slideshow, o elemento que contém o container das imagens,
+//o nome das imagens, formato das imagens eo elemento que contém o botão de anterior e o elemento 
+//que contém o botão de proximo.
+
 export class ImgSlideshow {
     constructor(a_noi, a_elemouse, a_elemouse_image, a_src_images) {
         this.noi = a_noi; //numero máximo de imagens no slideshow
@@ -85,10 +90,15 @@ export class ImgSlideshow {
     }
 }
 
-//exemplo de objeto:
+//Regras:
+//As imagens do slideshow tem que ter o mesmo nome a seguir do número da sua ordem. Exemplo:
+//imagemex_1.jpg, imagemex_2.jpg ...
+//O objeto deve ser criado com: (numero maximo de imagens, container das imagens, container das imagens, ['local/imagens','formato']);
+
+//Exemplo de objeto:
 //const obj_slide_show = new ImgSlideshow(5, 'imgslides', 'imgslides', [`images/sobre_portfolio/projeto_`,'.jpg']);
 
-//exemplo de html:
+//Exemplo de HTML:
 //<section>      <--- Seção onde tem o slideshow
 //    <article>  <--- Parte que segura o container das imagens
 //        <div>  <--- Container das imagens

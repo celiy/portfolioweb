@@ -53,6 +53,11 @@
 
 body{
     background-color: var(--eerie);
+    overflow-x: hidden;
+}
+
+html{
+    overflow-x: hidden;
 }
 
 ul {
@@ -192,65 +197,95 @@ p {
 }
 
 .pagina_2{
-    background-color: black;
+    background-image: url("../images/pag2-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     justify-content: center;
     margin: auto;
+    display: grid;
+    gap: 10rem;
 }
 
-.containerWidget{
+.containerWidgetRight{
     display: grid;
-    justify-content: center;
-    justify-items: center;
+    grid-template-columns: 1fr 1.4fr;
+    justify-items: start;
     padding-top: 12vh;
     padding-bottom: 12vh;
-} .widget{
+} 
+.containerWidgetLeft{
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    justify-items: end;
+    padding-top: 12vh;
+    padding-bottom: 12vh;
+} 
+
+.containerWidgetLeft figure, .containerWidgetRight figure{
+    justify-self: center;
+}
+
+.widget{
     position: relative;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 1rem;
 
     padding-top: 1.6rem;
     padding-left: 2.4rem;
     padding-right: 2.4rem;
     padding-bottom: 2rem;
-
-    margin-bottom: 40vh;
 
     width: 44rem;
     
     border-radius: 4vh;
 
-    background: var(--charcoal);
-    box-shadow: 0vh 0vh 5vh 0vh rgba(0, 0, 0, 0.233);
-    transition: 0.2s;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 4vh;
+    border: 1px solid #ffffff2e;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4);
+    transition: 0.2s all;
 } .widget:hover{
-    background-color: var(--charcoal);
-    box-shadow: 0vh 0vh 5vh 0vh #ffffff3b;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.15));
+    box-shadow: 0 0px 24px rgba(252, 252, 252, 0.2);
 } .widget img{
     width: 100%;
-    height: 100%;
     border: 2px;
     border-radius: 2vh;
     object-fit: contain;
-} #widgetSingleIcon{
-    width: 15%;
-    border-radius: 0%;
-    justify-self:end
-} #widgetMultipleIcon{
-    width: 3rem; 
-    border-radius: 0%;
-    justify-self:end
 } .widgetContainerInfo{
     display: grid;
     gap: 1rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.8fr 1.2fr;
     grid-column: 1 / -1;
     margin-top: 1vh;
 }
 
+.widgetImagem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.widgetImagem img{
+    width: 20%;
+    object-fit: contain;
+    background-color: rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 12px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+
 .widgetMais{
     position: relative;
+    align-self: center;
 
     display: grid;
     justify-content: center;
@@ -262,50 +297,41 @@ p {
     padding-right: 2.4rem;
     padding-bottom: 2rem;
 
-    margin-bottom: 40vh;
+    margin-bottom: 36vh;
 
     width: 22rem;
     
     border-radius: 4vh;
 
-    background: var(--charcoal);
-    transition: 0.2s;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 4vh;
+    border: 1px solid #ffffff2e;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4);
+    transition: 0.2s all;
 }.widgetMais:hover{
-    background-color: var(--charcoal);
-    box-shadow: 0vh 0vh 5vh 0vh #ffffff3b;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.15));
+    box-shadow: 0 0px 24px rgba(252, 252, 252, 0.2);
 }
 
 .botaoContato{
-    position: relative;
     font-family: PoppinsLight;
-    font-size: 1.2rem;
-    line-height: 1.6rem;
-    color: var(--sunset);
-    width: 10rem;
-    height: 3rem;
-    border-color: #ffffff00;
+    font-size: 1rem;
+    color: #ffffff;
+    width: 8.6rem;
+    height: 2.8rem;
+    border: 3px solid;
+    border-color: var(--sunset);
     border-radius: 1000px;
     background-color: var(--eerie);
     transition: all 0.4s;
-} .botaoContato::after{
-    position: absolute;
-    content: '';
-    height: 124%;
-    width: 106%;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    border-radius: 1000px;
-    background-image: linear-gradient(to bottom left, var(--sunset), #ca3737);
-    transition: all 0.6s;
-    z-index: -1;
 } .botaoContato:hover{
-    color: #ffffff;
+    color: #ffffff; 
+    background-color: var(--sunset);
     box-shadow: 0 0 40px var(--sunset);
     z-index: 0;
-} #botaoContatoSmall{
-    height: 124%;
-    width: 20%;
 }
 
 #lrbtn{
@@ -313,32 +339,20 @@ p {
     font-family: PoppinsLight;
     font-size: 1.2rem;
     line-height: 1.6rem;
-    color: var(--sunset);
+    color: #ffffff;
     width: 3rem;
-    height: 2rem;
-    border-color: #ffffff00;
+    height: 2.6rem;
+    border: 2px solid;
+    border-color: var(--sunset);
     border-radius: 1000px;
     background-color: var(--eerie);
     transition: all 0.4s;
-         
-} #lrbtn::after{
-    position: absolute;
-    content: '';
-    height: 124%;
-    width: 116%;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    border-radius: 1000px;
-    background-image: linear-gradient(to bottom left, var(--sunset), #ca3737);
-    transition: all 0.6s;
-    z-index: -1;
 } #lrbtn:hover{
-    color: #ffffff;
-    box-shadow: 0 0 20px var(--sunset);
+    color: #ffffff; 
+    background-color: var(--sunset);
+    box-shadow: 0 0 40px var(--sunset);
     z-index: 0;
 } 
-
 
 .btnVermais{
     position: relative;
@@ -348,7 +362,7 @@ p {
     color: #ffffff;
     width: 10rem;
     height: 3rem;
-    border: solid;
+    border: 3px solid;
     border-color: var(--sunset);
     border-radius: 1000px;
     background-color: var(--charcoal);
@@ -360,16 +374,30 @@ p {
     z-index: 0;
 } 
 
-.hidden{
+.hiddenL{
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
     transition: all 1s;
 }
-.show{
+.showL{
     filter: blur(0px);
     transform: translateX(0%);
     opacity: 1;
+} 
+
+.hiddenR{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 1s;
+    width: 0;
+}
+.showR{
+    filter: blur(0px);
+    transform: translateX(0%);
+    opacity: 1;
+    width: auto;
 } 
 
 .hidden2{
@@ -422,11 +450,6 @@ p {
         grid-column-gap: 3rem;
         grid-row-gap: 1.6rem;
     }
-    .botaoContato{   
-        height: 2.4rem;
-        width: 8rem;
-        font-size: 1rem;
-    }
     .widget{
         gap: 0.9rem;
         width: 36rem;
@@ -463,11 +486,6 @@ p {
         grid-column-gap: 3rem;
         grid-row-gap: 1.6rem;
     }
-    .botaoContato{   
-        height: 2.4rem;
-        width: 8rem;
-        font-size: 1rem;
-    } 
     .widget{
         gap: 0.9rem;
         width: 36rem;
@@ -496,11 +514,6 @@ p {
     p {
         font-size: 0.9rem;
         line-height: 1.3rem;
-    }
-    .botaoContato{   
-        height: 2.4rem;
-        width: 8rem;
-        font-size: 1rem;
     }
     .widget{
         gap: 0.8rem;
