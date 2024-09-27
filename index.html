@@ -9,16 +9,15 @@
     <link rel="stylesheet" type="text/css" href="css/estilo.css" />
     <link rel="stylesheet" type="text/css" href="css/resetcss.css" />
 
+    <script type="module" src="js/main.js"></script>
     <script defer type="module" src="js/index.js"></script>
+    
     <title>Home</title>
 </head>
 
 <body>
-    <ul>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="projetos.html">Projetos</a></li>
-        <li><a href="contato.html">Contato</a></li>
-        <li><a class="active" href="index.html">Home</a></li>
+    <ul id="ulmenu">
+        <p>Loading...</p>
     </ul>
     <section class="pagina_1">
         <div class="containerTextoEImagem">
@@ -40,7 +39,7 @@
                     Camaquã.
                 </p>
                 <div></div>
-                <button class="botaoContato" onclick="window.location.href='contato.html'">
+                <button id="5" class="botaoContato" onclick="window.location.href='contato.html'">
                     Contato
                 </button>
             </article>
@@ -48,7 +47,7 @@
                 <img src="images/ImagemLado.png" />
             </figure>
         </div>
-        <p class="textoCentro">Abaixe para ver mais</p>
+        <p id="6" class="textoCentro">Abaixe para ver mais</p>
     </section>
     <div class="fade_to_pagina_2"></div>
     <section class="pagina_2">
@@ -62,19 +61,18 @@
             <a href="sobre.html" style="text-decoration: none">
                 <article class="widget hiddenR">
                     <h2>Mecarvit</h2>
-                    <p>
+                    <p id="7">
                         Programa em Python para caso especifico de uma mecânica que tem 
                         integração com banco de dados PostgreSQL.
                     </p>
                     <div class="widgetContainerInfo">
                         <img src="images/widget_pyex.jpg" />
-                        <h4>
+                        <h4 id="8">
                             • Registrar cliente <br />
                             • Regristrar serviço <br />
                             • Ver clientes <br />
                             • Ver serviços <br />
-                            • Procurar serviço por nome do cliente <br />
-                            • Mudar serviços para pago ou não pago
+                            • Procurar serviço por nome do cliente
                         </h4>
                     </div>
                 </article>
@@ -83,21 +81,20 @@
         <div class="containerWidgetLeft">
             <a href="sobre.html" style="text-decoration: none">
                 <article class="widget hiddenL">
-                    <h2>Planilhas</h2>
-                    <p style="grid-column: 1 / -1">
+                    <h2 id="9">Planilhas</h2>
+                    <p id="10">
                         Este projeto é um aplicativo em Python que tem o intuido de
                         automatizar o gerenciamento de planilhas do Excel.
                     </p>
                     <div class="widgetContainerInfo">
                         <img src="images/widget_pyex.jpg" />
-                        <h4>
+                        <h4 id="11">
                             • Ler planilha <br />
                             • Inserir dados <br />
                             • Escanear dados <br />
                             • Maior/Menor valor <br />
-                            • Média <br />
-                            • Valores repetidos <br />
-                            • Criar planilha
+                            • Média de valores <br />
+                            • Valores repetidos
                         </h4>
                     </div>
                 </article>
@@ -115,13 +112,13 @@
             <a href="sobre.html" style="text-decoration: none">
                 <article class="widget hiddenR">
                     <h2>Web</h2>
-                    <p>
+                    <p id="12">
                         Sou um Desenvolvedor, programador e designer de websites. Tenho conhecimento
                         em programação front-end e back-end.
                     </p>
                     <div class="widgetContainerInfo">
                         <img src="images/widget_redj.jpg" />
-                        <h4>
+                        <h4 id="13">
                             Conhecimento em HTML, CSS, JavaScript, NodeJS, React e django.
                         </h4>
                     </div>
@@ -131,14 +128,14 @@
         <div class="containerWidgetLeft">
             <a href="sobre.html" style="text-decoration: none">
                 <article class="widget hiddenL" style="grid-column: 1">
-                    <h2>Design Gráfico</h2>
-                    <p>
+                    <h2 id="14">Design Gráfico</h2>
+                    <p id="15">
                         Trabalhei como designer gráfico freelancer por 2 anos.
                         Oferecendo serviços pequenos e projetos de escala média.
                     </p>
                     <div class="widgetContainerInfo">
                         <img src="images/widget_pspr.jpg" />
-                        <h4>
+                        <h4 id="16">
                             Usei ferramentas como Premiere Pro, Sony Vegas, GIMP, Photoshop,
                             Illustrator e Canva. Trabalhei com identidade visual e flyers
                             promocionais.
@@ -154,8 +151,8 @@
         <div style="display: grid; justify-content: center;">
             <a href="sobre.html" style="text-decoration: none;">
                 <article class="widgetMais hiddenL">
-                    <h2>Mais</h2>
-                    <p>Para ver mais sobre mim, minhas experiências, conhecimentos e projetos, clique aqui neste card.
+                    <h2 id="17">Mais</h2>
+                    <p id="18">Para ver mais sobre mim, minhas experiências, conhecimentos e projetos, clique aqui neste card.
                     </p>
                 </article>
             </a>
