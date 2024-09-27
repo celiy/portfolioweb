@@ -527,6 +527,7 @@ p {
 @media (max-width: 600px){
     .pagina_1{
         margin-top: 14vh;
+        margin-bottom: 0vh;
         width: 90%;
     }
     .containerTextoEImagem{
@@ -535,9 +536,19 @@ p {
     .containerImagem{
         height: 0px;
     }
+    .pagina_2{
+        gap: 0rem;
+    }
+    .containerWidgetRight{
+        justify-items: center;
+        grid-template-columns: 1fr;
+    }
+    .containerWidgetLeft{
+        justify-items: center;
+        grid-template-columns: 1fr;
+    }
     .widget{
         display: grid;
-        grid-template-columns: 1fr 1fr;
         gap: 1rem;
     
         padding-top: 1.6rem;
@@ -545,26 +556,23 @@ p {
         padding-right: 2.2rem;
         padding-bottom: 2rem;
     
-        margin-bottom: 40vh;
+        margin-bottom: 0vh;
     
         width: 18rem;
         
         border-radius:4vh;
-     } #widgetSingleIcon{
-        width: 2rem;
-        border-radius: 0%;
-        justify-self:end
-    } #widgetMultipleIcon{
-        width: 2rem; 
-        border-radius: 0%;
-        justify-self:end
-    } .widgetContainerInfo{
+     } .widgetContainerInfo{
         gap: 0rem;
         grid-template-columns: 1fr 0fr;
     } .widgetContainerInfo h4{
         font-size: 0rem;
+    } .widgetImagem{
+        height: 0px;
+    } .widgetImagem img{
+        display: none;
     }
     .widgetMais{
         width: 16rem;
+        margin-bottom: 30vh;
     }
 }
