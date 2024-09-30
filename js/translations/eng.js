@@ -33,4 +33,25 @@ export const eng_translations = {
     25:'See more',
     26:'See more',
     27:'See more',
+    28:'<span id="textoVermelho">Analyst, Developer and system programmer.</span>',
+    29:`• System analyst and developer. <br>
+        • TI knowledge <br>
+        • Graphic Design <br>
+        • Programmer <br>`,
+    30:'Contact',
+    31:'About',
+    32:`In addition to being an Analyst, Developer, and Programmer, I also possess advanced skills in image editing, video editing, and graphic design in general, with 4 years of experience in the field. I also have an in-depth knowledge of IT, with 6 years of experience in the area. 
+
+        <br><br>
+
+        • I worked autonomously with IT services, such as hardware and software support, for 3 years. Recently, I have been exploring the field of programming, analysis, and system development, as it is an area that I have been interested in for years and only recently feel comfortable taking on this role.
+
+        <br><br>
+
+        • I worked autonomously as a graphic designer for a total of 2 years. Before starting my career as a graphic designer, programmer, analyst, and developer, I studied IT concepts, and today I possess advanced knowledge in computing, both in software and hardware.',`,
+    
+    33:'Skills',
+    34:'Projects',
+    35:'Wanna see more projects?',
+    36:'Projects',
 }
