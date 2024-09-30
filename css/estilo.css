@@ -91,6 +91,12 @@ ul {
     font-size: 1.2rem;
 }
 
+.translation{
+    position: fixed;
+    left: 0;
+    margin-left: 2rem;
+}
+
 h1{
     font-family: PoppinsBold;
     font-size: 4rem;
