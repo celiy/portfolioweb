@@ -214,6 +214,13 @@ p {
     gap: 10rem;
 }
 
+.containerWidgetCenter{
+    display: grid;
+    justify-items: center;
+    padding-top: 12vh;
+    padding-bottom: 12vh;
+} 
+
 .containerWidgetRight{
     display: grid;
     grid-template-columns: 1fr 1.4fr;
@@ -221,6 +228,7 @@ p {
     padding-top: 12vh;
     padding-bottom: 12vh;
 } 
+
 .containerWidgetLeft{
     display: grid;
     grid-template-columns: 1.4fr 1fr;
@@ -231,6 +239,23 @@ p {
 
 .containerWidgetLeft figure, .containerWidgetRight figure{
     justify-self: center;
+}
+
+.widgetEducacao{
+    display: grid;
+    grid-template-columns: 0fr 1fr;
+    gap: 2rem;
+
+    padding-top: 1.6rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    padding-bottom: 2rem;
+}
+
+.vertBar{
+    width: 4px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.5);
 }
 
 .widget{
@@ -286,8 +311,6 @@ p {
     background-color: rgba(0, 0, 0, 0.15);
     box-shadow: 0px 0px 12px 12px rgba(0, 0, 0, 0.15);
 }
-
-
 
 .widgetMais{
     position: relative;
