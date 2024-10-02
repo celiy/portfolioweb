@@ -1,10 +1,9 @@
-import {eng_translations} from './translations/eng.js';
+import { eng_translations } from './translations/eng.js';
 
+async function draw_navbar() {
+  const ulmenu = document.getElementById('ulmenu');
 
-async function draw_navbar(){
-    const ulmenu = document.getElementById('ulmenu');
-
-    ulmenu.innerHTML = `
+  ulmenu.innerHTML = `
     <li><a id="111" class="js-active" href="sobre.html">Sobre</a></li>
     <li><a id="222" class="js-active" href="projetos.html">Projetos</a></li>
     <li><a id="333" class="js-active" href="contato.html">Contato</a></li>
@@ -12,15 +11,15 @@ async function draw_navbar(){
     <li><a class="translation" href="" onclick="changeLanguage()">PT-BR</a></li>`;
 
 } draw_navbar().then(() => {
-    const active = document.querySelectorAll('.js-active');
-    const translation = document.querySelector('.translation');
-    translation.href = window.location.href;
+  const active = document.querySelectorAll('.js-active');
+  const translation = document.querySelector('.translation');
+  translation.href = window.location.href;
 
-    for (const item of active) {
-        if (item.href === window.location.href) {
-            item.classList.add('active');
-        }
+  for (const item of active) {
+    if (item.href === window.location.href) {
+      item.classList.add('active');
     }
+  }
 });
 
 //Esta parte faz a tradução do site para o idioma inglês
@@ -45,18 +44,18 @@ if (currentLang === 'eng') {
   });
 }
 
-window.changeLanguage = function() {
-    if (currentLang === 'ptbr') {
-      localStorage.setItem('lang', 'eng');
-    } else {
-      localStorage.setItem('lang', 'ptbr');
-    }
-    window.location.reload();
-    console.log(localStorage.getItem('lang'));
+window.changeLanguage = function () {
+  if (currentLang === 'ptbr') {
+    localStorage.setItem('lang', 'eng');
+  } else {
+    localStorage.setItem('lang', 'ptbr');
+  }
+  window.location.reload();
+  console.log(localStorage.getItem('lang'));
 }
 
 if (currentLang === 'eng') {
-    translation_element.innerText = 'ENG';
+  translation_element.innerText = 'ENG';
 } else {
-    translation_element.innerText = 'PT-BR';
+  translation_element.innerText = 'PT-BR';
 }
