@@ -8,7 +8,7 @@ export const eng_translations = {
     1:'Hello, my name is',
     2:'Diogo Carvalho Viegas',
     3:'I am a <span id="textoVermelho"> System Analyst and Develpoper </span>',
-    4:'I started my career as a programmer with the C programming language. Since then, I have been learning and expanding my knowledge. This is my portfolio, which I created not only to show my knowledge of HTML/CSS, but also my skills as a graphic designer. I am looking for new job opportunities and open to creating new projects. I am currently attending a higher education course in Systems Analysis and Development at IFSUL Campus Camaquã.',
+    4:'HTML, CSS, JavaScript, React, django, NodeJS, Python, PostgreSQL and C Programmer. <br> System Analyst and Developer studying said fields in IFSUL Campus Camaquã <br> Expert in Graphic Design.',
     5:'Contact',
     6:'Scroll down to see more',
     7:'Python app for specific use case of a car mechanic that has PostgreSQL integration.',
@@ -23,6 +23,11 @@ export const eng_translations = {
     16:'I used tools such as Premiere Pro, Sony Vegas, GIMP, Photoshop and Canva. I worked with visual identity and promotional flyers.',
     17:'More',
     18:'To see more about me, my experience and my projects, click here.',
+    37:'Education',
+    38:'Computer basics | Presencial Course',
+    39:'System Analysis and Development | Superior Education',
+    40:'Online Courses',
+    41:'Projects and skills',
     projects:'projetos.html',
     19:'Specific application made for a car mechanic that has the functionalities of managing services and clients, with database integration.',
     20:'Writen in:',
@@ -33,6 +38,7 @@ export const eng_translations = {
     25:'See more',
     26:'See more',
     27:'See more',
+    sobre:'sobre.html',
     28:'<span id="textoVermelho">Analyst, Developer and system programmer.</span>',
     29:`• System analyst and developer. <br>
         • TI knowledge <br>

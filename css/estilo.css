@@ -73,7 +73,10 @@ ul {
     box-shadow: 0px -5px 15px 0px black;
 }li {
     float: right;
-}li a {
+}li img{
+    width: 1rem;
+}
+li a {
     display: block;
     padding: 2.4vh 2.2vw;
     font-family: PoppinsMedium;
@@ -211,7 +214,7 @@ p {
     justify-content: center;
     margin: auto;
     display: grid;
-    gap: 10rem;
+    gap: 0rem;
 }
 
 .containerWidgetCenter{
@@ -225,25 +228,29 @@ p {
     display: grid;
     grid-template-columns: 1fr 1.4fr;
     justify-items: start;
-    padding-top: 12vh;
-    padding-bottom: 12vh;
+    padding-top: 16vh;
+    padding-bottom: 16vh;
 } 
 
 .containerWidgetLeft{
     display: grid;
     grid-template-columns: 1.4fr 1fr;
     justify-items: end;
-    padding-top: 12vh;
-    padding-bottom: 12vh;
+    padding-top: 16vh;
+    padding-bottom: 16vh;
 } 
 
 .containerWidgetLeft figure, .containerWidgetRight figure{
     justify-self: center;
 }
 
+.containerWidetEducacao{
+    display: grid;
+}
+
 .widgetEducacao{
     display: grid;
-    grid-template-columns: 0fr 1fr;
+    grid-template-columns: 0.3fr 1fr;
     gap: 2rem;
 
     padding-top: 1.6rem;
@@ -553,6 +560,40 @@ p {
 }
 
 /* Ajuste para mobile */
+@media (max-width: 800px){
+    .containerWidgetRight{
+        justify-items: center;
+        grid-template-columns: 1fr;
+    }
+    .containerWidgetLeft{
+        justify-items: center;
+        grid-template-columns: 1fr;
+    }
+    .widget{
+        display: grid;
+        gap: 1rem;
+    
+        padding-top: 1.6rem;
+        padding-left: 2.2rem;
+        padding-right: 2.2rem;
+        padding-bottom: 2rem;
+    
+        margin-bottom: 0vh;
+    
+        width: 24rem;
+        
+        border-radius:4vh;
+     } .widgetContainerInfo{
+        gap: 0rem;
+        grid-template-columns: 1fr 0fr;
+    } .widgetContainerInfo h4{
+        font-size: 0rem;
+    } .widgetImagem{
+        height: 0px;
+    } .widgetImagem img{
+        display: none;
+    }
+}
 @media (max-width: 600px){
     .pagina_1{
         margin-top: 14vh;
@@ -603,5 +644,36 @@ p {
     .widgetMais{
         width: 16rem;
         margin-bottom: 30vh;
+    }
+} 
+@media (max-width: 375px){
+    .translation{
+        margin-left: 0.8rem;
+    }
+}
+@media (max-width: 320px){
+    li a {
+        padding: 2.4vh 1vw;
+    } 
+    .translation{
+        margin-left: 0.6rem;
+    }
+    .widget{
+        display: grid;
+        gap: 1rem;
+    
+        padding-top: 1.6rem;
+        padding-left: 1.4rem;
+        padding-right: 1.4rem;
+        padding-bottom: 2rem;
+    
+        margin-bottom: 0vh;
+    
+        width: 14rem;
+        
+        border-radius:4vh;
+    }
+    .widgetMais{
+        width: 10rem;
     }
 }
