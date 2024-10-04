@@ -561,6 +561,12 @@ p {
 
 /* Ajuste para mobile */
 @media (max-width: 800px){
+    .containerTextoEImagem{
+        grid-template-columns: 1fr;
+    }
+    .containerImagem{
+        height: 0px;
+    }
     .containerWidgetRight{
         justify-items: center;
         grid-template-columns: 1fr;

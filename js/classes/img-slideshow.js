@@ -11,6 +11,8 @@ export class ImgSlideshow {
         this.elemouse = document.getElementById(a_elemouse);
         this.image = document.getElementById(a_elemouse_image);
 
+        console.log(this.a_elemouse, this.a_elemouse_image);
+
         this.src_images = a_src_images;
         this.mousehover = false;
         this.intervalo_switch = null;
@@ -22,7 +24,8 @@ export class ImgSlideshow {
 
     //esta função faz a troca de imagens baseado no click do botão e click na imagem
     setupEvents() {
-        //pega o botão de próximo e anterior
+        try {
+            //pega o botão de próximo e anterior
         const nextBtn = document.querySelector(".rbtn");
         const prevBtn = document.querySelector(".lbtn");
 
@@ -32,6 +35,11 @@ export class ImgSlideshow {
 
         //evento de click na imagem
         this.image.addEventListener("click", () => this.switchSlide(true, true));
+        } catch (error) {
+            console.log(error);
+            console.log("Por causa do erro, botões de troca de imagem não podem ser implementados.");
+        }
+        
     }
 
     esperarSegundos(segundos) {
