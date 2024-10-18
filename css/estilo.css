@@ -75,8 +75,8 @@ ul {
     float: right;
 }li img{
     width: 1rem;
-}
-li a {
+}li a {
+    position: relative; 
     display: block;
     padding: 2.4vh 2.2vw;
     font-family: PoppinsMedium;
@@ -92,6 +92,18 @@ li a {
     font-family: PoppinsBold;
     color: var(--sunset);
     font-size: 1.2rem;
+} li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff6b6b; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+} li a:hover::after {
+    width: 100%; 
 }
 
 .translation{
@@ -198,7 +210,7 @@ p {
 }
 
 .pagina_2{
-    background-image: url("../images/pag2-background.png");
+    background-image: url("../images/pag2-background.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

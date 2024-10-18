@@ -9,12 +9,11 @@ async function draw_navbar() {
     <li><a id="333" class="js-active" href="contato.html">Contato</a></li>
     <li><a id="444" class="js-active" href="index.html">Home</a></li>
     <li><a class="translation" href="" onclick="changeLanguage()">PT-BR</a></li>`;
-
 } 
 
 document.addEventListener('DOMContentLoaded', async () => {
   await draw_navbar();
-  
+
   const active = document.querySelectorAll('.js-active');
   const translation = document.querySelector('.translation');
   translation.href = window.location.href;
