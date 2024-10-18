@@ -188,14 +188,6 @@ p {
     display: grid;
     justify-items: center;
     padding-top: 4vh;
-    opacity: 0;
-    animation: disappear-scroll linear;
-    animation-timeline: view();
-    animation-range-end: 500px;
-}
-@keyframes disappear-scroll{
-    from { opacity: 0.4 ;}
-    to { opacity: 0; }
 }
 
 .fade_to_pagina_2{
@@ -354,10 +346,10 @@ p {
 
 .botaoContato{
     font-family: PoppinsLight;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #ffffff;
-    width: 8.6rem;
-    height: 2.8rem;
+    width: 10rem;
+    height: 3.2rem;
     border: 3px solid;
     border-color: var(--sunset);
     border-radius: 1000px;
@@ -484,6 +476,11 @@ p {
         grid-column-gap: 3rem;
         grid-row-gap: 1.6rem;
     }
+    .botaoContato{
+        font-size: 1.1rem;
+        width: 9rem;
+        height: 3rem;
+    } 
     .widget{
         gap: 0.9rem;
         width: 36rem;
@@ -567,6 +564,11 @@ p {
     .containerImagem{
         height: 0px;
     }
+    .botaoContato{
+        font-size: 1rem;
+        width: 8rem;
+        height: 2.8rem;
+    } 
     .containerWidgetRight{
         justify-items: center;
         grid-template-columns: 1fr;

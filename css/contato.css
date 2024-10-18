@@ -42,9 +42,11 @@
     width: 12rem;
     object-fit: contain;
     transition: 0.2s ease-out;
-} .contato img:hover{
-    transform: scale(1.1);
-}
+} 
+
+.hover{
+    transform: scale(1.2);
+} 
 
 @media (max-width: 1600px){
     .contato{   

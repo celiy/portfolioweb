@@ -10,52 +10,57 @@ async function draw_navbar() {
     <li><a id="444" class="js-active" href="index.html">Home</a></li>
     <li><a class="translation" href="" onclick="changeLanguage()">PT-BR</a></li>`;
 
-} draw_navbar().then(() => {
+} 
+
+document.addEventListener('DOMContentLoaded', async () => {
+  await draw_navbar();
+  
   const active = document.querySelectorAll('.js-active');
   const translation = document.querySelector('.translation');
   translation.href = window.location.href;
 
   for (const item of active) {
-    if (item.href === window.location.href) {
+    if (new URL(item.href).pathname === new URL(window.location.href).pathname) {
       item.classList.add('active');
     }
   }
 });
 
-//Esta parte faz a tradução do site para o idioma inglês
-const currentLang = localStorage.getItem('lang') || 'ptbr';
-localStorage.setItem('lang', currentLang);
+document.addEventListener('DOMContentLoaded', () => {
+  //Esta parte faz a tradução do site para o idioma inglês ou portugûes
+  const currentLang = localStorage.getItem('lang') || 'ptbr';
+  localStorage.setItem('lang', currentLang);
 
-const translation_element = document.querySelector('.translation');
-const ids = [];
+  const translation_element = document.querySelector('.translation');
+  const ids = [];
 
-if (currentLang === 'eng') {
-  const elements = document.querySelectorAll('*[id]');
-  elements.forEach((element) => {
-    const id = element.id;
-    if (!isNaN(parseInt(id))) {
-      ids.push(id);
-    }
-  });
+  if (currentLang === 'eng') {
+    const elements = document.querySelectorAll('*[id]');
+    elements.forEach((element) => {
+      const id = element.id;
+      if (!isNaN(parseInt(id))) {
+        ids.push(id);
+      }
+    });
 
-  ids.forEach((id) => {
-    const element = document.getElementById(id);
-    element.innerHTML = eng_translations[id];
-  });
-}
-
-window.changeLanguage = function () {
-  if (currentLang === 'ptbr') {
-    localStorage.setItem('lang', 'eng');
-  } else {
-    localStorage.setItem('lang', 'ptbr');
+    ids.forEach((id) => {
+      const element = document.getElementById(id);
+      element.innerHTML = eng_translations[id];
+    });
   }
-  window.location.reload();
-  console.log(localStorage.getItem('lang'));
-}
 
-if (currentLang === 'eng') {
-  translation_element.innerText = 'ENG';
-} else {
-  translation_element.innerText = 'PT-BR';
-}
+  window.changeLanguage = function () {
+    if (currentLang === 'ptbr') {
+      localStorage.setItem('lang', 'eng');
+    } else {
+      localStorage.setItem('lang', 'ptbr');
+    }
+    window.location.reload();
+  }
+
+  if (currentLang === 'ptbr') {
+    translation_element.innerText = 'PT-BR';
+  } else {
+    translation_element.innerText = 'ENG';
+  }
+});
