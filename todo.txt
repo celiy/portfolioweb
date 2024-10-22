@@ -20,3 +20,8 @@ Mobile
 1024x768 X
 1152x864 X
 1280x960 X
+
+2. Inspirações para serem implementadas:
+
+https://www.behance.net/gallery/205357511/Porfolio-Web-Design?tracking_source=search_projects|web+porfolio&l=0
+
