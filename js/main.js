@@ -7,7 +7,7 @@ async function draw_navbar() {
     <li><a id="111" class="js-active" href="sobre.html">Sobre</a></li>
     <li><a id="222" class="js-active" href="projetos.html">Projetos</a></li>
     <li><a id="333" class="js-active" href="contato.html">Contato</a></li>
-    <li><a id="444" class="js-active" href="home.html">Home</a></li>
+    <li><a id="444" class="js-active" href="index.html">Home</a></li>
     <li><a class="translation" href="" onclick="changeLanguage()">PT-BR</a></li>`;
 } 
 
