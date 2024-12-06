@@ -7,9 +7,11 @@
     <link rel="shortcut icon" type="image/x-icon" href="logos/diogologo.ico" />
 
     <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="css/estilo_256.css" />
     <link rel="stylesheet" type="text/css" href="css/resetcss.css" />
 
     <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/256.js"></script>
     <script defer type="module" src="js/index.js"></script>
     
     <title>Home</title>
@@ -180,6 +182,55 @@
                 <img src="logos/pr.png" />
             </figure>
         </div>
+        <!-- PARA IMPLEMENTAR -->
+        <div class="main">
+            <div class="menu-header">
+                <p class="title">256</p>
+                <p class="score">Pontos: 0</p>
+                <p class="best">Diogo V.</p>
+            </div>
+            <div class="game-primary">
+                <div class="border">
+                    <div class="game-tile unselected" id="01" onclick="addNum('01')"></div>
+                </div>
+                <div class="border">
+                    <div class="game-tile unselected" id="02" onclick="addNum('02')"></div>
+                </div>
+                <div class="border">
+                    <div class="game-tile unselected" id="03" onclick="addNum('03')"></div>
+                </div>
+                <div class="border">
+                    <div class="game-tile unselected" id="04" onclick="addNum('04')"></div>
+                </div>
+                <div class="border">
+                    <div class="game-tile unselected" id="05" onclick="addNum('05')"></div>
+                </div>
+                <div class="border">
+                    <div class="game-tile unselected" id="06" onclick="addNum('06')"></div>
+                </div>
+                <div class="border">
+                    <div class="game-tile unselected" id="07" onclick="addNum('07')"></div>
+                </div>
+                <div class="border">
+                    <div class="game-tile unselected" id="08" onclick="addNum('08')"></div>
+                </div>
+                <div class="border">
+                    <div class="game-tile unselected" id="09" onclick="addNum('09')"></div>
+                </div>
+            </div>
+            <div class="separation"></div>
+            <div class="game-inventory">
+                <div class="border">
+                    <div class="game-inv-tile unselected" id="010" onclick="selectNum('010')"></div>
+                </div>
+                <div class="border">
+                    <div class="game-inv-tile unselected" id="011" onclick="selectNum('011')"></div>
+                </div>
+                <div class="border">
+                    <div class="game-inv-tile unselected" id="012" onclick="selectNum('012')"></div>
+                </div>
+            </div>
+        </div>
         <div style="display: grid; justify-content: center;">
             <a href="sobre.html" style="text-decoration: none;">
                 <article class="widgetMais hiddenL">
@@ -190,7 +241,7 @@
             </a>
     </section>
     </div>
-
+    
 </body>
 
 </html>
