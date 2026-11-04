@@ -1,0 +1,27 @@
+1. Adicionar suporte as resoluções:
+
+Mobile
+9:16 X
+
+16:9
+1280×720 X
+1366×768 X
+1600×900 X
+1920×1080 X
+2560×1440
+3840×2160
+
+16:10
+1280x800 X
+1440x900 X
+1680x1050 
+
+4:3
+1024x768 X
+1152x864 X
+1280x960 X
+
+2. Inspirações para serem implementadas:
+
+https://www.behance.net/gallery/205357511/Porfolio-Web-Design?tracking_source=search_projects|web+porfolio&l=0
+
