@@ -3,13 +3,21 @@
         <NavBar variant="simplified absolute inset-x-0 top-0">
             <div class="w-full p-3">
                 <div class="flex w-full items-center justify-center gap-3">
-                    <Button variant="transparent">Início</Button>
+                    <Button
+                        v-for="link in [
+                            { label: 'Início', href: '/' },
+                            { label: 'Projetos', href: '/projects' },
+                            { label: 'Sobre', href: '/about' },
+                            { label: 'Contato', href: '/contact' }
+                        ]"
+                        :key="link.label"
 
-                    <Button variant="transparent">Projetos</Button>
-
-                    <Button variant="transparent">Sobre</Button>
-
-                    <Button variant="transparent">Contato</Button>
+                        variant="transparent"
+                        class="hover:text-primary"
+                        :href="link.href"
+                    >
+                        {{ link.label }}
+                    </Button>
 
                     <Button
                         variant="transparent"
