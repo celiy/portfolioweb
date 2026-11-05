@@ -26,7 +26,7 @@ Index:
             <seção>
         </introdução>
 
-        <lista de conhecimentos, cada conhecimento usa ItemIcon com cor combinando, incluir Fastify, Java>
+        <lista de conhecimentos, cada conhecimento usa ItemIcon com cor combinando>
             <div align="center">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="html5 logo"  />
                 <img width="12" />
@@ -229,8 +229,6 @@ Index:
 
 Novo variante para seletor do tabs que expande até o final e é parecido com toggleable
 
-Poder usar o reveal-highlight e customizar, no caso definir qual cor ele usa, intesidade e itensidade no fly tipo reveal-highlight-primary, reveal-highlight-white/80
-
 Link podem mostrar um tooltip com uma imagem pequena mostrando um preview do que tem
 
 Incluir o Fastify, Java no readme do github
@@ -238,5 +236,3 @@ Incluir o Fastify, Java no readme do github
 Forçar o reveal highlight
 
 Atualizar o Readme do contracheques php
-
-Variante outline o fundo deve ficar cor sólida e o texto foreground da cor
