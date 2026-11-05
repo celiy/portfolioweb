@@ -4,11 +4,11 @@ Index:
     <inicio>
         <introdução texto na esquerda que tem width limitado estilo jasoncameron.dev>
             <bem pequeno>Olá, me chamo</bem>
-            <texto gadriente que muda o gadriente ao hover>Diogo Carvalho Viegas</texto>
+            <texto gadriente que muda o gadriente ao hover, clicar leva para o Sobre>Diogo Carvalho Viegas</texto>
             <pequeno>DESENVOLVEDOR FULL-STACK</pequeno>
 
             <p>
-                Me especializo em desenvolver aplicações escaláveis, tendo experiência de mais de 4 anos focada em front-end e backend, me envolvendo em cada parte do processo do desenvolvimento desde o design, programação, testes e publicação.
+                Me especializo em desenvolver aplicações escaláveis, tendo experiência de mais de 3 anos focada em front-end e backend, me envolvendo em cada parte do processo do desenvolvimento desde o design, programação, testes e publicação.
             </p>
 
             <seção contato e afins>
@@ -93,14 +93,150 @@ Index:
 
         <experiencia e projetos> <Botão que leva para ver todo os projetos>
             <even7 clicar leva para o site da even7>
+                Banner EVEN7
                 EVEN7 <badge>Trabalho</badge>
+                [desc]
+                <Botão baixar carta de recomendação />
                 Tags: Vue, React, MaterialUI, TypeScript, TailwindCSS, Fastify, MongoDB, Redis
             </even7>
+
+            <CHT>
+                Banner CHT <No canto superior direito icone de internet com tooltip [link do site] que ao clicar leva ao site>
+                CHT Template <Badge>Projeto</Badge>
+                [desc]
+                Tags: TypeScript, Vue, TailwindCSS, Python, Electron, Vite
+            </CHT>
+
+            <Mecarvit>
+                Banner Mecarvit
+                Mecarvit <Badge>Projeto</Badge>
+                [desc]
+                Tags: TypeScript, Vue, TailwindCSS, ExpressJS, SQLite, Drizzle
+            </Mecarvit>
+
+            <Pasgo>
+                Banner Pasgo <No canto superior direito icone de internet com tooltip pasgo.com.br que ao clicar leva ao site>
+                Pasgo <Badge>Projeto</Badge>
+                [desc]
+                Tags: JavaScript, TailwindCSS, React, Shadcn, Vue, Naive-ui, ExpressJS, MongoDB
+            </Pasgo>
         </experiencia>
+
+        <mini cards>
+            <lado a lado>
+                <card de commits mais recentes>
+                    <icon de git branch> Commits recentes
+                    ex (clicar leva para o link do commit): Repositório: nome do commit bla bl... +53 / -12
+                    <Link leva para o perfil github> Ver no github <Link>
+                </card>
+
+                <card de atividade no github>
+                    [Numero de repositórios] Repositórios publicados
+                    ex (clicar leva ao repositório): Nome do repositório
+                    <Barra que mostra a porcentagem de linguagens que tem no meu git>
+                </card>
+            </lado>
+
+            <lado a lado>
+                <card de educação>
+                    <educação>
+                        Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas, IFSUL Camaquã
+                        julho de 2021 – atual (Previsão de conclusão: dezembro de 2026)
+                    </educação>
+                </card>
+
+                <lado a lado>
+                    <card que mostra os stats do code wars>
+
+                    </card>
+
+                    <card de localização>
+                        <Icone pin primary> Localização atual
+                        Mapa que mostra a cidade atual
+                        Nome da cidade, estado / horario local em primary
+                    </card>
+                </lado>
+            </lado>
+        </mini>
     </inicio>
+
+    <Projetos>
+        <CHT>
+            Banner CHT <No canto superior direito icone de internet com tooltip [link do site] que ao clicar leva ao site>
+            CHT Template <Badge>Projeto</Badge>
+            [desc]
+            Tags: TypeScript, Vue, TailwindCSS, Python, Electron, Vite
+        </CHT>
+
+        <Mecarvit>
+            Banner Mecarvit
+            Mecarvit <Badge>Projeto</Badge>
+            [desc]
+            Tags: TypeScript, Vue, TailwindCSS, ExpressJS, SQLite, Drizzle
+        </Mecarvit>
+
+        <Pasgo>
+            Banner Pasgo <No canto superior direito icone de internet com tooltip pasgo.com.br que ao clicar leva ao site>
+            Pasgo <Badge>Projeto</Badge>
+            [desc]
+            Tags: JavaScript, TailwindCSS, SCSS, React, Shadcn, Vue, Naive-ui, ExpressJS, MongoDB
+        </Pasgo>
+
+        <API REST>
+            API REST <Badge>Projeto</Badge>
+            Trabalho da faculdade de uma API REST em PHP com Laravel (Blade) e SQLite.
+            Tags: PHP, Laravel, Blade, SQLite
+        </API REST>
+
+        <Contracheque Online>
+            Contracheque Online <Badge>Projeto</Badge>
+            Sistema de contracheque em PHP e JavaScript.
+            Tags: PHP, JavaScript
+        </Contracheque Online>
+
+        <Flutter Todo App>
+            Flutter Todo App <Badge>Projeto</Badge>
+            App de Todo em Dart com Flutter e PostgreSQL.
+            Tags: Dart, Flutter, PostgreSQL
+        </Flutter Todo App>
+    </Projetos>
+
+    <Sobre>
+        Sobre mim
+        <lado a lado>
+            <foto minha></foto>
+
+            <p>
+                Sou Diogo Carvalho Viegas, analista, desenvolvedor e designer de sistemas. Minha posição atual é full-stack, pelo simples motivo de ser a área em que tenho mais conhecimento, mas qualquer tecnologia, linguagem ou framework eu consigo aprender e usar na construção de um projeto.
+
+                Estou sempre à procura de ampliar meu conhecimento e me profissionalizar cada vez mais na minha área. Amo construir projetos, desde o design até o desenvolvimento e a publicação.
+        </lado>
+    </Sobre>
+
+    <Contato>
+        Entre em contato
+        <campo nome></campo> <campo email></campo>
+        <textarea da mensagem></textarea>
+
+        <Botão enviar email>
+    </Contato>
+
+<Footer>
+<link do gh>Este portfólio</link> foi feito com o <link>CHT Template.</link>
+
+<lista de contato botões transparentes> GitHub LinkedIn Email Numero celular (whatts) </lista>
+</Footer>
 
 Novo variante para seletor do tabs que expande até o final e é parecido com toggleable
 
-Poder usar o reveal-highlight e customizar, no caso definir qual cor ele usa, intesidade e itensidade no fly tipo reveal-highlight-primary
+Poder usar o reveal-highlight e customizar, no caso definir qual cor ele usa, intesidade e itensidade no fly tipo reveal-highlight-primary, reveal-highlight-white/80
+
+Link podem mostrar um tooltip com uma imagem pequena mostrando um preview do que tem
 
 Incluir o Fastify, Java no readme do github
+
+Forçar o reveal highlight
+
+Atualizar o Readme do contracheques php
+
+Variante outline o fundo deve ficar cor sólida e o texto foreground da cor

@@ -5,3 +5,46 @@
  * Plain CSS only: do not add `@import "tailwindcss"` or `@source`; cht-base
  * already builds Tailwind with this client's classes.
  */
+
+@property --primary-stop {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 0%;
+}
+
+.primary-gradient {
+    position: relative;
+    width: fit-content;
+    background: linear-gradient(
+        to right,
+        var(--color-primary) var(--primary-stop),
+        oklch(0.6846 0.16 24.28)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform-origin: left center;
+    transition:
+        --primary-stop 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.primary-gradient:hover {
+    --primary-stop: 100%;
+    transform: scale(1.06);
+}
+
+.primary-gradient::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 2px;
+    background: var(--color-primary);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.primary-gradient:hover::after {
+    transform: scaleX(1);
+}

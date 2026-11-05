@@ -1,43 +1,62 @@
 <template>
-    <main class="relative h-dvh">
-        <NavBar variant="simplified absolute inset-x-0 top-0">
-            <div class="w-full p-3">
-                <div class="flex w-full items-center justify-center gap-3">
-                    <Button
-                        v-for="link in [
-                            { label: 'Início', href: '/' },
-                            { label: 'Projetos', href: '/projects' },
-                            { label: 'Sobre', href: '/about' },
-                            { label: 'Contato', href: '/contact' }
-                        ]"
-                        :key="link.label"
+    <article class="container-md">
+        <section class="max-w-2xl pt-42">
+            <h5>Olá, me chamo</h5>
 
-                        variant="transparent"
-                        class="hover:text-primary"
-                        :href="link.href"
+            <h1
+                class="primary-gradient cursor-pointer py-1 select-none"
+
+                @click="$router.push('/sobre')"
+            >
+                Diogo Carvalho Viegas
+            </h1>
+
+            <h4>DESENVOLVEDOR FULL-STACK</h4>
+
+            <p class="mt-2">
+                Me especializo em desenvolver aplicações escaláveis, tendo experiência de mais de 3
+                anos focada em front-end e backend, me envolvendo em cada parte do processo do
+                desenvolvimento desde o design, programação, testes e publicação.
+            </p>
+
+            <div class="mt-4 flex items-center">
+                <ContactList />
+                <span class="pl-2.5 text-xl text-primary select-none"> / </span>
+                <RouterLink
+                    v-slot="{ navigate }"
+
+                    custom
+                    to="/sobre"
+                >
+                    <span
+                        class="class cursor-pointer pl-2.5 text-sm transition-all hover:text-primary"
+
+                        @click="navigate"
                     >
-                        {{ link.label }}
-                    </Button>
-
-                    <Button
-                        variant="transparent"
-                        :left-icon="isDarkTheme ? 'fa-sun' : 'fa-moon'"
-
-                        @click="toggleTheme"
-                    />
-                </div>
+                        Saiba mais sobre mim
+                    </span>
+                </RouterLink>
             </div>
-        </NavBar>
+        </section>
 
-        <article></article>
-    </main>
+        <div class="reveal-highlight my-12 border-t" />
+
+        <section class="mt-12">
+            <h3>Conhecimentos</h3>
+        </section>
+    </article>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import ContactList from "../components/ContactList.vue";
 
 export default defineComponent({
     name: "IndexPage",
+
+    components: {
+        ContactList
+    },
 
     computed: {
         isDarkTheme() {
