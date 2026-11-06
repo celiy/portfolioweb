@@ -1,6 +1,6 @@
 <template>
-    <article class="container-md">
-        <section class="max-w-2xl pt-42">
+    <article>
+        <section class="max-w-2xl pt-32 md:pt-42">
             <h5>Olá, me chamo</h5>
 
             <h1
@@ -19,7 +19,7 @@
                 desenvolvimento desde o design, programação, testes e publicação.
             </p>
 
-            <div class="mt-4 flex items-center">
+            <div class="mt-4 flex flex-wrap items-center gap-y-3">
                 <Button
                     left-icon="fa-download"
                     label="Baixar CV"
@@ -29,29 +29,33 @@
 
                 <ContactList />
 
-                <span class="pl-2.5 text-xl text-primary select-none"> / </span>
+                <template v-if="!$project.device.isPhone">
+                    <span class="pl-2.5 text-xl text-primary select-none"> / </span>
 
-                <RouterLink
-                    v-slot="{ navigate }"
+                    <RouterLink
+                        v-slot="{ navigate }"
 
-                    custom
-                    to="/sobre"
-                >
-                    <span
-                        class="class cursor-pointer pl-2.5 text-sm transition-all hover:text-primary"
-
-                        @click="navigate"
+                        custom
+                        to="/sobre"
                     >
-                        Saiba mais sobre mim
-                    </span>
-                </RouterLink>
+                        <span
+                            class="class cursor-pointer pl-2.5 text-sm transition-all hover:text-primary"
+
+                            @click="navigate"
+                        >
+                            Saiba mais sobre mim
+                        </span>
+                    </RouterLink>
+                </template>
             </div>
         </section>
 
-        <div class="reveal-highlight reveal-highlight-primary/80 my-12 border-t" />
+        <div class="reveal-highlight reveal-highlight-primary/80 my-12 border-t md:my-18" />
 
-        <section class="mt-12">
-            <h3><span class="fa-solid fa-book text-primary" /> Conhecimentos</h3>
+        <section>
+            <div class="flex flex-col items-center justify-between sm:flex-row">
+                <h3><span class="fa-solid fa-book text-primary" /> Conhecimentos</h3>
+            </div>
 
             <div class="mt-6 flex flex-wrap gap-2">
                 <Tooltip
@@ -87,10 +91,10 @@
             </div>
         </section>
 
-        <div class="reveal-highlight reveal-highlight-primary/80 my-12 border-t" />
+        <div class="reveal-highlight reveal-highlight-primary/80 my-12 border-t md:my-18" />
 
         <section class="mt-12">
-            <div class="flex items-center justify-between">
+            <div class="flex flex-col items-center justify-between sm:flex-row">
                 <h3><span class="fa-solid fa-star text-primary" /> Projetos e experiências</h3>
 
                 <Button
@@ -102,7 +106,7 @@
                 />
             </div>
 
-            <div class="mt-6 grid gap-4 md:grid-cols-2">
+            <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
                 <ProjectCard
                     v-for="entry in entries"
                     :key="entry.name"
@@ -111,12 +115,56 @@
                 />
             </div>
         </section>
+
+        <div class="reveal-highlight reveal-highlight-primary/80 my-12 border-t md:my-18" />
+
+        <section>
+            <div class="flex flex-col gap-4">
+                <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                    <GithubCommitsCard />
+
+                    <GithubActivityCard />
+                </div>
+
+                <div
+                    class="reveal-highlight reveal-highlight-primary/80 flex min-w-0 flex-col gap-3 rounded border p-4"
+                >
+                    <div class="flex items-center gap-3 font-semibold">
+                        <i class="fa-solid fa-graduation-cap text-primary" />
+                        Educação
+                    </div>
+
+                    <div class="flex flex-col gap-1">
+                        <span class="font-semibold">
+                            Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas
+                        </span>
+
+                        <span class="text-sm text-primary">
+                            IFSUL Camaquã
+                            <span class="pl-0.5 text-sm text-muted-foreground">
+                                / Julho de 2021 – Atual (Previsão de conclusão: Dezembro de 2026)
+                            </span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                    <CodewarsCard />
+
+                    <LocationCard />
+                </div>
+            </div>
+        </section>
     </article>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import CodewarsCard from "../components/CodewarsCard.vue";
 import ContactList from "../components/ContactList.vue";
+import GithubActivityCard from "../components/GithubActivityCard.vue";
+import GithubCommitsCard from "../components/GithubCommitsCard.vue";
+import LocationCard from "../components/LocationCard.vue";
 import ProjectCard from "../components/ProjectCard.vue";
 import { EXPERIENCES, PROJECTS } from "../constants/projectsAndExperience";
 
@@ -124,7 +172,11 @@ export default defineComponent({
     name: "IndexPage",
 
     components: {
+        CodewarsCard,
         ContactList,
+        GithubActivityCard,
+        GithubCommitsCard,
+        LocationCard,
         ProjectCard
     },
 

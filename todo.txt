@@ -1,45 +1,6 @@
 Usar container-sm no conteúdo principal
 
 Index:
-    <inicio>
-        <mini cards>
-            <lado a lado>
-                <card de commits mais recentes>
-                    <icon de git branch> Commits recentes
-                    ex (clicar leva para o link do commit): Repositório: nome do commit bla bl... +53 / -12
-                    <Link leva para o perfil github> Ver no github <Link>
-                </card>
-
-                <card de atividade no github>
-                    [Numero de repositórios] Repositórios publicados
-                    ex (clicar leva ao repositório): Nome do repositório
-                    <Barra que mostra a porcentagem de linguagens que tem no meu git>
-                </card>
-            </lado>
-
-            <lado a lado>
-                <card de educação>
-                    <educação>
-                        Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas, IFSUL Camaquã
-                        julho de 2021 – atual (Previsão de conclusão: dezembro de 2026)
-                    </educação>
-                </card>
-
-                <lado a lado>
-                    <card que mostra os stats do code wars>
-
-                    </card>
-
-                    <card de localização>
-                        <Icone pin primary> Localização atual
-                        Mapa que mostra a cidade atual
-                        Nome da cidade, estado / horario local em primary
-                    </card>
-                </lado>
-            </lado>
-        </mini>
-    </inicio>
-
     <Projetos>
         ...resto
 
@@ -81,14 +42,6 @@ Index:
 
         <Botão enviar email>
     </Contato>
-
-<Footer>
-<link do gh>Este portfólio</link> foi feito com o <link>CHT Template.</link>
-
-<lista de contato botões transparentes> GitHub LinkedIn Email Numero celular (whatts) </lista>
-</Footer>
-
-Novo variante para seletor do tabs que expande até o final e é parecido com toggleable
 
 Link podem mostrar um tooltip com uma imagem pequena mostrando um preview do que tem
 

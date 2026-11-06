@@ -17,6 +17,8 @@
                 <i :class="contact.class" />
 
                 <div
+                    v-if="showName"
+
                     class="grid transition-[grid-template-columns,opacity] duration-500 ease-out"
                     :class="
                         showNameOnHover
@@ -47,6 +49,11 @@ export default {
 
     props: {
         showNameOnHover: {
+            type: Boolean,
+            default: true
+        },
+
+        showName: {
             type: Boolean,
             default: true
         }

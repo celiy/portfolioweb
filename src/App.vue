@@ -1,9 +1,9 @@
 <template>
     <main class="relative">
-        <div class="absolute inset-x-0 top-0 z-60">
+        <div class="fixed inset-x-0 top-0 z-60">
             <NavBar variant="simplified">
-                <div class="w-full p-3">
-                    <div class="flex w-full items-center justify-center gap-3">
+                <div class="w-full p-2 sm:p-3">
+                    <div class="flex w-full items-center justify-center gap-0.5 sm:gap-3">
                         <Button
                             v-for="link in [
                                 { label: 'Início', href: '/' },
@@ -14,11 +14,12 @@
                             :key="link.label"
 
                             variant="transparent"
-                            class="hover:text-primary"
+                            class="px-2! text-xs! hover:text-primary sm:px-2.5! sm:text-sm!"
                             :background-style="
                                 link.href === $route.path ? 'bg-primary text-contrast' : ''
                             "
                             border-style="border-transparent"
+
                             @click="$router.push(link.href)"
                         >
                             {{ link.label }}
@@ -35,22 +36,57 @@
             </NavBar>
         </div>
 
-        <Transition
-            name="docs-page-slide"
-            mode="out-in"
-        >
-            <RouterView />
-        </Transition>
+        <div class="container-md">
+            <Transition
+                name="docs-page-slide"
+                mode="out-in"
+            >
+                <RouterView />
+            </Transition>
 
-        <footer class="mt-32">footer</footer>
+            <footer class="reveal-highlight mt-12 mb-12 rounded border p-4 md:mt-18">
+                <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                    <span class="text-sm text-muted-foreground">
+                        Este
+
+                        <a
+                            href="https://github.com/celiy/portfolioweb"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <span>portfólio</span>
+                        </a>
+                        foi feito com o
+
+                        <a
+                            href="https://github.com/celiy/cht-main"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            CHT Template.
+                        </a>
+                    </span>
+
+                    <ContactList
+                        :show-name-on-hover="false"
+                        :show-name="false"
+                    />
+                </div>
+            </footer>
+        </div>
     </main>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import ContactList from "./components/ContactList.vue";
 
 export default defineComponent({
     name: "PortfoliowebApp",
+
+    components: {
+        ContactList
+    },
 
     computed: {
         isDarkTheme() {

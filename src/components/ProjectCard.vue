@@ -1,6 +1,6 @@
 <template>
     <div
-        class="reveal-highlight reveal-highlight-primary/80 flex flex-col rounded border"
+        class="reveal-highlight reveal-highlight-primary/80 flex min-w-0 flex-col rounded border"
 
         @mouseenter="hovered = true"
         @mouseleave="hovered = false"
@@ -38,7 +38,7 @@
         </div>
 
         <div class="flex flex-1 flex-col p-4">
-            <div class="item flex items-center justify-between">
+            <div class="item flex flex-wrap items-center justify-between gap-x-2">
                 <h4 class="mb-1">{{ project.name }}</h4>
 
                 <div class="flex gap-1">
