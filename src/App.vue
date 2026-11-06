@@ -1,5 +1,5 @@
 <template>
-    <main class="relative h-dvh">
+    <main class="relative">
         <div class="absolute inset-x-0 top-0 z-60">
             <NavBar variant="simplified">
                 <div class="w-full p-3">
@@ -19,8 +19,6 @@
                                 link.href === $route.path ? 'bg-primary text-contrast' : ''
                             "
                             border-style="border-transparent"
-                            :href="link.href"
-
                             @click="$router.push(link.href)"
                         >
                             {{ link.label }}
@@ -43,6 +41,8 @@
         >
             <RouterView />
         </Transition>
+
+        <footer class="mt-32">footer</footer>
     </main>
 </template>
 

@@ -51,12 +51,14 @@
         <div class="reveal-highlight reveal-highlight-primary/80 my-12 border-t" />
 
         <section class="mt-12">
-            <h3>Conhecimentos</h3>
+            <h3><span class="fa-solid fa-book text-primary" /> Conhecimentos</h3>
 
             <div class="mt-6 flex flex-wrap gap-2">
                 <Tooltip
-                    v-for="tech in techStack"
+                    v-for="(tech, index) in techStack"
                     :key="tech.tooltip"
+
+                    :animation="index % 2 ? 'slide-down' : 'slide-up'"
                 >
                     <ItemIcon
                         :key="tech.tooltip"
@@ -84,18 +86,46 @@
                 </Tooltip>
             </div>
         </section>
+
+        <div class="reveal-highlight reveal-highlight-primary/80 my-12 border-t" />
+
+        <section class="mt-12">
+            <div class="flex items-center justify-between">
+                <h3><span class="fa-solid fa-star text-primary" /> Projetos e experiências</h3>
+
+                <Button
+                    label="Ver todos os projetos"
+                    variant="transparent"
+                    right-icon="fa-arrow-right"
+
+                    @click="$router.push('/projects')"
+                />
+            </div>
+
+            <div class="mt-6 grid gap-4 md:grid-cols-2">
+                <ProjectCard
+                    v-for="entry in entries"
+                    :key="entry.name"
+
+                    :project="entry"
+                />
+            </div>
+        </section>
     </article>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import ContactList from "../components/ContactList.vue";
+import ProjectCard from "../components/ProjectCard.vue";
+import { EXPERIENCES, PROJECTS } from "../constants/projectsAndExperience";
 
 export default defineComponent({
     name: "IndexPage",
 
     components: {
-        ContactList
+        ContactList,
+        ProjectCard
     },
 
     data() {
@@ -107,6 +137,10 @@ export default defineComponent({
     computed: {
         isDarkTheme() {
             return this.$project.style.activeTheme === "dark";
+        },
+
+        entries() {
+            return [...EXPERIENCES, ...PROJECTS.filter((project) => project.featured)];
         },
 
         techStack() {
@@ -225,11 +259,6 @@ export default defineComponent({
                     tooltip: "Git",
                     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
                     color: "#F05032"
-                },
-                {
-                    tooltip: "VS Code",
-                    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
-                    color: "#007ACC"
                 },
                 {
                     tooltip: "PostgreSQL",
