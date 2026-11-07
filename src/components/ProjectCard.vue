@@ -47,7 +47,7 @@
 
                         v-tooltip="'Baixar carta de recomendação'"
                         :href="letterUrl"
-                        download="Carta de recomendação.pdf"
+                        v-bind="letterDownloadAttrs"
                         class="py-1.5!"
                         left-icon="fa-file-arrow-down"
                         label="Carta de recomendação"
@@ -115,7 +115,9 @@ export default defineComponent({
 
     data() {
         return {
-            hovered: false
+            hovered: false,
+            // Button has no `download` prop, so the attribute goes through v-bind to reach the <a>
+            letterDownloadAttrs: { download: "Carta de recomendação.pdf" }
         };
     },
 

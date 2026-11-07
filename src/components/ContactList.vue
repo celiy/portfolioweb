@@ -43,8 +43,10 @@
     </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
     name: "ContactList",
 
     props: {
@@ -85,5 +87,5 @@ export default {
             ]
         };
     }
-};
+});
 </script>
