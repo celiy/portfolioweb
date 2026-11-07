@@ -8,7 +8,7 @@ Ele é um cliente do CHT Template, então não roda sozinho. O código do site f
 
 Vue 3 com TypeScript, Vue Router e Tailwind CSS 4. O build e o servidor de desenvolvimento são do Vite, mas quem configura isso é o `cht-base`. Os botões, badges, tooltips e outros componentes vêm do `cht-design-system`.
 
-Hoje só a página inicial existe. A navegação já tem Projetos, Sobre e Contato, mas essas rotas ainda não foram criadas.
+A página inicial é a única com conteúdo. Projetos, Sobre e Contato já têm rota, em `/projects`, `/about` e `/contact`, mas as páginas ainda estão em branco.
 
 ## Rodando
 
@@ -38,21 +38,23 @@ O script não precisa de dependências. Se existir a variável `GITHUB_TOKEN` el
 
 ## Workflow
 
-O arquivo `.github/workflows/update-public-profiles.yml` roda o script a cada 6 horas e também pelo botão Run workflow na aba Actions. Se o JSON mudou ele faz um commit direto na `main`. Por isso o repositório precisa deixar a Action escrever, e se o push for recusado vale conferir em Settings, Actions, General se as permissões estão em leitura e escrita.
+O arquivo `.github/workflows/deploy-pages.yml` faz o build e publica o site no GitHub Pages. Ele roda a cada push na `main`, a cada 6 horas e pelo botão Run workflow na aba Actions.
 
-Ele só atualiza o JSON. O site publicado continua com os dados antigos até alguém gerar o build de novo.
+Como o build mora no `cht-main`, o workflow baixa o `cht-main` e coloca este repositório dentro dele. Depois pega a `main` do `cht-base`, do `cht-design-system` e do `cht-shared`, instala as dependências, roda o script de dados e gera o site. Cada publicação já sai com os commits e o Codewars atualizados, e nada disso é commitado. Por isso a pasta `docs` fica fora do git e não existe cópia dos arquivos no repositório.
 
-## Publicando no GitHub Pages
+Antes do primeiro deploy falta uma configuração. Em Settings, Pages, Source, escolha GitHub Actions.
+
+Como ele segue a `main` dos repositórios do núcleo, uma mudança neles só aparece no site depois de chegar na `main` deles.
+
+## Testando o build
 
 ```bash
 node scripts/buildDocs.mjs
 ```
 
-O script faz o build e coloca o resultado na pasta `docs`, que é apagada e refeita a cada vez. Ele também cria o `404.html`, cópia do `index.html`, para o Pages entregar o app em links diretos. O arquivo `.nojekyll` evita que o Pages processe a saída com Jekyll.
+Gera na pasta `docs` o mesmo site que o workflow publica, para olhar antes de dar push. Ela é ignorada pelo git e apagada a cada vez. O script também cria o `404.html`, cópia do `index.html`, para o Pages entregar o app em links diretos, e o arquivo `.nojekyll`, que evita que o Pages processe a saída com Jekyll.
 
-Depois é commitar a pasta `docs` e escolher em Settings, Pages a branch `main` com a pasta `/docs`.
-
-O Pages serve um repositório de projeto em `usuario.github.io/portfolioweb`, então o site precisa saber que mora nessa subpasta. O script define isso na constante `BASE`, que hoje vale `/portfolioweb/` e vira a variável `CHT_BASE` do build. Se o site passar a morar na raiz do domínio, seja em `usuario.github.io` ou num domínio próprio, troque `BASE` para `/` e gere de novo. Sem essa variável o build usa `/`.
+O Pages serve um repositório de projeto em `usuario.github.io/portfolioweb`, então o site precisa saber que mora nessa subpasta. O script define isso na constante `BASE`, que hoje vale `/portfolioweb/` e vira a variável `CHT_BASE` do build. Se o site passar a morar na raiz do domínio, seja em `usuario.github.io` ou num domínio próprio, troque `BASE` para `/`. Sem essa variável o build usa `/`.
 
 ## Estrutura
 
@@ -64,6 +66,6 @@ src/constants      projetos e experiências
 src/services       leitura do JSON de perfis
 src/data           JSON gerado pelo script
 scripts            atualização dos dados e build para o Pages
-docs               site publicado
+docs               build local de teste, fora do git
 old                versão antiga do portfólio
 ```

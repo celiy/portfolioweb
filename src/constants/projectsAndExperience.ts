@@ -11,6 +11,9 @@ import mecarvitCover from "../assets/mecarvit-cover.jpg";
 import mecarvitCoverHover from "../assets/mecarvit-cover-hover.jpg";
 import pasgoCover from "../assets/pasgo-cover.jpg";
 import pasgoCoverHover from "../assets/pasgo-cover-hover.jpg";
+import contrachequesCover from "../assets/contracheques-php-cover.jpg";
+import flutterTodoCover from "../assets/flutter-todo-app-cover.jpg";
+import sistemaServicosCover from "../assets/sistema-servicos-laravel-cover.png";
 
 /** Brand color of each technology that can appear as a tag. */
 const TECH_COLORS = {
@@ -156,7 +159,7 @@ export const PROJECTS: Project[] = [
         period: "",
         githubUrl: "https://github.com/celiy/Pasgo-public",
         siteUrl: "https://pasgo.com.br",
-        highlight: "reveal-highlight-white/80",
+        highlight: "dark:reveal-highlight-white/80 light:reveal-highlight-black/80",
         tags: tags(
             "JavaScript",
             "Tailwind CSS",
@@ -169,39 +172,44 @@ export const PROJECTS: Project[] = [
         )
     },
     {
-        name: "API REST",
+        name: "Sistemas de serviços",
         badge: "Projeto",
         featured: false,
-        cover: "",
+        cover: sistemaServicosCover,
         coverHover: "",
-        description: "Trabalho da faculdade de uma API REST.",
+        description:
+            "Sistema de gerenciamento serviços e ordens de serviço (dashboard, clientes, serviços e ordens de serviço)",
         period: "",
         githubUrl: "https://github.com/celiy/Desenvolvimento-API-REST_Laravel",
         siteUrl: "",
+        highlight: "reveal-highlight-indigo-500/80",
         tags: tags("PHP", "Laravel", "Blade", "SQLite")
     },
     {
         name: "Contracheque Online",
         badge: "Projeto",
         featured: false,
-        cover: "",
+        cover: contrachequesCover,
         coverHover: "",
-        description: "Sistema de contracheque online.",
+        description:
+            "Sistema simples de contracheque online com suporte a gerenciamento de PDFs feito em PHP.",
         period: "",
         githubUrl: "https://github.com/celiy/SistemaDeContrachequesOnline",
         siteUrl: "",
+        highlight: "reveal-highlight-indigo-500/80",
         tags: tags("PHP", "JavaScript")
     },
     {
         name: "Flutter Todo App",
         badge: "Projeto",
         featured: false,
-        cover: "",
+        cover: flutterTodoCover,
         coverHover: "",
-        description: "App de lista de tarefas.",
+        description: "App de lista de tarefas em Flutter multi-plataforma.",
         period: "",
         githubUrl: "https://github.com/celiy/Flutter-todo-app",
         siteUrl: "",
+        highlight: "reveal-highlight-sky-500/80",
         tags: tags("Dart", "Flutter", "PostgreSQL")
     }
 ];

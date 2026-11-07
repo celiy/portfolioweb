@@ -6,7 +6,7 @@
             <h1
                 class="primary-gradient cursor-pointer py-1 select-none"
 
-                @click="$router.push('/sobre')"
+                @click="$router.push('/about')"
             >
                 Diogo Carvalho Viegas
             </h1>
@@ -36,7 +36,7 @@
                         v-slot="{ navigate }"
 
                         custom
-                        to="/sobre"
+                        to="/about"
                     >
                         <span
                             class="class cursor-pointer pl-2.5 text-sm transition-all hover:text-primary"

@@ -1,40 +1,6 @@
 Usar container-sm no conteúdo principal
 
 Index:
-    <Projetos>
-        ...resto
-
-        <API REST>
-            API REST <Badge>Projeto</Badge>
-            Trabalho da faculdade de uma API REST em PHP com Laravel (Blade) e SQLite.
-            Tags: PHP, Laravel, Blade, SQLite
-        </API REST>
-
-        <Contracheque Online>
-            Contracheque Online <Badge>Projeto</Badge>
-            Sistema de contracheque em PHP e JavaScript.
-            Tags: PHP, JavaScript
-        </Contracheque Online>
-
-        <Flutter Todo App>
-            Flutter Todo App <Badge>Projeto</Badge>
-            App de Todo em Dart com Flutter e PostgreSQL.
-            Tags: Dart, Flutter, PostgreSQL
-        </Flutter Todo App>
-    </Projetos>
-
-    <Sobre>
-        Sobre mim
-        <lado a lado>
-            <foto minha></foto>
-
-            <p>
-                Sou Diogo Carvalho Viegas, analista, desenvolvedor e designer de sistemas. Minha posição atual é full-stack, pelo simples motivo de ser a área em que tenho mais conhecimento, mas qualquer tecnologia, linguagem ou framework eu consigo aprender e usar na construção de um projeto.
-
-                Estou sempre à procura de ampliar meu conhecimento e me profissionalizar cada vez mais na minha área. Amo construir projetos, desde o design até o desenvolvimento e a publicação.
-        </lado>
-    </Sobre>
-
     <Contato>
         Entre em contato
         <campo nome></campo> <campo email></campo>
@@ -47,12 +13,27 @@ Link podem mostrar um tooltip com uma imagem pequena mostrando um preview do que
 
 Incluir o Fastify, Java no readme do github
 
-Atualizar o Readme do contracheques php
-
 Adicionar bastante interatividade em tudo
 
 Fazer o fundo ter umas linhas parecidas com a do pasgo mas fazer mais interessante tipo animado
 
-Adicionar sombra na imagem dos cards de projetos
+Fazer a navbar menu flutuante no mobile
 
 Adicionar animações de entrada
+
+Documentar as classes appear-from nos docs
+
+Educação:
+    Incluir os mini cursos que fiz para:
+        Java
+        Python
+        NodeJS
+
+Interatividade:
+    Ao passar o mouse em cima do titulo Conhecimento, efeito de hover, do lado aparece uma label pequena, essa label define quais conhecimentos aparecem, então os conhecimentos tem todos, linguagens, tecnologias e banco de dados, ao clicar alternar entre esses, mostrar apenas os conhecimentos de acordo com a label, se a categoria não for todos então a label quando não está com o hover em cima do titulo fica visivel mas transparente
+
+    Parecido com o de cima, mas ao clicar no Projetos e experiências, ele anterna entre as experiências e projetos e todos, fazer isso na pagina de projects tbm
+
+    No inicio as badges dos projetos tem select-none, e então ao clicar em um conhecimento, ele da auto scroll para baixo e a badge que bate com a tecnologia vira uma badge sólida sem ser a bordered por tipo 5 segundos e depois volta ao variante outline, para completar adicione o html e css ao projeto de contracheques. Ah e se o usuário clicar em uma tecnologia que não tem no inicio, ir par o projects e fazer esse mesmo passo mas para um projeto destacado
+
+    Na pagina de sobre, ao dar hover na minha foto, a imagem sobe um pouco pra cima, o nome Diogo fica primary, e ao clicar, o full-stack recebe um efeito tipo arco iris da cor primaria e a primaria só que um pouco mais apagada, igual ao nome no inicio, mas o fade meio que faz uma animação de cruzando pelo o nome uma vez por click. Cada click tbm move a imagem um pouco pra baixo como um efeito de click

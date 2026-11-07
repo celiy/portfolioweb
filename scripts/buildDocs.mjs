@@ -1,12 +1,16 @@
 /**
- * Builds the site into docs/ so GitHub Pages can serve it from "main" + "/docs".
- * Run it from anywhere: node portfolioweb/scripts/buildDocs.mjs
+ * Builds the site for GitHub Pages: index.html, 404.html and .nojekyll, with the /portfolioweb/ base path.
+ * The deploy workflow runs it with ./site. Locally it is handy to preview the published build.
  *
+ *   node portfolioweb/scripts/buildDocs.mjs [outputFolder]
+ *
+ * Without an argument the result goes to docs/ in this repo, which is git ignored.
  * It needs the cht-main workspace around this folder, because the build lives in cht-base.
- * docs/ is replaced on every run, so never keep hand-written files in it.
+ * The output folder is replaced on every run, so never keep hand-written files in it.
  */
 import { copyFileSync, writeFileSync } from "node:fs";
 import { spawnSync } from "node:child_process";
+import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const CLIENT = "portfolioweb";
@@ -17,7 +21,7 @@ const BASE = "/portfolioweb/";
 
 const clientDir = fileURLToPath(new URL("..", import.meta.url));
 const workspace = fileURLToPath(new URL("../..", import.meta.url));
-const docs = `${clientDir}docs`;
+const docs = process.argv[2] ? resolve(process.argv[2]) : `${clientDir}docs`;
 const npx = process.platform === "win32" ? "npx.cmd" : "npx";
 
 const build = spawnSync(npx, ["chtmain", "build", CLIENT, `--out:${docs}`], {
