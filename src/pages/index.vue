@@ -54,38 +54,45 @@
 
         <section>
             <div class="flex flex-col items-center justify-between sm:flex-row">
-                <h3><span class="fa-solid fa-book text-primary" /> Conhecimentos</h3>
+                <CycleTitle
+                    v-model="knowledgeFilter"
+                    :options="knowledgeFilters"
+                >
+                    <span class="fa-solid fa-book text-primary" /> Conhecimentos
+                </CycleTitle>
             </div>
 
             <div class="mt-6 flex flex-wrap gap-2">
                 <Tooltip
-                    v-for="(tech, index) in techStack"
-                    :key="tech.tooltip"
+                    v-for="(tech, index) in knowledge"
+                    :key="tech.name"
 
                     :animation="index % 2 ? 'slide-down' : 'slide-up'"
                 >
                     <ItemIcon
-                        :key="tech.tooltip"
+                        :key="tech.name"
 
-                        :icon="tech.tooltip"
+                        class="cursor-pointer"
+                        :icon="tech.name"
                         size="sm"
                         variant="default"
                         :style="{ backgroundColor: `${tech.color}26` }"
                         :class="`reveal-highlight border-transparent hover:reveal-highlight-${tech.color}`"
 
-                        @mouseenter="hoveredStack = tech.tooltip"
+                        @mouseenter="hoveredStack = tech.name"
                         @mouseleave="hoveredStack = ''"
+                        @click="focusTech(tech)"
                     >
                         <img
                             class="m-1 h-8 w-8 transition-all"
-                            :class="hoveredStack === tech.tooltip ? 'scale-120' : 'scale-100'"
+                            :class="hoveredStack === tech.name ? 'scale-120' : 'scale-100'"
                             :src="tech.image"
-                            :alt="tech.tooltip"
+                            :alt="tech.name"
                         />
                     </ItemIcon>
 
                     <template #tooltip>
-                        <span class="text-sm">{{ tech.tooltip }}</span>
+                        <span class="text-sm">{{ tech.name }}</span>
                     </template>
                 </Tooltip>
             </div>
@@ -95,7 +102,12 @@
 
         <section class="mt-12">
             <div class="flex flex-col items-center justify-between sm:flex-row">
-                <h3><span class="fa-solid fa-star text-primary" /> Projetos e experiências</h3>
+                <CycleTitle
+                    v-model="entryFilter"
+                    :options="entryFilters"
+                >
+                    <span class="fa-solid fa-star text-primary" /> Projetos e experiências
+                </CycleTitle>
 
                 <Button
                     label="Ver todos os projetos"
@@ -162,11 +174,14 @@
 import { defineComponent } from "vue";
 import CodewarsCard from "../components/CodewarsCard.vue";
 import ContactList from "../components/ContactList.vue";
+import CycleTitle from "../components/CycleTitle.vue";
 import GithubActivityCard from "../components/GithubActivityCard.vue";
 import GithubCommitsCard from "../components/GithubCommitsCard.vue";
 import LocationCard from "../components/LocationCard.vue";
 import ProjectCard from "../components/ProjectCard.vue";
-import { EXPERIENCES, PROJECTS } from "../constants/projectsAndExperience";
+import { KNOWLEDGE, KNOWLEDGE_FILTERS, type Knowledge } from "../constants/knowledge";
+import { ENTRY_FILTERS, entriesFor } from "../constants/projectsAndExperience";
+import { hasTag, revealTag, techFocus } from "../services/techFocus";
 
 export default defineComponent({
     name: "IndexPage",
@@ -174,6 +189,7 @@ export default defineComponent({
     components: {
         CodewarsCard,
         ContactList,
+        CycleTitle,
         GithubActivityCard,
         GithubCommitsCard,
         LocationCard,
@@ -182,7 +198,11 @@ export default defineComponent({
 
     data() {
         return {
-            hoveredStack: ""
+            hoveredStack: "",
+            knowledgeFilter: "all",
+            knowledgeFilters: KNOWLEDGE_FILTERS,
+            entryFilter: "all",
+            entryFilters: ENTRY_FILTERS
         };
     },
 
@@ -191,154 +211,40 @@ export default defineComponent({
             return this.$project.style.activeTheme === "dark";
         },
 
-        entries() {
-            return [...EXPERIENCES, ...PROJECTS.filter((project) => project.featured)];
+        knowledge() {
+            return KNOWLEDGE.filter(
+                (tech) => this.knowledgeFilter === "all" || tech.category === this.knowledgeFilter
+            );
         },
 
-        techStack() {
-            return [
-                {
-                    tooltip: "HTML5",
-                    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-                    color: "#E34F26"
-                },
-                {
-                    tooltip: "CSS3",
-                    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-                    color: "#1572B6"
-                },
-                {
-                    tooltip: "Sass",
-                    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
-                    color: "#CC6699"
-                },
-                {
-                    tooltip: "JavaScript",
-                    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-                    color: "#F7DF1E"
-                },
-                {
-                    tooltip: "TypeScript",
-                    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-                    color: "#3178C6"
-                },
-                {
-                    tooltip: "Dart",
-                    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg",
-                    color: "#0175C2"
-                },
-                {
-                    tooltip: "PHP",
-                    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-                    color: "#777BB4"
-                },
-                {
-                    tooltip: "Flutter",
-                    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
-                    color: "#02569B"
-                },
-                {
-                    tooltip: "C",
-                    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
-                    color: "#00599C"
-                },
-                {
-                    tooltip: "Python",
-                    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-                    color: "#3776AB"
-                },
-                {
-                    tooltip: "Java",
-                    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-                    color: "#ED8B00"
-                },
-                {
-                    tooltip: "Tailwind CSS",
-                    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
-                    color: "#06B6D4"
-                },
-                {
-                    tooltip: "Node.js",
-                    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-                    color: "#339933"
-                },
-                {
-                    tooltip: "Express",
-                    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-                    color: "#888888"
-                },
-                {
-                    tooltip: "Fastify",
-                    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastify/fastify-original.svg",
-                    color: "#888888"
-                },
-                {
-                    tooltip: "Vue.js",
-                    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
-                    color: "#4FC08D"
-                },
-                {
-                    tooltip: "React",
-                    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-                    color: "#61DAFB"
-                },
-                {
-                    tooltip: "Material UI",
-                    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
-                    color: "#007FFF"
-                },
-                {
-                    tooltip: "Laravel",
-                    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg",
-                    color: "#FF2D20"
-                },
-                {
-                    tooltip: "Electron",
-                    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg",
-                    color: "#47848F"
-                },
-                {
-                    tooltip: "Docker",
-                    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-                    color: "#2496ED"
-                },
-                {
-                    tooltip: "Nginx",
-                    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg",
-                    color: "#009639"
-                },
-                {
-                    tooltip: "Git",
-                    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-                    color: "#F05032"
-                },
-                {
-                    tooltip: "PostgreSQL",
-                    image: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/postgresql.png",
-                    color: "#336791"
-                },
-                {
-                    tooltip: "MongoDB",
-                    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-                    color: "#47A248"
-                },
-                {
-                    tooltip: "MySQL",
-                    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-                    color: "#4479A1"
-                },
-                {
-                    tooltip: "SQLite",
-                    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg",
-                    color: "#0F80CC"
-                }
-            ];
+        entries() {
+            return entriesFor(this.entryFilter, true);
         }
     },
 
     methods: {
         toggleTheme() {
             this.$project.style.theme(this.isDarkTheme ? "light" : "dark");
+        },
+
+        /**
+         * Shows where a technology is used: scrolls to a card of this page, or opens the projects page
+         * @param {Knowledge} tech The clicked knowledge item
+         */
+        async focusTech(tech: Knowledge) {
+            const tag = tech.tag ?? tech.name;
+
+            if (entriesFor("all", true).some((entry) => hasTag(entry, tag))) {
+                this.entryFilter = "all";
+                await revealTag(this.$el, tag, entriesFor("all", true));
+
+                return;
+            }
+
+            if (entriesFor("all", false).some((entry) => hasTag(entry, tag))) {
+                techFocus.pending = tag;
+                void this.$router.push("/projects");
+            }
         }
     }
 });

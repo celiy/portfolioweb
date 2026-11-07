@@ -3,7 +3,12 @@
  * This module is responsible for the client hooks that run at startup of the project.
  */
 import { watch, type App } from "vue";
-import type { Router } from "vue-router";
+import type { Router, RouterOptions } from "vue-router";
+
+/** Every page change jumps to the top at once, with no smooth scrolling. */
+export const routerOptions: Partial<RouterOptions> = {
+    scrollBehavior: () => ({ top: 0, left: 0, behavior: "instant" })
+};
 
 export function setupAuthGuard(_router: Router): void {
     void _router;

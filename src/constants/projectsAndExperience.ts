@@ -113,6 +113,7 @@ export const EXPERIENCES: Experience[] = [
             "Tailwind CSS",
             "Fastify",
             "MongoDB",
+            "MySQL",
             "Redis",
             "Docker"
         )
@@ -197,7 +198,7 @@ export const PROJECTS: Project[] = [
         githubUrl: "https://github.com/celiy/SistemaDeContrachequesOnline",
         siteUrl: "",
         highlight: "reveal-highlight-indigo-500/80",
-        tags: tags("PHP", "JavaScript")
+        tags: tags("PHP", "JavaScript", "HTML5", "CSS3")
     },
     {
         name: "Flutter Todo App",
@@ -213,3 +214,30 @@ export const PROJECTS: Project[] = [
         tags: tags("Dart", "Flutter", "PostgreSQL")
     }
 ];
+
+/** Options of the title that filters the experiences and projects. */
+export const ENTRY_FILTERS = [
+    { value: "all", label: "Todos" },
+    { value: "experiences", label: "Experiências" },
+    { value: "projects", label: "Projetos" }
+];
+
+/**
+ * Entries for a filter of the title
+ * @param {string} filter One of the ENTRY_FILTERS values
+ * @param {boolean} featuredOnly Whether only the featured projects count, as on the home page
+ * @returns {(Experience | Project)[]} The experiences and projects to show
+ */
+export function entriesFor(filter: string, featuredOnly: boolean): (Experience | Project)[] {
+    const projects = featuredOnly ? PROJECTS.filter((project) => project.featured) : PROJECTS;
+
+    if (filter === "experiences") {
+        return [...EXPERIENCES];
+    }
+
+    if (filter === "projects") {
+        return [...projects];
+    }
+
+    return [...EXPERIENCES, ...projects];
+}

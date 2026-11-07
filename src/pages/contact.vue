@@ -1,5 +1,5 @@
 <template>
-    <article class="pt-42" />
+    <article class="pt-32 md:pt-42"></article>
 </template>
 
 <script lang="ts">

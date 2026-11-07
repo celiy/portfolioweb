@@ -2,6 +2,7 @@
     <div
         class="reveal-highlight flex min-w-0 flex-col rounded border bg-card/20 transition-all hover:bg-card/40"
         :class="project.highlight"
+        :data-project="project.name"
 
         @mouseenter="hovered = true"
         @mouseleave="hovered = false"
@@ -90,8 +91,9 @@
                     v-for="tag in project.tags"
                     :key="tag.name"
 
+                    class="transition-colors select-none"
                     :color="tag.color"
-                    variant-style="bordered"
+                    :variant-style="activeTag === tag.name ? 'fill' : 'bordered'"
                 >
                     {{ tag.name }}
                 </Badge>
@@ -103,6 +105,7 @@
 <script lang="ts">
 import { defineComponent, type PropType } from "vue";
 import type { Experience, Project } from "../constants/projectsAndExperience";
+import { techFocus } from "../services/techFocus";
 
 export default defineComponent({
     name: "ProjectCard",
@@ -123,6 +126,11 @@ export default defineComponent({
     },
 
     computed: {
+        /** Tag whose badges are solid right now. */
+        activeTag(): string {
+            return techFocus.tag;
+        },
+
         role(): string {
             return "role" in this.project ? this.project.role : "";
         },

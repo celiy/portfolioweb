@@ -2,7 +2,7 @@
     <main class="relative">
         <div class="fixed inset-x-0 top-0 z-60">
             <NavBar variant="simplified">
-                <div class="w-full p-2 sm:p-3">
+                <div class="appear-from-t-to-b w-full p-2 sm:p-3">
                     <div class="flex w-full items-center justify-center gap-0.5 sm:gap-3">
                         <Button
                             v-for="link in [

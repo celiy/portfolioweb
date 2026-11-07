@@ -1,14 +1,40 @@
 <template>
     <article class="pt-32 md:pt-42">
         <div class="grid gap-8 md:grid-cols-[1fr_2fr]">
-            <div class="h-fit w-fit overflow-hidden rounded">
-                <img :src="FotoSobre" />
+            <div
+                class="h-fit w-fit cursor-pointer overflow-hidden rounded transition-transform duration-200 select-none hover:-translate-y-2 active:translate-y-1"
+                role="button"
+                tabindex="0"
+
+                @mouseenter="photoHovered = true"
+                @mouseleave="photoHovered = false"
+                @click="onPhotoClick"
+                @keydown.enter.prevent="onPhotoClick"
+            >
+                <img
+                    :src="FotoSobre"
+                    alt="Foto de Diogo Carvalho Viegas"
+                    draggable="false"
+                />
             </div>
 
             <div class="flex flex-col gap-4">
                 <p class="text-xl! leading-snug font-semibold!">
-                    Designer, analista, desenvolvedor e programador. Sou o Diogo, desenvolvedor
-                    <span class="text-primary">full-stack</span>.
+                    Designer, analista, desenvolvedor e programador. Sou o
+                    <span
+                        class="transition-colors duration-200"
+                        :class="{ 'text-primary': photoHovered }"
+                        >Diogo</span
+                    >, desenvolvedor
+                    <span
+                        :key="sweepKey"
+
+                        class="text-primary"
+                        :class="{ 'primary-sweep': sweeping }"
+
+                        @animationend="sweeping = false"
+                        >full-stack</span
+                    >.
                 </p>
 
                 <p>
@@ -38,8 +64,19 @@ export default defineComponent({
 
     data() {
         return {
-            FotoSobre
+            FotoSobre,
+            photoHovered: false,
+            sweeping: false,
+            sweepKey: 0
         };
+    },
+
+    methods: {
+        /** Each click runs the sweep over "full-stack" once; the new key restarts it mid-animation. */
+        onPhotoClick() {
+            this.sweepKey++;
+            this.sweeping = true;
+        }
     }
 });
 </script>
