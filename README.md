@@ -52,7 +52,7 @@ O script faz o build e coloca o resultado na pasta `docs`, que é apagada e refe
 
 Depois é commitar a pasta `docs` e escolher em Settings, Pages a branch `main` com a pasta `/docs`.
 
-O build usa caminhos que começam na raiz do domínio, como `/assets/...`. Isso funciona em `usuario.github.io` ou em domínio próprio. Em `usuario.github.io/portfolioweb` a página abre em branco, porque os arquivos são procurados no lugar errado.
+O Pages serve um repositório de projeto em `usuario.github.io/portfolioweb`, então o site precisa saber que mora nessa subpasta. O script define isso na constante `BASE`, que hoje vale `/portfolioweb/` e vira a variável `CHT_BASE` do build. Se o site passar a morar na raiz do domínio, seja em `usuario.github.io` ou num domínio próprio, troque `BASE` para `/` e gere de novo. Sem essa variável o build usa `/`.
 
 ## Estrutura
 

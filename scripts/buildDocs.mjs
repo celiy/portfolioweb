@@ -10,6 +10,11 @@ import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 
 const CLIENT = "portfolioweb";
+
+// Where the site lives. Pages serves a project repo at /<repo>/, so assets and routes need that prefix.
+// Use "/" for a user site (<user>.github.io) or a custom domain.
+const BASE = "/portfolioweb/";
+
 const clientDir = fileURLToPath(new URL("..", import.meta.url));
 const workspace = fileURLToPath(new URL("../..", import.meta.url));
 const docs = `${clientDir}docs`;
@@ -17,7 +22,8 @@ const npx = process.platform === "win32" ? "npx.cmd" : "npx";
 
 const build = spawnSync(npx, ["chtmain", "build", CLIENT, `--out:${docs}`], {
     cwd: workspace,
-    stdio: "inherit"
+    stdio: "inherit",
+    env: { ...process.env, CHT_BASE: BASE }
 });
 
 if (build.status !== 0) {
