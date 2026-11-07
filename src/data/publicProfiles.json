@@ -1,52 +1,56 @@
 {
-    "generatedAt": "2026-11-07T11:57:32.088Z",
+    "generatedAt": "2026-11-07T17:14:57.132Z",
     "commits": [
         {
-            "repo": "portfolioweb",
-            "message": "Refactor code structure for improved readability and maintainability",
-            "url": "https://github.com/celiy/portfolioweb/commit/a5cd994fc09954240c9d9adcc838aa0910e0d482",
-            "additions": 19,
-            "deletions": 5
-        },
-        {
-            "repo": "cht-base",
-            "message": "fix: ensure correct base path for CHT_BASE in Vite config and update router history initialization",
-            "url": "https://github.com/celiy/cht-base/commit/c9123fcfb41b5c2492927fb8881d14b5f4b05df7",
-            "additions": 3,
+            "repo": "cht-main",
+            "message": "bump: update subproject commits for cht-base and cht-design-system",
+            "url": "https://github.com/celiy/cht-main/commit/a62b64badc67d832d54f65a6637b21c4e006bc46",
+            "additions": 2,
             "deletions": 2
         },
         {
-            "repo": "portfolioweb",
-            "message": "feat: refactor ContactList and ProjectCard components for TypeScript support and improved download handling",
-            "url": "https://github.com/celiy/portfolioweb/commit/9b9d5d8b67960cbb7b1e1c8180f72ccb0b0af676",
-            "additions": 9,
-            "deletions": 5
+            "repo": "cht-main",
+            "message": "bump: update subproject commits for cht-base and cht-design-system; enhance build script to prevent unsafe output directories",
+            "url": "https://github.com/celiy/cht-main/commit/dddd541ca55eeed72a5e06e2c556ef3dce44492a",
+            "additions": 128,
+            "deletions": 11
         },
         {
             "repo": "portfolioweb",
-            "message": "Add client-override.css and index.html for client-specific styling and structure",
-            "url": "https://github.com/celiy/portfolioweb/commit/f869a445d4c630626b245ca12bcfbe50834ab242",
-            "additions": 42,
-            "deletions": 0
+            "message": "Refactor code structure for improved readability and maintainability",
+            "url": "https://github.com/celiy/portfolioweb/commit/d8f2dd118180a905ba012b8f0f60f051642aa03a",
+            "additions": 123,
+            "deletions": 6
+        },
+        {
+            "repo": "cht-base",
+            "message": "feat: enhance documentation and components; add ItemIcon, update badges and buttons with new features",
+            "url": "https://github.com/celiy/cht-base/commit/fd8b4af9b8156ee9e198de05779849e8132eec60",
+            "additions": 491,
+            "deletions": 6
         },
         {
             "repo": "portfolioweb",
-            "message": "feat: update layout and add new components for GitHub and Codewars profiles",
-            "url": "https://github.com/celiy/portfolioweb/commit/33c592703a774052d64212597daab498649a43f0",
-            "additions": 1012,
-            "deletions": 105
+            "message": "Refactor code structure for improved readability and maintainability",
+            "url": "https://github.com/celiy/portfolioweb/commit/537258a46fe1d5ac28c9d612a0ad3f4cf44898be",
+            "additions": 16,
+            "deletions": 10
         },
         {
-            "repo": "portfolioweb",
-            "message": "feat: força reveal-highlight",
-            "url": "https://github.com/celiy/portfolioweb/commit/9d83ea7e5bfc3d0a229ac8f23d634c4eee7f6f78",
-            "additions": 211,
-            "deletions": 9
+            "repo": "cht-base",
+            "message": "style: update heading sizes and clean up mask properties in CSS",
+            "url": "https://github.com/celiy/cht-base/commit/b527d5900be446ec981bf3d31265447396941f40",
+            "additions": 12,
+            "deletions": 16
         }
     ],
     "activity": {
         "repoCount": 20,
         "recentRepos": [
+            {
+                "name": "SistemaDeContrachequesOnline",
+                "url": "https://github.com/celiy/SistemaDeContrachequesOnline"
+            },
             {
                 "name": "portfolioweb",
                 "url": "https://github.com/celiy/portfolioweb"
@@ -56,10 +60,6 @@
                 "url": "https://github.com/celiy/cht-main"
             },
             {
-                "name": "cht-base",
-                "url": "https://github.com/celiy/cht-base"
-            },
-            {
                 "name": "cht-design-system",
                 "url": "https://github.com/celiy/cht-design-system"
             }
@@ -67,11 +67,11 @@
         "languages": [
             {
                 "name": "Vue",
-                "percent": 34.5
+                "percent": 34.7
             },
             {
                 "name": "JavaScript",
-                "percent": 27.4
+                "percent": 27.3
             },
             {
                 "name": "TypeScript",
@@ -79,7 +79,7 @@
             },
             {
                 "name": "Python",
-                "percent": 6.9
+                "percent": 6.8
             },
             {
                 "name": "Blade",
