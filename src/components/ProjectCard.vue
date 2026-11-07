@@ -2,7 +2,7 @@
     <div
         class="reveal-highlight card-bg flex min-w-0 flex-col rounded border"
         :class="project.highlight"
-        :data-project="project.name"
+        v-bind="{ 'data-project': project.name }"
 
         @mouseenter="hovered = true"
         @mouseleave="hovered = false"
