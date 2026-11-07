@@ -3,7 +3,7 @@
         :href="profileUrl"
         target="_blank"
         rel="noopener noreferrer"
-        class="reveal-highlight reveal-highlight-primary/80 @container flex h-full min-w-0 flex-col gap-3 rounded border p-4 text-foreground! no-underline! hover:bg-accent/50 hover:brightness-100!"
+        class="reveal-highlight reveal-highlight-primary/80 @container flex h-full min-w-0 flex-col gap-3 rounded border bg-card/20 p-4 text-foreground! no-underline! hover:bg-card/40 hover:brightness-100!"
     >
         <div class="flex items-center gap-2 font-semibold">
             <i class="fa-solid fa-terminal text-primary" />

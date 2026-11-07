@@ -1,5 +1,7 @@
 <template>
-    <div class="reveal-highlight reveal-highlight-primary/80 flex h-full min-w-0 flex-col gap-3 rounded border p-4">
+    <div
+        class="reveal-highlight reveal-highlight-primary/80 flex h-full min-w-0 flex-col gap-3 rounded border bg-card/20 p-4 transition-all hover:bg-card/40"
+    >
         <div class="flex items-center gap-2 font-semibold">
             <i class="fa-solid fa-code-branch text-primary" />
             Commits recentes
@@ -26,7 +28,6 @@
             >
                 <a
                     v-tooltip="commit.message"
-
                     :href="commit.url"
                     target="_blank"
                     rel="noopener noreferrer"

@@ -127,7 +127,7 @@
                 </div>
 
                 <div
-                    class="reveal-highlight reveal-highlight-primary/80 flex min-w-0 flex-col gap-3 rounded border p-4"
+                    class="reveal-highlight reveal-highlight-primary/80 flex min-w-0 flex-col gap-3 rounded border bg-card/20 p-4 transition-all hover:bg-card/40"
                 >
                     <div class="flex items-center gap-3 font-semibold">
                         <i class="fa-solid fa-graduation-cap text-primary" />

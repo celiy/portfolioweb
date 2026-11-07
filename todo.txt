@@ -54,3 +54,5 @@ Adicionar bastante interatividade em tudo
 Fazer o fundo ter umas linhas parecidas com a do pasgo mas fazer mais interessante tipo animado
 
 Adicionar sombra na imagem dos cards de projetos
+
+Adicionar animações de entrada

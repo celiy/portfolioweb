@@ -67,6 +67,8 @@ export type PortfolioEntry = {
     period: string;
     githubUrl: string;
     siteUrl: string;
+    /** Full class of the card glow, e.g. "reveal-highlight-blue-500". Never build it from a color name, or Tailwind will not generate it. */
+    highlight?: string;
     tags: Tag[];
 };
 
@@ -98,6 +100,7 @@ export const EXPERIENCES: Experience[] = [
         githubUrl: "",
         siteUrl: "https://even7.com.br",
         recommendationLetterUrl: recommendationLetter,
+        highlight: "reveal-highlight-yellow-500/80",
         tags: tags(
             "Vue",
             "React",
@@ -125,6 +128,7 @@ export const PROJECTS: Project[] = [
         period: "",
         githubUrl: "https://github.com/celiy/cht-main",
         siteUrl: "https://cht-dev.netlify.app",
+        highlight: "reveal-highlight-blue-500/80",
         tags: tags("TypeScript", "Vue", "Tailwind CSS", "Python", "Electron", "Vite")
     },
     {
@@ -138,6 +142,7 @@ export const PROJECTS: Project[] = [
         period: "",
         githubUrl: "https://github.com/celiy/cht-client-mecarvit",
         siteUrl: "",
+        highlight: "reveal-highlight-blue-500/80",
         tags: tags("TypeScript", "Vue", "Tailwind CSS", "ExpressJS", "SQLite", "Drizzle")
     },
     {
@@ -151,6 +156,7 @@ export const PROJECTS: Project[] = [
         period: "",
         githubUrl: "https://github.com/celiy/Pasgo-public",
         siteUrl: "https://pasgo.com.br",
+        highlight: "reveal-highlight-white/80",
         tags: tags(
             "JavaScript",
             "Tailwind CSS",

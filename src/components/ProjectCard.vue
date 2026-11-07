@@ -1,6 +1,7 @@
 <template>
     <div
-        class="reveal-highlight reveal-highlight-primary/80 flex min-w-0 flex-col rounded border"
+        class="reveal-highlight flex min-w-0 flex-col rounded border bg-card/20 transition-all hover:bg-card/40"
+        :class="project.highlight"
 
         @mouseenter="hovered = true"
         @mouseleave="hovered = false"
