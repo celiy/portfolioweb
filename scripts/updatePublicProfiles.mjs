@@ -12,7 +12,7 @@ import { fileURLToPath } from "node:url";
 
 const GITHUB_USER = "celiy";
 const CODEWARS_USER = "celiy";
-const RECENT_COMMITS = 4;
+const RECENT_COMMITS = 6;
 const RECENT_REPOS = 4;
 const OUTPUT = fileURLToPath(new URL("../src/data/publicProfiles.json", import.meta.url));
 
