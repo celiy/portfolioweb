@@ -1,47 +1,47 @@
 {
-    "generatedAt": "2026-11-07T00:52:08.879Z",
+    "generatedAt": "2026-11-07T11:57:32.088Z",
     "commits": [
         {
             "repo": "portfolioweb",
-            "message": "feat: cards de projetos e experiencias",
-            "url": "https://github.com/celiy/portfolioweb/commit/99fd77d961f226dbd60457adc0be997cbe0f9a98",
-            "additions": 395,
-            "deletions": 153
-        },
-        {
-            "repo": "portfolioweb",
-            "message": "feat: começo do index",
-            "url": "https://github.com/celiy/portfolioweb/commit/d236e1753a2eb34c0bde35346f83af45ec02c20b",
-            "additions": 398,
-            "deletions": 102
-        },
-        {
-            "repo": "cht-design-system",
-            "message": "fix: update color token description in README.md to reference 'theme' field in cht.config",
-            "url": "https://github.com/celiy/cht-design-system/commit/4030f5aa88e1c239ee5489cee88543a2f3681dd4",
-            "additions": 1,
-            "deletions": 1
+            "message": "Refactor code structure for improved readability and maintainability",
+            "url": "https://github.com/celiy/portfolioweb/commit/a5cd994fc09954240c9d9adcc838aa0910e0d482",
+            "additions": 19,
+            "deletions": 5
         },
         {
             "repo": "cht-base",
-            "message": "refactor: update README and documentation for theme configuration; enhance styling and button components",
-            "url": "https://github.com/celiy/cht-base/commit/bddfeef0dcd7c462667b5eb67190ac2f6db5fc67",
-            "additions": 48,
-            "deletions": 39
+            "message": "fix: ensure correct base path for CHT_BASE in Vite config and update router history initialization",
+            "url": "https://github.com/celiy/cht-base/commit/c9123fcfb41b5c2492927fb8881d14b5f4b05df7",
+            "additions": 3,
+            "deletions": 2
         },
         {
-            "repo": "cht-main",
-            "message": "Merge branch 'beta' into main",
-            "url": "https://github.com/celiy/cht-main/commit/df7b0dbdfa1f93c2aeb86f58f43a5c5ee9bec774",
-            "additions": 7,
-            "deletions": 10
+            "repo": "portfolioweb",
+            "message": "feat: refactor ContactList and ProjectCard components for TypeScript support and improved download handling",
+            "url": "https://github.com/celiy/portfolioweb/commit/9b9d5d8b67960cbb7b1e1c8180f72ccb0b0af676",
+            "additions": 9,
+            "deletions": 5
         },
         {
-            "repo": "cht-main",
-            "message": "bump: versões das repos principais (cht-shared 1.1.10, cht-base 1.2.0, cht-design-system 1.2.0)",
-            "url": "https://github.com/celiy/cht-main/commit/fff2eb10904c25aea8f0d380a11850a2918c0ddd",
-            "additions": 7,
-            "deletions": 10
+            "repo": "portfolioweb",
+            "message": "Add client-override.css and index.html for client-specific styling and structure",
+            "url": "https://github.com/celiy/portfolioweb/commit/f869a445d4c630626b245ca12bcfbe50834ab242",
+            "additions": 42,
+            "deletions": 0
+        },
+        {
+            "repo": "portfolioweb",
+            "message": "feat: update layout and add new components for GitHub and Codewars profiles",
+            "url": "https://github.com/celiy/portfolioweb/commit/33c592703a774052d64212597daab498649a43f0",
+            "additions": 1012,
+            "deletions": 105
+        },
+        {
+            "repo": "portfolioweb",
+            "message": "feat: força reveal-highlight",
+            "url": "https://github.com/celiy/portfolioweb/commit/9d83ea7e5bfc3d0a229ac8f23d634c4eee7f6f78",
+            "additions": 211,
+            "deletions": 9
         }
     ],
     "activity": {
@@ -137,7 +137,7 @@
         "honor": 744,
         "completed": 117,
         "topLanguage": "python",
-        "leaderboardPosition": 69710,
+        "leaderboardPosition": 69711,
         "honorPercentile": 9.034,
         "languages": [
             {
