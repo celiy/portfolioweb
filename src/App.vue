@@ -1,5 +1,20 @@
 <template>
     <main class="relative">
+        <template v-if="$route.path === '/'">
+            <div
+                class="absolute inset-0 -z-10 h-full w-full bg-background bg-size-[24px_24px] transition-opacity duration-1400 dark:bg-[linear-gradient(to_right,color-mix(in_srgb,var(--color-border)_40%,transparent)_1px,transparent_1px),linear-gradient(to_bottom,color-mix(in_srgb,var(--color-border)_40%,transparent)_1px,transparent_1px)] light:bg-[linear-gradient(to_right,color-mix(in_srgb,var(--color-border)_60%,transparent)_1px,transparent_1px),linear-gradient(to_bottom,color-mix(in_srgb,var(--color-border)_60%,transparent)_1px,transparent_1px)]"
+                :class="isMounted ? 'opacity-100' : 'opacity-0'"
+            />
+
+            <div
+                class="absolute inset-0 top-0 -z-10 h-48 translate-y-12 bg-linear-to-b from-background to-transparent"
+            />
+
+            <div
+                class="absolute inset-0 top-0 -z-10 h-full translate-y-12 bg-linear-to-t from-background from-85% to-transparent md:from-80%"
+            />
+        </template>
+
         <div class="fixed inset-x-0 top-0 z-60">
             <NavBar variant="simplified">
                 <div class="appear-from-t-to-b w-full p-2 sm:p-3">
@@ -31,6 +46,7 @@
 
                             @click="toggleTheme"
                         />
+                        {{ isMounted }}
                     </div>
                 </div>
             </NavBar>
@@ -88,10 +104,22 @@ export default defineComponent({
         ContactList
     },
 
+    data() {
+        return {
+            isMounted: false
+        };
+    },
+
     computed: {
         isDarkTheme() {
             return this.$project.style.activeTheme === "dark";
         }
+    },
+
+    mounted() {
+        setTimeout(() => {
+            this.isMounted = true;
+        }, 10);
     },
 
     methods: {

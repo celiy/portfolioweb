@@ -6,6 +6,16 @@
  * already builds Tailwind with this client's classes.
  */
 
+.card-bg {
+    background-color: color-mix(in oklab, var(--color-card) 20%, transparent);
+    backdrop-filter: blur(4px);
+    transition: all 0.15s;
+
+    &:hover {
+        background-color: color-mix(in oklab, var(--color-card) 40%, transparent);
+    }
+}
+
 @property --primary-stop {
     syntax: "<percentage>";
     inherits: false;

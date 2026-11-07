@@ -62,7 +62,7 @@
                 </CycleTitle>
             </div>
 
-            <div class="mt-6 flex flex-wrap gap-2">
+            <div class="mt-6 flex flex-wrap justify-center gap-2">
                 <Tooltip
                     v-for="(tech, index) in knowledge"
                     :key="tech.name"
@@ -77,7 +77,7 @@
                         size="sm"
                         variant="default"
                         :style="{ backgroundColor: `${tech.color}26` }"
-                        :class="`reveal-highlight border-transparent hover:reveal-highlight-${tech.color}`"
+                        :class="`reveal-highlight border-transparent hover:reveal-highlight-${tech.color} backdrop-blur-[4px]`"
 
                         @mouseenter="hoveredStack = tech.name"
                         @mouseleave="hoveredStack = ''"
@@ -139,7 +139,7 @@
                 </div>
 
                 <div
-                    class="reveal-highlight reveal-highlight-primary/80 flex min-w-0 flex-col gap-3 rounded border bg-card/20 p-4 transition-all hover:bg-card/40"
+                    class="reveal-highlight reveal-highlight-primary/80 card-bg flex min-w-0 flex-col gap-3 rounded border p-4"
                 >
                     <div class="flex items-center gap-3 font-semibold">
                         <i class="fa-solid fa-graduation-cap text-primary" />
