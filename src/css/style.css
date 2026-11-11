@@ -98,3 +98,40 @@
         animation: none;
     }
 }
+
+/*
+ * Filter swap: the old list fades out fast, then the new one comes in item by item.
+ * Each item sets --i with its position; the delay is capped so long lists do not drag.
+ */
+.filter-swap-leave-active {
+    transition:
+        opacity 0.12s ease-in,
+        transform 0.12s ease-in;
+}
+
+.filter-swap-leave-to {
+    opacity: 0;
+    transform: translateY(-6px);
+}
+
+.stagger-in > * {
+    animation: stagger-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+    animation-delay: calc(min(var(--i, 0), 14) * 30ms);
+}
+
+@keyframes stagger-in {
+    from {
+        opacity: 0;
+        transform: translateY(14px) scale(0.96);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .stagger-in > * {
+        animation: none;
+    }
+
+    .filter-swap-leave-active {
+        transition: none;
+    }
+}

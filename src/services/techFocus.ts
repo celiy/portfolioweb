@@ -69,9 +69,16 @@ export async function revealTag(
     // that jump from cancelling the smooth scroll below.
     await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()));
 
-    root
-        .querySelector(`[data-project="${CSS.escape(first.name)}"]`)
-        ?.scrollIntoView({ behavior: "smooth", block: "center" });
+    // After a filter change the new list only mounts once the old one has faded out
+    const selector = `[data-project="${CSS.escape(first.name)}"]`;
+    let card = root.querySelector(selector);
+
+    for (let frame = 0; !card && frame < 40; frame++) {
+        await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()));
+        card = root.querySelector(selector);
+    }
+
+    card?.scrollIntoView({ behavior: "smooth", block: "center" });
 
     return true;
 }

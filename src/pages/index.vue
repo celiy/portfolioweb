@@ -1,23 +1,25 @@
 <template>
     <article>
         <section class="max-w-2xl pt-32 md:pt-42">
-            <h5>Olá, me chamo</h5>
+            <div>
+                <h5>Olá, me chamo</h5>
 
-            <h1
-                class="primary-gradient cursor-pointer py-1 select-none"
+                <h1
+                    class="primary-gradient cursor-pointer py-1 select-none"
 
-                @click="$router.push('/about')"
-            >
-                Diogo Carvalho Viegas
-            </h1>
+                    @click="$router.push('/about')"
+                >
+                    Diogo Carvalho Viegas
+                </h1>
 
-            <h4>DESENVOLVEDOR FULL-STACK</h4>
+                <h4>DESENVOLVEDOR FULL-STACK</h4>
 
-            <p class="mt-2">
-                Me especializo em desenvolver aplicações escaláveis, tendo experiência de mais de 3
-                anos focada em front-end e backend, me envolvendo em cada parte do processo do
-                desenvolvimento desde o design, programação, testes e publicação.
-            </p>
+                <p class="mt-2">
+                    Me especializo em desenvolver aplicações escaláveis, tendo experiência de mais
+                    de 3 anos focada em front-end e backend, me envolvendo em cada parte do processo
+                    do desenvolvimento desde o design, programação, testes e publicação.
+                </p>
+            </div>
 
             <div class="mt-4 flex flex-wrap items-center gap-y-3">
                 <Button
@@ -50,7 +52,7 @@
             </div>
         </section>
 
-        <div class="reveal-highlight reveal-highlight-primary/80 my-12 border-t md:my-18" />
+        <div class="my-12 h-px md:my-18" />
 
         <section>
             <div class="flex flex-col items-center justify-between sm:flex-row">
@@ -62,43 +64,55 @@
                 </CycleTitle>
             </div>
 
-            <div class="mt-6 flex flex-wrap justify-center gap-2">
-                <Tooltip
-                    v-for="(tech, index) in knowledge"
-                    :key="tech.name"
+            <Transition
+                name="filter-swap"
+                mode="out-in"
+            >
+                <div
+                    :key="knowledgeFilter"
 
-                    :animation="index % 2 ? 'slide-down' : 'slide-up'"
+                    class="stagger-in mt-6 flex flex-wrap justify-center gap-2"
                 >
-                    <ItemIcon
+                    <Tooltip
+                        v-for="(tech, index) in knowledge"
                         :key="tech.name"
 
-                        class="cursor-pointer"
-                        :icon="tech.name"
-                        size="sm"
-                        variant="default"
-                        :style="{ backgroundColor: `${tech.color}26` }"
-                        :class="`reveal-highlight border-transparent hover:reveal-highlight-${tech.color} backdrop-blur-[4px]`"
-
-                        @mouseenter="hoveredStack = tech.name"
-                        @mouseleave="hoveredStack = ''"
-                        @click="focusTech(tech)"
+                        :style="{ '--i': index }"
+                        :animation="index % 2 ? 'slide-down' : 'slide-up'"
                     >
-                        <img
-                            class="m-1 h-8 w-8 transition-all"
-                            :class="hoveredStack === tech.name ? 'scale-120' : 'scale-100'"
-                            :src="tech.image"
-                            :alt="tech.name"
-                        />
-                    </ItemIcon>
+                        <ItemIcon
+                            :key="tech.name"
 
-                    <template #tooltip>
-                        <span class="text-sm">{{ tech.name }}</span>
-                    </template>
-                </Tooltip>
-            </div>
+                            class="cursor-pointer"
+                            :icon="tech.name"
+                            size="sm"
+                            variant="default"
+                            :style="{ backgroundColor: `${tech.color}26` }"
+                            :class="`reveal-highlight border-transparent hover:reveal-highlight-${tech.color} backdrop-blur-[4px]`"
+
+                            @mouseenter="hoveredStack = tech.name"
+                            @mouseleave="hoveredStack = ''"
+                            @click="focusTech(tech)"
+                        >
+                            <img
+                                class="m-1 h-8 w-8 transition-all"
+                                :class="hoveredStack === tech.name ? 'scale-120' : 'scale-100'"
+                                :src="tech.image"
+                                :alt="tech.name"
+                            />
+                        </ItemIcon>
+
+                        <template #tooltip>
+                            <span class="text-sm">{{ tech.name }}</span>
+                        </template>
+                    </Tooltip>
+                </div>
+            </Transition>
         </section>
 
-        <div class="reveal-highlight reveal-highlight-primary/80 my-12 border-t md:my-18" />
+        <div
+            class="reveal-highlight reveal-highlight-primary/80 my-12 border-t-transparent md:my-18"
+        />
 
         <section class="mt-12">
             <div class="flex flex-col items-center justify-between sm:flex-row">
@@ -118,17 +132,29 @@
                 />
             </div>
 
-            <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
-                <ProjectCard
-                    v-for="entry in entries"
-                    :key="entry.name"
+            <Transition
+                name="filter-swap"
+                mode="out-in"
+            >
+                <div
+                    :key="entryFilter"
 
-                    :project="entry"
-                />
-            </div>
+                    class="stagger-in mt-6 grid grid-cols-1 gap-4 md:grid-cols-2"
+                >
+                    <ProjectCard
+                        v-for="(entry, index) in entries"
+                        :key="entry.name"
+
+                        :style="{ '--i': index }"
+                        :project="entry"
+                    />
+                </div>
+            </Transition>
         </section>
 
-        <div class="reveal-highlight reveal-highlight-primary/80 my-12 border-t md:my-18" />
+        <div
+            class="reveal-highlight reveal-highlight-primary/80 my-12 border-t-transparent md:my-18"
+        />
 
         <section>
             <div class="flex flex-col gap-4">

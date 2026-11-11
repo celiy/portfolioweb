@@ -1,21 +1,9 @@
-Usar container-sm no conteúdo principal
-
-Index:
-    <Contato>
-        Entre em contato
-        <campo nome></campo> <campo email></campo>
-        <textarea da mensagem></textarea>
-
-        <Botão enviar email>
-    </Contato>
-
 Link podem mostrar um tooltip com uma imagem pequena mostrando um preview do que tem
 
 Incluir o Fastify, Java no readme do github
 
-Fazer o fundo ter umas linhas parecidas com a do pasgo mas fazer mais interessante tipo animado
-
-Fazer a navbar menu flutuante no mobile
+Botões de links nos cards devem ser brancos invés de primary:
+    Novo variante de botão: contrast
 
 Educação:
     Incluir os mini cursos que fiz para:

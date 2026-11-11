@@ -46,7 +46,6 @@
 
                             @click="toggleTheme"
                         />
-                        {{ isMounted }}
                     </div>
                 </div>
             </NavBar>

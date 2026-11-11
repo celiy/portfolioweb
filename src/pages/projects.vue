@@ -7,14 +7,24 @@
             <span class="fa-solid fa-star text-primary" /> Projetos e experiências
         </CycleTitle>
 
-        <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
-            <ProjectCard
-                v-for="entry in entries"
-                :key="entry.name"
+        <Transition
+            name="filter-swap"
+            mode="out-in"
+        >
+            <div
+                :key="entryFilter"
 
-                :project="entry"
-            />
-        </div>
+                class="stagger-in mt-6 grid grid-cols-1 gap-4 md:grid-cols-2"
+            >
+                <ProjectCard
+                    v-for="(entry, index) in entries"
+                    :key="entry.name"
+
+                    :style="{ '--i': index }"
+                    :project="entry"
+                />
+            </div>
+        </Transition>
     </article>
 </template>
 
