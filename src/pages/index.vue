@@ -23,9 +23,12 @@
 
             <div class="mt-4 flex flex-wrap items-center gap-y-3">
                 <Button
+                    v-tooltip="'Baixar currículo'"
                     left-icon="fa-download"
                     label="Baixar CV"
                     variant="outline-primary"
+                    download="CV_DIOGOVIEGAS_FULLSTACK.pdf"
+                    :href="cvUrl"
                     class="mr-4"
                 />
 
@@ -198,6 +201,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import cvUrl from "../assets/CV_DIOGOVIEGAS_FULLSTACK.pdf";
 import CodewarsCard from "../components/CodewarsCard.vue";
 import ContactList from "../components/ContactList.vue";
 import CycleTitle from "../components/CycleTitle.vue";
@@ -224,6 +228,7 @@ export default defineComponent({
 
     data() {
         return {
+            cvUrl,
             hoveredStack: "",
             knowledgeFilter: "all",
             knowledgeFilters: KNOWLEDGE_FILTERS,

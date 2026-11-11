@@ -50,10 +50,11 @@
                         v-tooltip="'Baixar carta de recomendação'"
                         :href="letterUrl"
                         v-bind="letterDownloadAttrs"
-                        class="py-1.5!"
+                        class="py-1.5! opacity-80"
                         left-icon="fa-file-arrow-down"
                         label="Carta de recomendação"
-                        variant="transparent-primary"
+                        background-style="bg-transparent"
+                        hover-style="hover:dark:bg-white/20 hover:light:bg-black/20 shadow-none!"
                         aria-label="Baixar carta de recomendação"
                     />
 
@@ -63,9 +64,10 @@
                         v-tooltip="siteLabel"
                         :href="project.siteUrl"
                         target="_blank"
-                        class="p-2!"
+                        class="opacity-80"
                         left-icon="fa-globe"
-                        variant="transparent-primary"
+                        background-style="bg-transparent"
+                        hover-style="hover:dark:bg-white/20 hover:light:bg-black/20 shadow-none!"
                     />
 
                     <Button
@@ -74,9 +76,10 @@
                         v-tooltip="'GitHub'"
                         :href="project.githubUrl"
                         target="_blank"
-                        class="p-2"
+                        class="opacity-80"
                         left-icon="fa-brands fa-github"
-                        variant="transparent-primary"
+                        background-style="bg-transparent"
+                        hover-style="hover:dark:bg-white/20 hover:light:bg-black/20 shadow-none!"
                     />
                 </div>
             </div>
